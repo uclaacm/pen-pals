@@ -1,0 +1,7 @@
+@use "_colors.scss" as colors;
+
+#exercise-side-container {
+    height: 100%;
+    background-color: colors.$bg-white;
+    flex-grow: 1;
+}
