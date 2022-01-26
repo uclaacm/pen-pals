@@ -1,13 +1,16 @@
-import AppWrapper from './shared/AppWrapper';
-import { HeaderSections } from './shared/globalTypes';
+import ExerciseSide from './shared/ExerciseSide';
+import Footer from './shared/Footer';
+import LessonSide from './shared/LessonSide';
 import '../assets/WestwoodSans-Regular.ttf';
 
 function App(): JSX.Element {
   return (
     <div>
-      <AppWrapper section={HeaderSections.DEFAULT_SECTION}>
-        Your content here! 🥔
-      </AppWrapper>
+      <main>
+        <LessonSide />
+        <ExerciseSide />
+      </main>
+      <Footer />
     </div>
   );
 }

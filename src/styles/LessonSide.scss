@@ -1,0 +1,7 @@
+@use '_colors.scss' as colors;
+
+#lesson-side-container {
+  background-color: colors.$primary-green;
+  height: 100%;
+  width: 40%;
+}
