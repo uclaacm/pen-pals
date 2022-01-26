@@ -6,11 +6,11 @@ import Footer from './shared/Footer';
 function App(): JSX.Element {
   return (
     <div>
-    <main>
-      <LessonSide />
-      <ExerciseSide />
-    </main>
-    <Footer />
+      <main>
+        <LessonSide />
+        <ExerciseSide />
+      </main>
+      <Footer />
     </div>
   );
 }
