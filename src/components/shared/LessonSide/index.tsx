@@ -6,7 +6,7 @@ function LessonSide(): JSX.Element {
     <section id="lesson-side-container">
       some stuff
       {/* don't change this next line */}
-      <LevelSelector />
+      <LevelSelector items={5} current={2} />
     </section>
   );
 }

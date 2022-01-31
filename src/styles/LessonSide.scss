@@ -1,7 +1,67 @@
 @use '_colors.scss' as colors;
 
+@mixin font-styles {
+  font-family: Quattrocento Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+}
+
 #lesson-side-container {
   background-color: colors.$primary-green;
   height: 100%;
   width: 40%;
+  padding: 20px;
+}
+
+.selector-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 85%;
+}
+
+.level-selector {
+  flex-shrink: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 5px 5px 5px;
+  width: 70%;
+}
+
+.level-button {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-shrink: 0;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  line-height: 45px;
+
+  border-radius: 50%;
+  border: 2px solid colors.$bg-white;
+
+  @include font-styles;  
+}
+
+.other-level {
+  background-color: colors.$primary-green;
+  color: colors.$text-white;
+}
+
+.current-level {
+  background-color: colors.$bg-white;
+  color: colors.$primary-green;
+}
+
+.level-connector {
+  height: 0px;
+  width: 45px;
+  background-color: colors.$bg-white;
+  border: 2px solid colors.$bg-white;
+  flex-shrink: 5;
 }
