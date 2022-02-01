@@ -1,9 +1,9 @@
 @use '_colors.scss' as colors;
 
 @mixin font-styles {
-  font-family: Quattrocento Sans;
-  font-size: 30px;
+  font-family: Quattrocento Sans, sans;
   font-style: normal;
+  font-size: 30px;
   font-weight: bold;
 }
 
