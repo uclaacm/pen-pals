@@ -2,50 +2,50 @@
 
 @mixin font-styles {
   font-family: Quattrocento Sans;
+  font-size: 30px;
   font-style: normal;
   font-weight: bold;
-  font-size: 30px;
 }
 
 #lesson-side-container {
   background-color: colors.$primary-green;
   height: 100%;
-  width: 40%;
   padding: 20px;
+  width: 40%;
 }
 
 .selector-box {
-  display: flex;
-  justify-content: center;
   align-items: flex-end;
-  width: 100%;
+  display: flex;
   height: 85%;
+  justify-content: center;
+  width: 100%;
 }
 
 .level-selector {
-  flex-shrink: 5;
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  flex-shrink: 5;
   justify-content: center;
-  margin: 5px 5px 5px 5px;
+  margin: 5px;
   width: 70%;
 }
 
 .level-button {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  flex-shrink: 0;
-  vertical-align: middle;
-  align-items: center;
-  justify-content: center;
-  line-height: 45px;
 
-  border-radius: 50%;
+  @include font-styles;
+  align-items: center;
   border: 2px solid colors.$bg-white;
 
-  @include font-styles;  
+  border-radius: 50%;
+  display: flex;
+  flex-shrink: 0;
+  height: 45px;
+  justify-content: center;
+  line-height: 45px;
+  vertical-align: middle;
+  width: 45px;  
 }
 
 .other-level {
@@ -59,9 +59,9 @@
 }
 
 .level-connector {
-  height: 0px;
-  width: 45px;
   background-color: colors.$bg-white;
   border: 2px solid colors.$bg-white;
   flex-shrink: 5;
+  height: 0;
+  width: 45px;
 }
