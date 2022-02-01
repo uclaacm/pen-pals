@@ -33,7 +33,6 @@
 }
 
 .level-button {
-
   @include font-styles;
   align-items: center;
   border: 2px solid colors.$bg-white;
@@ -45,7 +44,7 @@
   justify-content: center;
   line-height: 45px;
   vertical-align: middle;
-  width: 45px;  
+  width: 45px;
 }
 
 .other-level {
