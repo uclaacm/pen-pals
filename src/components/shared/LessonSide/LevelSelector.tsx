@@ -9,14 +9,16 @@ function LevelSelector({ items, current }: IProps): JSX.Element {
   const levelList = () => {
     const list = [];
     for (let item = 1; item <= items; item++) {
-      let styleClasses = 'level-button other-level';
+      let buttonStyles = 'level-button other-level';
+      let connectorStyles = 'level-connector';
       if (item == current) {
-        styleClasses = 'level-button current-level';
+        buttonStyles = 'level-button current-level';
       }
-      list.push(<div className={styleClasses}>{item}</div>);
-      if (item != items) {
-        list.push(<div className="level-connector"></div>);
+      else if (item < current) {
+        connectorStyles += ' reached-level-connector';
       }
+      list.push(<div className={buttonStyles}>{item}</div>);
+      list.push(<div className={connectorStyles}></div>)
     }
     return list;
   };
