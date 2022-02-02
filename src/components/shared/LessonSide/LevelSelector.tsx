@@ -13,12 +13,11 @@ function LevelSelector({ items, current }: IProps): JSX.Element {
       let connectorStyles = 'level-connector';
       if (item == current) {
         buttonStyles = 'level-button current-level';
-      }
-      else if (item < current) {
+      } else if (item < current) {
         connectorStyles += ' reached-level-connector';
       }
       list.push(<div className={buttonStyles}>{item}</div>);
-      list.push(<div className={connectorStyles}></div>)
+      list.push(<div className={connectorStyles}></div>);
     }
     return list;
   };
