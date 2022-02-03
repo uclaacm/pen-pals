@@ -35,9 +35,12 @@
 .level-button {
   @include font-styles;
   align-items: center;
+
+  background-color: colors.$primary-green;
   border: 2px solid colors.$bg-white;
 
   border-radius: 50%;
+  color: colors.$text-white;
   display: flex;
   flex-shrink: 0;
   height: 45px;
@@ -45,9 +48,6 @@
   line-height: 45px;
   vertical-align: middle;
   width: 45px;
-
-  background-color: colors.$primary-green;
-  color: colors.$text-white;
 }
 
 .current-level {
