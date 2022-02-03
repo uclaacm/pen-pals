@@ -1,30 +1,27 @@
 import '../../../styles/LessonSide.scss';
 
-interface IProps {
-  items: number;
-  current: number;
+interface LevelSelectorProps {
+  numLevels: number;
+  currentLevel: number;
 }
 
-function LevelSelector({ items, current }: IProps): JSX.Element {
-  const levelList = () => {
-    const list = [];
-    for (let item = 1; item <= items; item++) {
-      let buttonStyles = 'level-button other-level';
-      let connectorStyles = 'level-connector';
-      if (item == current) {
-        buttonStyles = 'level-button current-level';
-      } else if (item < current) {
-        connectorStyles += ' reached-level-connector';
-      }
-      list.push(<div className={buttonStyles}>{item}</div>);
-      list.push(<div className={connectorStyles}></div>);
-    }
-    return list;
-  };
-
+function LevelSelector({ numLevels, currentLevel }: LevelSelectorProps): JSX.Element {
   return (
     <div className="selector-box">
-      <div className="level-selector">{levelList()}</div>
+      <div className="level-selector">
+        {Array(numLevels * 2 - 1)
+          .fill(0)
+          .map((_, i) => {
+            const level = i/2 + 1;
+            return i % 2 == 1 ? (
+              <div className={"level-connector" + (level < currentLevel ? ' reached-level-connector' : '')}></div>
+            ) : (
+              <div className={"level-button" + (level == currentLevel ? ' current-level' : '')}>
+                {level}
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 }
