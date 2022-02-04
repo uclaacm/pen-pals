@@ -57,11 +57,13 @@
 
 .level-connector {
   flex-shrink: 5;
-  width: 45pc;
+  width: 45px;
 }
 
 .reached-level-connector {
   background-color: colors.$bg-white;
-  border: 2px solid colors.$bg-white;
+  border-width: 2px 0px;
+  border-style: solid;
+  border-color: colors.$bg-white;
   height: 0;
 }
