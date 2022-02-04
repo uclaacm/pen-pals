@@ -58,11 +58,11 @@
 }
 
 .level-connector {
-  flex-shrink: 5;
-  min-width: 10px;
-  width: 45px;
   border-color: colors.$bg-white;
   border-style: solid;
   border-width: 2px 0;
+  flex-shrink: 5;
   height: 0;
+  min-width: 10px;
+  width: 45px;
 }

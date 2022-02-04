@@ -32,8 +32,10 @@ function LevelSelector({
                 </div>
               ) : (
                 <div
-                  className='level-connector'
-                  style={{"visibility": level < maxLevelReached ? "visible" : "hidden"}}
+                  className="level-connector"
+                  style={{
+                    visibility: level < maxLevelReached ? 'visible' : 'hidden',
+                  }}
                 ></div>
               );
             })
