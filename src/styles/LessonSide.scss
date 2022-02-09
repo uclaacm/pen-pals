@@ -5,3 +5,39 @@
   height: 100%;
   width: 40%;
 }
+
+#turtle-logo{
+  //align-items: flex-start;
+  text-align:left;
+  padding: 5%;
+  color: colors.$text-white;
+}
+#turtle-text{
+  display:inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+  font-size: 48px;
+}
+#turtle-image{
+  display:inline-block;
+  vertical-align: middle;
+  //float:left;
+  
+}
+
+#lesson-side-header{
+  color: colors.$text-white;
+  padding-left: 5%;
+  padding-bottom: 2.5%;
+  text-align:left;
+  font-size: 30px;
+}
+
+#lesson-side-body{
+  color: colors.$text-white;
+  padding-top: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align:left;
+  font-size: 18px;
+}
