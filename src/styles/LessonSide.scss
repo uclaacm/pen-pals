@@ -48,9 +48,9 @@
   height: calc(24px + 1vw);
   justify-content: center;
   line-height: calc(24px + 1vw);
+  max-width: 45px;
   vertical-align: middle;
   width: calc(24px + 1vw);
-  max-width: 45px;
 }
 
 .level-button.current-level {
@@ -65,7 +65,7 @@
   border-width: 2px 0;
   flex-shrink: 5;
   height: 0;
-  min-width: 10px;
   max-width: 45px;
+  min-width: 10px;
   width: calc(35px + 0.5vw);
 }

@@ -28,7 +28,7 @@ function LevelSelector({
                     (level === currentLevel ? ' current-level' : '')
                   }
                 >
-                  <p style={{position: 'relative', top: '1px'}}>{level}</p>
+                  <p style={{ position: 'relative', top: '1px' }}>{level}</p>
                 </div>
               ) : (
                 <div
