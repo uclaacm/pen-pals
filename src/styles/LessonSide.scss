@@ -2,7 +2,7 @@
 
 @mixin font-styles {
   font-family: Quattrocento Sans, sans-serif;
-  font-size: 30px;
+  font-size: calc(16px + 1vw);
   font-style: normal;
   font-weight: bold;
 }
@@ -30,7 +30,7 @@
   flex-direction: row;
   flex-shrink: 5;
   justify-content: center;
-  margin: 5px;
+  margin: 7px calc(4px + 1vw);
   width: 70%;
 }
 
@@ -45,11 +45,12 @@
   color: colors.$text-white;
   display: flex;
   flex-shrink: 0;
-  height: 45px;
+  height: calc(24px + 1vw);
   justify-content: center;
-  line-height: 45px;
+  line-height: calc(24px + 1vw);
   vertical-align: middle;
-  width: 45px;
+  width: calc(24px + 1vw);
+  max-width: 45px;
 }
 
 .level-button.current-level {
@@ -58,11 +59,13 @@
 }
 
 .level-connector {
+  background-color: colors.$bg-white;
   border-color: colors.$bg-white;
   border-style: solid;
   border-width: 2px 0;
   flex-shrink: 5;
   height: 0;
   min-width: 10px;
-  width: 45px;
+  max-width: 45px;
+  width: calc(35px + 0.5vw);
 }
