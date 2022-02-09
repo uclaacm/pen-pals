@@ -6,38 +6,39 @@
   width: 40%;
 }
 
-#turtle-logo{
-  //align-items: flex-start;
-  text-align:left;
-  padding: 5%;
+#turtle-logo {
   color: colors.$text-white;
+  padding: 5%;
+  //align-items: flex-start;
+  text-align: left;
 }
-#turtle-text{
-  display:inline-block;
-  vertical-align: middle;
-  padding-left: 20px;
+
+#turtle-text {
+  display: inline-block;
   font-size: 48px;
+  padding-left: 20px;
+  vertical-align: middle;
 }
-#turtle-image{
-  display:inline-block;
+
+#turtle-image {
+  display: inline-block;
   vertical-align: middle;
   //float:left;
-  
 }
 
-#lesson-side-header{
+#lesson-side-header {
   color: colors.$text-white;
-  padding-left: 5%;
-  padding-bottom: 2.5%;
-  text-align:left;
   font-size: 30px;
+  padding-bottom: 2.5%;
+  padding-left: 5%;
+  text-align: left;
 }
 
-#lesson-side-body{
+#lesson-side-body {
   color: colors.$text-white;
-  padding-top: 2.5%;
+  font-size: 18px;
   padding-left: 5%;
   padding-right: 5%;
-  text-align:left;
-  font-size: 18px;
+  padding-top: 2.5%;
+  text-align: left;
 }
