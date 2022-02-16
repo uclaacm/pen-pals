@@ -1,19 +1,19 @@
 @mixin font-styles {
-    font-family: Quattrocento Sans, sans-serif;
-    font-size: calc(16px + 1vw);
-    font-style: normal;
-    font-weight: bold;
+  font-family: Quattrocento Sans, sans-serif;
+  font-size: calc(16px + 1vw);
+  font-style: normal;
+  font-weight: bold;
 }
 
 .axis-container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    max-width: 100%;
-    width: calc(350px + 1vw)
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100%;
+  width: calc(350px + 1vw);
 }
 
 .axis-img {
-    max-width: 80%;
+  max-width: 80%;
 }
