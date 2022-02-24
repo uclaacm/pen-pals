@@ -8,8 +8,8 @@ function LessonSide(): JSX.Element {
     <section id="lesson-side-container">
       {/* don't change this next line */}
       <div id="turtle-logo">
-        <img src={penPalsLogo} id="turtle-image" />
-        <div id="turtle-text">Pen Pals</div>
+        <img src={penPalsLogo} alt="Small turtle, part of the TeachLA logo" id="turtle-image" />
+        <div id="turtle-logo-text">Pen Pals</div>
       </div>
       <div id="lesson-side-header">Positioning in Computers</div>
       <div id="lesson-side-body">
@@ -26,7 +26,7 @@ function LessonSide(): JSX.Element {
         number means you move left. And when moving up and down with the second
         number, a positive number means you move up and a negative means down.
       </div>
-      <img src={encouragingTurtle} />
+      <img src={encouragingTurtle} alt='Turtle saying "You can do it!"' id="encouraging-turtle"/>
       <LevelSelector />
     </section>
   );
