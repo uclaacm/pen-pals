@@ -13,6 +13,7 @@
   overflow-y: auto;
   padding: 20px;
   width: 40%;
+  overflow-y: auto;
 }
 
 #turtle-logo {
@@ -28,6 +29,7 @@
   font-size: 48px;
   padding-left: 20px;
   vertical-align: middle;
+  font-family: "PT Sans";
 }
 
 #turtle-image {
@@ -43,6 +45,7 @@
   padding-bottom: 2.5%;
   padding-left: 5%;
   text-align: left;
+  font-family: "PT Sans";
 }
 
 
@@ -54,15 +57,16 @@
   padding-right: 5%;
   padding-top: 2.5%;
   text-align: left;
+  font-family: "PT Sans";
 }
 
 #encouraging-turtle{
+  padding: 5%;
   align-items: flex-end0;
   display: flex;
   flex-shrink: 5;
   max-width:400px;
   min-width: 100px;
-  padding: 5%;
   width: calc(35vw);
 }
 
