@@ -6,7 +6,6 @@ import LevelSelector from './LevelSelector';
 function LessonSide(): JSX.Element {
   return (
     <section id="lesson-side-container">
-      {/* don't change this next line */}
       <div id="turtle-logo">
         <img
           src={penPalsLogo}
@@ -35,7 +34,9 @@ function LessonSide(): JSX.Element {
         alt='Turtle saying "You can do it!"'
         id="encouraging-turtle"
       />
-      <LevelSelector />
+
+      {/* don't change this next line */}
+      <LevelSelector numLevels={5} currentLevel={2} maxLevelReached={4} />
     </section>
   );
 }
