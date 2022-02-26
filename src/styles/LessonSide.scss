@@ -10,6 +10,7 @@
 #lesson-side-container {
   background-color: colors.$primary-green;
   height: 100%;
+  padding: 20px;
   width: 40%;
   overflow-y: auto;
 }
@@ -70,6 +71,62 @@
   align-items: flex-end;
   display: flex;
   // height: 85%;
+  justify-content: center;
+  width: 100%;
+}
+
+.level-selector {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 5;
+  justify-content: center;
+  margin: 7px calc(4px + 1vw);
+  width: 70%;
+}
+
+.level-button {
+  @include font-styles;
+  align-items: center;
+
+  background-color: colors.$primary-green;
+  border: 2px solid colors.$bg-white;
+
+  border-radius: 50%;
+  color: colors.$text-white;
+  display: flex;
+  flex-shrink: 0;
+  height: calc(24px + 1vw);
+  justify-content: center;
+  line-height: calc(24px + 1vw);
+  max-width: 45px;
+  vertical-align: middle;
+  width: calc(24px + 1vw);
+}
+
+.level-button.current-level {
+  background-color: colors.$bg-white;
+  color: colors.$primary-green;
+}
+
+.level-connector {
+  background-color: colors.$bg-white;
+  border-color: colors.$bg-white;
+  border-style: solid;
+  border-width: 2px 0;
+  flex-shrink: 5;
+  height: 0;
+  max-width: 45px;
+  min-width: 10px;
+  width: calc(35px + 0.5vw);
+}
+
+// LevelSelector
+
+.selector-box {
+  align-items: flex-end;
+  display: flex;
+  height: 85%;
   justify-content: center;
   width: 100%;
 }

@@ -6,7 +6,6 @@ import LevelSelector from './LevelSelector';
 function LessonSide(): JSX.Element {
   return (
     <section id="lesson-side-container">
-      {/* don't change this next line */}
       <div id="turtle-logo">
         <img src={penPalsLogo} alt="Small turtle, part of the TeachLA logo" id="turtle-image" />
         <div id="turtle-logo-text">Pen Pals</div>
@@ -27,6 +26,7 @@ function LessonSide(): JSX.Element {
         number, a positive number means you move up and a negative means down.
       </div>
       <img src={encouragingTurtle} alt='Turtle saying "You can do it!"' id="encouraging-turtle"/>
+      {/* don't change this next line */}
       <LevelSelector numLevels={5} currentLevel={2} maxLevelReached={4} />
     </section>
   );

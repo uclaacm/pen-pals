@@ -7,6 +7,12 @@
 }
 
 @font-face {
+  font-family: 'Cascadia Code';
+  src: local('Cascadia Code'),
+    url('../assets/CascadiaCode.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'Westwood Sans';
   src: url('../assets/WestwoodSans-Regular.ttf') format('truetype');
 }
