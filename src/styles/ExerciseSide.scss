@@ -13,16 +13,16 @@ body {
   level {
     color: white;
     font-size: 1.875rem;
-    padding: 10px 10px;
     margin-left: 10px;
+    padding: 10px;
   }
   
   button {
+    background-color: green;
+    border: 1px solid #e1e4e8;
+    border-radius: 10px;
     color: white;
     //padding: 3px 10px;
     font-size: 1.5rem;
-    border-radius: 10px;
-    border: 1px solid #e1e4e8;
-    background-color: green;
   }
 }
