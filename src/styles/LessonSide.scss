@@ -3,8 +3,8 @@
 #lesson-side-container {
   background-color: colors.$primary-green;
   height: 100%;
-  width: 40%;
   overflow-y: auto;
+  width: 40%;
 }
 
 #turtle-logo {
@@ -16,10 +16,10 @@
 
 #turtle-logo-text {
   display: inline-block;
-  font-size: 48px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 3.5em;
   padding-left: 20px;
   vertical-align: middle;
-  font-family: "PT Sans";
 }
 
 #turtle-image {
@@ -30,30 +30,29 @@
 
 #lesson-side-header {
   color: colors.$text-white;
-  font-size: 30px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.5em;
   padding-bottom: 2.5%;
   padding-left: 5%;
   text-align: left;
-  font-family: "PT Sans";
 }
-
 
 #lesson-side-body {
   color: colors.$text-white;
-  font-size: 14px;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 1em;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2.5%;
   text-align: left;
-  font-family: "PT Sans";
 }
 
-#encouraging-turtle{
-  padding: 5%;
-  align-items: flex-end0;
+#encouraging-turtle {
+  align-items: flex-end;
   display: flex;
   flex-shrink: 5;
-  max-width:400px;
+  max-width: 400px;
   min-width: 100px;
+  padding: 5%;
   width: calc(35vw);
 }
