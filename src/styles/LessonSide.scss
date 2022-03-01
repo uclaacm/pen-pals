@@ -10,8 +10,7 @@
 #lesson-side-container {
   background-color: colors.$primary-green;
   height: 100%;
-  overflow-y: auto;
-  padding: 20px;
+  overflow-y: scroll;
   width: 40%;
 }
 
@@ -65,12 +64,16 @@
   width: calc(35vw);
 }
 
+#footer-space {
+  height: 8vh;
+}
+
 // LevelSelector
 
 .selector-box {
   align-items: flex-end;
   display: flex;
-  height:auto;
+  height: auto;
   justify-content: center;
   width: 100%;
 }
