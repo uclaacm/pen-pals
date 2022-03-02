@@ -6,8 +6,7 @@ import LevelSelector from './LevelSelector';
 function LessonSide(): JSX.Element {
   return (
     <section id="lesson-side-container">
-      <div id="flex-div">
-        <div id="top-stuff">
+        <div>
           <div id="turtle-logo">
             <img
               src={penPalsLogo}
@@ -32,7 +31,7 @@ function LessonSide(): JSX.Element {
             number, a positive number means you move up and a negative means down.
           </div>
         </div>
-        <div id="bottom-stuff">
+        <div>
           <img
             src={encouragingTurtle}
             alt='Turtle saying "You can do it!"'
@@ -41,10 +40,9 @@ function LessonSide(): JSX.Element {
 
           {/* don't change this next line */}
           <LevelSelector numLevels={5} currentLevel={2} maxLevelReached={4} />
+        <div id="footer-space"/>
         </div>
-      </div>
-      <div id="footer-space" />
-      </section>
+    </section>
 
   );
 }
