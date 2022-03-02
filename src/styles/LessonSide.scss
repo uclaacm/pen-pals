@@ -11,8 +11,12 @@
   background-color: colors.$primary-green;
   height: 100%;
   overflow-y: auto;
-  padding: 20px;
   width: 40%;
+}
+#flex-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #turtle-logo {
