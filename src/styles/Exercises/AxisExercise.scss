@@ -6,45 +6,45 @@
 }
 
 .axis-container {
-  max-width: 100%;
-  width: 70%;
-  margin: 2%;
-  height: calc(150px + 1vw);
   align-items: center;
   display: flex;
   flex-direction: row;
+  height: calc(150px + 1vw);
   justify-content: center;
+  margin: 2%;
+  max-width: 100%;
+  width: 70%;
 }
 
 .marker-container {
   @include font-styles;
-  position: absolute;
-  height: 70%;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  height: 70%;
   justify-content: center;
-  align-items: center;
+  position: absolute;
   width: 10%;
 }
 
 .marker {
-  height: 0px;
-  border: calc(1px + 0.1vw) solid #000000;
-  background-color: #000000;
+  background-color: #000;
+  border: calc(1px + 0.1vw) solid #000;
   border-radius: 10%;
+  height: 0;
   transform: rotate(90deg);
 }
 
 .marker-pos {
-  position: absolute;
   bottom: 0%;
+  position: absolute;
   transform: rotate(0deg);
 }
 
 .marker-label {
-  position: absolute;
   font-size: calc(10px + 1vw);
   font-style: italic;
+  position: absolute;
   top: 0%;
   transform: rotate(0deg);
 }
