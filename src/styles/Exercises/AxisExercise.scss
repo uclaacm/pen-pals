@@ -1,19 +1,54 @@
 @mixin font-styles {
-  font-family: Quattrocento Sans, sans-serif;
-  font-size: calc(16px + 1vw);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: calc(10px + 1vw);
   font-style: normal;
   font-weight: bold;
 }
 
 .axis-container {
+  max-width: 100%;
+  width: 70%;
+  margin: 2%;
+  height: calc(150px + 1vw);
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  max-width: 100%;
-  width: calc(350px + 1vw);
+}
+
+.marker-container {
+  @include font-styles;
+  position: absolute;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+
+.marker {
+  height: 0px;
+  border: calc(1px + 0.1vw) solid #000000;
+  background-color: #000000;
+  border-radius: 10%;
+  transform: rotate(90deg);
+}
+
+.marker-pos {
+  position: absolute;
+  bottom: 0%;
+  transform: rotate(0deg);
+}
+
+.marker-label {
+  position: absolute;
+  font-size: calc(10px + 1vw);
+  font-style: italic;
+  top: 0%;
+  transform: rotate(0deg);
 }
 
 .axis-img {
-  max-width: 80%;
+  width: 100%;
 }
