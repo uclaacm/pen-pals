@@ -3,7 +3,7 @@ import Axis from '../../../assets/Exercises/axis.svg';
 
 interface AxisExerciseProps {
   orientation: string;
-  markers: Number[];
+  markers: number[];
   labels: string[];
 }
 
@@ -19,21 +19,21 @@ function AxisExercise({ orientation, markers, labels }: AxisExerciseProps): JSX.
           const leftPosition = 45 + (markerSpacing * pos);
           return (
             <div className="marker-container" style={{
-                left: `${leftPosition}%`
+              left: `${leftPosition}%`
             }}>
               <div className = "marker-label" style={{
-                  transform: `rotate(${orientation === 'horizontal' ? '0deg' : '270deg'})`
+                transform: `rotate(${orientation === 'horizontal' ? '0deg' : '270deg'})`
               }}>
                 {labels[idx]}
               </div>
-              <div 
-                className = "marker" 
+              <div
+                className = "marker"
                 style = {{
                   width: `calc(${(pos == 0 ? 20 : 8)}px + 1vw)`
                 }}
               />
               <div className="marker-pos" style={{
-                  transform: `rotate(${orientation === 'horizontal' ? '0deg' : '270deg'})`
+                transform: `rotate(${orientation === 'horizontal' ? '0deg' : '270deg'})`
               }}>
                 {pos}
               </div>
