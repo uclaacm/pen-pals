@@ -18,9 +18,11 @@ function AxisExercise({ orientation, markers, labels }: AxisExerciseProps): JSX.
         markers.map((pos, idx) => {
           const leftPosition = 45 + (markerSpacing * pos);
           return (
-            <div className="marker-container" style={{
-              left: `${leftPosition}%`
-            }}>
+            <div
+              className="marker-container" 
+              style={{left: `${leftPosition}%`}}
+              key={pos}
+            >
               <div className = "marker-label" style={{
                 transform: `rotate(${orientation === 'horizontal' ? '0deg' : '270deg'})`
               }}>
