@@ -11,7 +11,14 @@ function ExerciseSide(): JSX.Element {
   return (
     <section id="exercise-side-container">
 
-      <UnitCircleExercise turtleAngle={10} labelOne={labelOne} labelTwo={labelTwo} labelThree={labelThree} labelFour={labelFour} labelFive={labelFive}/>
+      <UnitCircleExercise 
+        turtleAngle={10} 
+        labelOne={labelOne} 
+        labelTwo={labelTwo} 
+        labelThree={labelThree} 
+        labelFour={labelFour} 
+        labelFive={labelFive}
+      />
 
     </section>
   );
