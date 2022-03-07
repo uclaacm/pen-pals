@@ -5,3 +5,35 @@
   flex-grow: 1;
   height: 100%;
 }
+
+.unit-circle {
+  position: absolute;
+  left: 900px;
+  top: 100px;
+  z-index: 0;
+}
+
+.unit-circle-markers {
+  position: absolute;
+  left: 870px;
+  top: 70px;
+  z-index: 1;
+}
+
+.unit-circle-turtle {
+  position: absolute;
+  left: 1052px;
+  top: 250px;
+  z-index: 2;
+}
+
+.unit-circle-unknown-label {
+  font-weight: 700;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.unit-circle-known-label {
+  font-weight: 700;
+  font-size: 20px;
+}
