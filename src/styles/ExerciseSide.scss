@@ -7,33 +7,33 @@
 }
 
 .unit-circle {
-  position: absolute;
   left: 900px;
+  position: absolute;
   top: 100px;
   z-index: 0;
 }
 
 .unit-circle-markers {
-  position: absolute;
   left: 870px;
+  position: absolute;
   top: 70px;
   z-index: 1;
 }
 
 .unit-circle-turtle {
-  position: absolute;
   left: 1052px;
+  position: absolute;
   top: 250px;
   z-index: 2;
 }
 
 .unit-circle-unknown-label {
-  font-weight: 700;
   font-size: 30px;
   font-style: italic;
+  font-weight: 700;
 }
 
 .unit-circle-known-label {
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
 }

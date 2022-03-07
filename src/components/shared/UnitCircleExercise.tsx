@@ -31,22 +31,62 @@ export function UnitCircleExercise({
 }: UnitCircleExerciseProps): JSX.Element {
   return (
     <section id="exercise-side-container">
-      <img className="unit-circle" id="unit-circle" src={UnitCircleBase} alt="unit circle!!" />
+      <img
+        className="unit-circle"
+        id="unit-circle"
+        src={UnitCircleBase}
+        alt="unit circle!!"
+      />
 
-      <img className="unit-circle-markers" id="unit-markers" src={UnitCircleMarkers} alt="unit markers"/>
+      <img
+        className="unit-circle-markers"
+        id="unit-markers"
+        src={UnitCircleMarkers}
+        alt="unit markers"
+      />
 
-      <img className="unit-circle-turtle" id="unit-turtle" src={UnitCircleTurle} alt="unit turtle" style={{transform: `rotate(${turtleAngle}deg)`}}/>
+      <img
+        className="unit-circle-turtle"
+        id="unit-turtle"
+        src={UnitCircleTurle}
+        alt="unit turtle"
+        style={{ transform: `rotate(${turtleAngle}deg)` }}
+      />
 
-      <p className={labelOne.type} style={{ position: 'absolute', left: 920, top: 220 }}>{labelOne.label}</p>
+      <p
+        className={labelOne.type}
+        style={{ position: 'absolute', left: 920, top: 220 }}
+      >
+        {labelOne.label}
+      </p>
 
-      <p className={labelTwo.type} style={{ position: 'absolute', left: 960, top: 130 }}>{labelTwo.label}</p>
+      <p
+        className={labelTwo.type}
+        style={{ position: 'absolute', left: 960, top: 130 }}
+      >
+        {labelTwo.label}
+      </p>
 
-      <p className={labelThree.type} style={{ position: 'absolute', left: 1060, top: 100 }}>{labelThree.label}</p>
+      <p
+        className={labelThree.type}
+        style={{ position: 'absolute', left: 1060, top: 100 }}
+      >
+        {labelThree.label}
+      </p>
 
-      <p className={labelFour.type} style={{ position: 'absolute', left: 1160, top: 130 }}>{labelFour.label}</p>
+      <p
+        className={labelFour.type}
+        style={{ position: 'absolute', left: 1160, top: 130 }}
+      >
+        {labelFour.label}
+      </p>
 
-      <p className={labelFive.type} style={{ position: 'absolute', left: 1190, top: 235 }}>{labelFive.label}</p>
-
+      <p
+        className={labelFive.type}
+        style={{ position: 'absolute', left: 1190, top: 235 }}
+      >
+        {labelFive.label}
+      </p>
     </section>
   );
 }
