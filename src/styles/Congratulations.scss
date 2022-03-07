@@ -1,0 +1,62 @@
+@use '_colors.scss' as colors;
+
+#congratulations-container {
+  background-color: colors.$primary-green;
+  height: 100vh;
+  width: 100vw;
+}
+
+#speech-bubble {
+  position: absolute;
+  width: 80vw;
+  height: 60vh;
+  left: 10vw;
+  top: 20vh;
+}
+
+#header {
+  position: absolute;
+  width: 68.08px;
+  height: 35px;
+  left: 40px;
+  top: 71px;
+}
+
+#dog {
+  position: absolute;
+  width: 15vw;
+  height: 15vh;
+  left: 80vw;
+  top: 90vh;
+}
+
+#cat {
+  position: absolute;
+  width: 15vw;
+  height: 15vh;
+  left: 90vw;
+  top: 90vh;
+}
+
+#encouraging-turtle {
+  position: absolute;
+  width: 15vw;
+  height: 15vh;
+  left: 10vw;
+  top: 80vh;
+}
+
+#congratulations-text {
+  position: absolute;
+  width: 60vw;
+  left: 20vw;
+  top: 27vh;
+
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 79px;
+
+  color: colors.$primary-green;
+}
