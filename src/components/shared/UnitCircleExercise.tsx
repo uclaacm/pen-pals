@@ -1,6 +1,6 @@
 import UnitCircleBase from '../../assets/unit-circle-base.svg';
-import UnitCircleTurle from '../../assets/unit-circle-turtle.svg';
 import UnitCircleMarkers from '../../assets/unit-circle-markers.svg';
+import UnitCircleTurle from '../../assets/unit-circle-turtle.svg';
 
 import '../../styles/ExerciseSide.scss';
 
@@ -35,7 +35,7 @@ export function UnitCircleExercise({
 
       <img className="unit-circle-markers" id="unit-markers" src={UnitCircleMarkers} alt="unit markers"/>
 
-      <img className="unit-circle-turtle" id="unit-turtle" src={UnitCircleTurle} alt="unit turtle" style={{transform: `rotate(${turtleAngle}deg)`}}/> 
+      <img className="unit-circle-turtle" id="unit-turtle" src={UnitCircleTurle} alt="unit turtle" style={{transform: `rotate(${turtleAngle}deg)`}}/>
 
       <p className={labelOne.type} style={{ position: 'absolute', left: 920, top: 220 }}>{labelOne.label}</p>
 

@@ -1,11 +1,11 @@
 import '../../styles/ExerciseSide.scss';
 import {UnitCircleTick, UnitCircleExercise} from './UnitCircleExercise';
 
-let labelOne: UnitCircleTick =({label: 'A', type: "unit-circle-unknown-label"});
-let labelTwo: UnitCircleTick =({label: 'C', type: "unit-circle-unknown-label"});
-let labelThree: UnitCircleTick =({label: '0˚', type: "unit-circle-known-label"});
-let labelFour: UnitCircleTick =({label: 'B', type: "unit-circle-unknown-label"});
-let labelFive: UnitCircleTick =({label: '90˚', type: "unit-circle-known-label"});
+const labelOne: UnitCircleTick =({label: 'A', type: 'unit-circle-unknown-label'});
+const labelTwo: UnitCircleTick =({label: 'C', type: 'unit-circle-unknown-label'});
+const labelThree: UnitCircleTick =({label: '0˚', type: 'unit-circle-known-label'});
+const labelFour: UnitCircleTick =({label: 'B', type: 'unit-circle-unknown-label'});
+const labelFive: UnitCircleTick =({label: '90˚', type: 'unit-circle-known-label'});
 
 function ExerciseSide(): JSX.Element {
   return (
