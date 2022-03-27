@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @font-face {
+  font-family: 'Cascadia Code';
+  src: local('Cascadia Code'),
+    url('../assets/CascadiaCode.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'Westwood Sans';
-  src: local('Westwood Sans'),
-    url('../assets/WestwoodSans-Regular.ttf') format('truetype');
+  src: url('../assets/WestwoodSans-Regular.ttf') format('truetype');
 }
 
 body {
-  font-family: 'Poppins', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'Quattrocento Sans', 'Westwood Sans', 'Helvetica Neue',
+    sans-serif;
   margin: 0;
   text-align: center;
 }
