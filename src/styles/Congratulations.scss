@@ -1,62 +1,114 @@
 @use '_colors.scss' as colors;
 
-#congratulations-container {
+#congratulations-bg {
   background-color: colors.$primary-green;
   height: 100vh;
   width: 100vw;
 }
 
+#congratulations-container {
+  display: flex;
+  background-color: colors.$primary-green;
+  height: 65vmin;
+  width: 100vmin;
+}
+
+#speech-bubble-container {
+  position: absolute;
+  width: 80%;
+  height: 60%;
+  left: 10%;
+  top: 20%;
+}
+
 #speech-bubble {
   position: absolute;
-  width: 80vw;
-  height: 60vh;
-  left: 10vw;
-  top: 20vh;
-}
-
-#header {
-  position: absolute;
-  width: 68.08px;
-  height: 35px;
-  left: 40px;
-  top: 71px;
-}
-
-#dog {
-  position: absolute;
-  width: 15vw;
-  height: 15vh;
-  left: 80vw;
-  top: 90vh;
-}
-
-#cat {
-  position: absolute;
-  width: 15vw;
-  height: 15vh;
-  left: 90vw;
-  top: 90vh;
-}
-
-#encouraging-turtle {
-  position: absolute;
-  width: 15vw;
-  height: 15vh;
-  left: 10vw;
-  top: 80vh;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
 }
 
 #congratulations-text {
   position: absolute;
-  width: 60vw;
-  left: 20vw;
-  top: 27vh;
+  width: 60%;
+  left: 20%;
+  top: 18%;
 
   font-family: PT Sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 79px;
+  font-size: 5vmin;
 
   color: colors.$primary-green;
+}
+
+#encouraging-turtle {
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  left: 0%;
+  top: 100%;
+}
+
+#header {
+  position: absolute;
+  width: 200px;
+  left: 40px;
+  top: 50px;
+}
+#dog-cat-box {
+  position: absolute;
+  //background-color: #344;
+  width: 15%;
+  height: 15%;
+  border-radius: 1%;
+  top: 80%;
+  left: 70%;
+}
+
+#dog-box {
+  position: absolute;
+  background-color: colors.$bg-white;
+  border-radius: 10%;
+  width: 80%;
+  height: 65%;
+  left: 90%;
+}
+
+#cat-box {
+  position: absolute;
+  background-color: colors.$bg-white;
+  border-radius: 10%;
+  width: 80%;
+  height: 65%;
+}
+
+#dog {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  left: 15%;
+}
+
+#cat {
+  position: absolute;
+  width: 60%;
+  height: 90%;
+  left: 18%;
+}
+
+#animals-text {
+  position: absolute;
+  left: 45%;
+  top: -50%;
+
+  font-family: PT Sans;
+  font-size: 3vmin;
+  font-style: normal;
+  line-height: 45px;
+  white-space: nowrap;
+  text-align: center;
+
+  color: colors.$text-white;
 }

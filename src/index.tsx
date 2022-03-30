@@ -2,10 +2,12 @@ import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import './styles/global.scss';
 import App from './components/App';
+import Congratulations from './components/Congratulations';
 
 ReactDOM.render(
   <StrictMode>
-    <App />
+
+    <Congratulations />
   </StrictMode>,
   document.getElementById('root')
 );
