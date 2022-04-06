@@ -22,7 +22,7 @@ function AxisExercise({
     <div
       className="axis-container"
       style={{
-        transform: `rotate(${orientation === 'horizontal' ? '0deg' : '90deg'})`,  // axis orientation
+        transform: `rotate(${orientation === 'horizontal' ? '0deg' : '90deg'})`, // axis orientation
       }}
     >
       <img
@@ -32,15 +32,16 @@ function AxisExercise({
         style={{ left: `${turtleLeftPos}%` }}
       />
       <img className="axis-img" src={Axis} alt="single-axis" />
-      {markers.map((pos, idx) => {  // map markers and corresponding labels onto axis
-        const leftPosition = 45 + markerSpacing * pos;  // calculate posiition for marker
+      {markers.map((pos, idx) => {
+        // map markers and corresponding labels onto axis
+        const leftPosition = 45 + markerSpacing * pos; // calculate posiition for marker
         return (
           <div
             className="marker-container"
             style={{ left: `${leftPosition}%` }}
             key={pos}
           >
-            <div  // marker label (A, B, C, ...)
+            <div // marker label (A, B, C, ...)
               className="marker-label"
               style={{
                 transform: `rotate(${
@@ -56,7 +57,7 @@ function AxisExercise({
                 width: `calc(${pos == 0 ? 20 : 8}px + 1vw)`,
               }}
             />
-            <div  // marker position
+            <div // marker position
               className="marker-pos"
               style={{
                 transform: `rotate(${
