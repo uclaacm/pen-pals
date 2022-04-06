@@ -25,10 +25,10 @@ function AxisExercise({
         transform: `rotate(${orientation === 'horizontal' ? '0deg' : '90deg'})`,  // axis orientation
       }}
     >
-      <img 
-        className="turtle-img" 
-        src={Turtle} 
-        alt="turtle-icon" 
+      <img
+        className="turtle-img"
+        src={Turtle}
+        alt="turtle-icon"
         style={{ left: `${turtleLeftPos}%` }}
       />
       <img className="axis-img" src={Axis} alt="single-axis" />
