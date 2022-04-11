@@ -33,12 +33,13 @@ function AxisExercise({
             style={{ left: `${leftPosition}%` }}
             key={pos}
           >
-            { // render turtle at appropriate position
+            {
+              // render turtle at appropriate position
               pos === turtlePosition ? (
-                <img 
-                  className="turtle-img" 
-                  src={Turtle} 
-                  alt="turtle-icon" 
+                <img
+                  className="turtle-img"
+                  src={Turtle}
+                  alt="turtle-icon"
                   style={{
                     transform: `rotate(${
                       orientation === 'horizontal' ? '0deg' : '270deg'
@@ -60,7 +61,7 @@ function AxisExercise({
             <div // marker line
               className="marker"
               style={{
-                width: `calc(${pos == 0 ? 20 : 8}px + 1vw)`,  // making markers larger or smaller
+                width: `calc(${pos == 0 ? 20 : 8}px + 1vw)`, // making markers larger or smaller
               }}
             />
             <div // marker position
@@ -69,8 +70,8 @@ function AxisExercise({
                 transform: `rotate(${
                   orientation === 'horizontal' ? '0deg' : '270deg'
                 })`,
-                top: `${pos === 0 ? 90 : 75}%`,         // shifting 0 downwards
-                fontSize: `${pos === 0 ? 2 : 1.5}rem`,  // sizing fonts for numbers
+                top: `${pos === 0 ? 90 : 75}%`, // shifting 0 downwards
+                fontSize: `${pos === 0 ? 2 : 1.5}rem`, // sizing fonts for numbers
               }}
             >
               {pos}
