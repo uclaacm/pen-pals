@@ -10,7 +10,7 @@ function ExerciseSide(): JSX.Element {
           orientation="horizontal"
           markers={[-2, -1, 0, 1, 2]}
           labels={['A', '', '', 'B', 'C']}
-          turtlePosition={0}
+          turtlePosition={1}
         />
       </div>
     </section>
