@@ -33,14 +33,9 @@ function AxisExercise({
             style={{ left: `${leftPosition}%` }}
             key={pos}
           >
-            {pos === turtlePosition ? 
-                <img
-                  className="turtle-img"
-                  src={Turtle}
-                  alt="turtle-icon"
-                />
-              : null
-            }
+            {pos === turtlePosition ? (
+              <img className="turtle-img" src={Turtle} alt="turtle-icon" />
+            ) : null}
             <div // marker label (A, B, C, ...)
               className="marker-label"
               style={{
