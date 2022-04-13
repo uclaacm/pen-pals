@@ -1,4 +1,5 @@
 @use '_colors.scss' as colors;
+@use '_vars.scss' as vars;
 
 @mixin font-styles {
   font-family: Quattrocento Sans, sans-serif;
@@ -30,8 +31,8 @@
 #turtle-logo-text {
   display: inline-block;
   font-family: 'PT Sans', sans-serif;
-  font-size: 3.5em;
-  padding-left: 2.2vw;
+  font-size: vars.$logo-font-size;
+  padding-left: vars.$lesson-side-left-padding;
   vertical-align: middle;
 }
 
@@ -44,18 +45,18 @@
 #lesson-side-header {
   color: colors.$text-white;
   font-family: 'PT Sans', sans-serif;
-  font-size: 1.5em;
+  font-size: vars.$header-font-size;
   padding-bottom: 2.5vh;
-  padding-left: 2.2vw;
+  padding-left: vars.$lesson-side-left-padding;
   text-align: left;
 }
 
 #lesson-side-body {
   color: colors.$text-white;
   font-family: 'Quattrocento Sans', sans-serif;
-  font-size: 1em;
-  padding-left: 2.2vw;
-  padding-right: 2.2vw;
+  font-size: vars.$body-font-size;
+  padding-left: vars.$lesson-side-left-padding;
+  padding-right: vars.$lesson-side-left-padding;
   padding-top: 2.5vh;
   text-align: left;
 }
