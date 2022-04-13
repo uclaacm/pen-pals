@@ -1,7 +1,28 @@
 @use '_colors.scss' as colors;
 
+
+body {
+	font-family: "Quattrocento Sans", sans-serif;
+}
+
 #exercise-side-container {
   background-color: colors.$bg-white;
   flex-grow: 1;
   height: 100%;
+
+  level {
+    color: white;
+    font-size: 1.875rem;
+    margin-left: 10px;
+    padding: 10px;
+  }
+  
+  button {
+    background-color: green;
+    border: 1px solid #e1e4e8;
+    border-radius: 10px;
+    color: white;
+    //padding: 3px 10px;
+    font-size: 1.5rem;
+  }
 }
