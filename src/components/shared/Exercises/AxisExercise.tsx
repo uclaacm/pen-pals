@@ -64,18 +64,22 @@ function AxisExercise({
                 width: `calc(${pos == 0 ? 20 : 8}px + 1vw)`, // making markers larger or smaller
               }}
             />
-            <div // marker position
-              className="marker-pos"
-              style={{
-                transform: `rotate(${
-                  orientation === 'horizontal' ? '0deg' : '270deg'
-                })`,
-                top: `${pos === 0 ? 90 : 75}%`, // shifting 0 downwards
-                fontSize: `${pos === 0 ? 2 : 1.5}rem`, // sizing fonts for numbers
-              }}
-            >
-              {pos}
-            </div>
+            {
+              labels[idx] === '' ? (
+                <div // marker position
+                  className="marker-pos"
+                  style={{
+                    transform: `rotate(${
+                      orientation === 'horizontal' ? '0deg' : '270deg'
+                    })`,
+                    top: `${pos === 0 ? 90 : 75}%`, // shifting 0 downwards
+                    fontSize: `${pos === 0 ? 2 : 1.5}rem`, // sizing fonts for numbers
+                  }}
+                >
+                  {pos}
+                </div>
+              ) : null
+            }
           </div>
         );
       })}
