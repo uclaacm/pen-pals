@@ -1,4 +1,5 @@
 @use '_colors.scss' as colors;
+@use '_vars.scss' as vars;
 
 @mixin font-styles {
   font-family: Quattrocento Sans, sans-serif;
@@ -9,9 +10,66 @@
 
 #lesson-side-container {
   background-color: colors.$primary-green;
-  height: 100%;
-  padding: 20px;
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  overflow-y: auto;
+  width: 40vw;
+}
+
+#turtle-logo {
+  color: colors.$text-white;
+  padding-bottom: 2.5vh;
+  padding-left: 2vw;
+  padding-top: 2vh;
+
+  //align-items: flex-start;
+  text-align: left;
+}
+
+#turtle-logo-text {
+  display: inline-block;
+  font-family: 'PT Sans', sans-serif;
+  font-size: vars.$logo-font-size;
+  padding-left: vars.$lesson-side-left-padding;
+  vertical-align: middle;
+}
+
+#turtle-image {
+  display: inline-block;
+  vertical-align: middle;
+  //float:left;
+}
+
+#lesson-side-header {
+  color: colors.$text-white;
+  font-family: 'PT Sans', sans-serif;
+  font-size: vars.$header-font-size;
+  padding-bottom: 2.5vh;
+  padding-left: vars.$lesson-side-left-padding;
+  text-align: left;
+}
+
+#lesson-side-body {
+  color: colors.$text-white;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: vars.$body-font-size;
+  padding-left: vars.$lesson-side-left-padding;
+  padding-right: vars.$lesson-side-left-padding;
+  padding-top: 2.5vh;
+  text-align: left;
+}
+
+#encouraging-turtle {
+  align-items: flex-end;
+  display: flex;
+  padding: 5vh;
+  width: calc(100px + 15vw);
+}
+
+#footer-space {
+  height: 8vh;
 }
 
 // LevelSelector
@@ -19,8 +77,9 @@
 .selector-box {
   align-items: flex-end;
   display: flex;
-  height: 85%;
+  height: auto;
   justify-content: center;
+  padding-bottom: 1vh;
   width: 100%;
 }
 

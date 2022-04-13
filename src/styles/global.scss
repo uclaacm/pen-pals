@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+  font-family: 'Cascadia Code';
+  src: local('Cascadia Code'),
+    url('../assets/CascadiaCode.woff2') format('woff2');
+}
 
 @font-face {
   font-family: 'Cascadia Code';
