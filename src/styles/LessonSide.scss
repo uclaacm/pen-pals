@@ -19,9 +19,10 @@
 
 #turtle-logo {
   color: colors.$text-white;
+  padding-bottom: 2.5vh;
   padding-left: 2vw;
   padding-top: 2vh;
-  padding-bottom: 2.5vh;
+
   //align-items: flex-start;
   text-align: left;
 }
@@ -63,7 +64,7 @@
   align-items: flex-end;
   display: flex;
   padding: 5vh;
-  width: calc(100px + 15vw) 
+  width: calc(100px + 15vw);
 }
 
 #footer-space {
