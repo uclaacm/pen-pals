@@ -1,0 +1,57 @@
+.axis-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: calc(150px + 1vw);
+  justify-content: center;
+  margin: 2%;
+  max-width: 100%;
+  width: 70%;
+}
+
+.turtle-img {
+  bottom: 120%;
+  position: absolute;
+  width: calc(1vw + 50px);
+}
+
+.marker-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  height: 70%;
+  justify-content: center;
+  position: absolute;
+  width: 10%;
+}
+
+.marker {
+  background-color: #000;
+  border: calc(1px + 0.1vw) solid #000;
+  border-radius: 10%;
+  height: 0;
+  transform: rotate(90deg);
+}
+
+.marker-pos {
+  bottom: 0%;
+  font-family: Cascadia Code, sans-serif;
+  font-weight: regular;
+  position: absolute;
+  transform: rotate(0deg);
+}
+
+.marker-label {
+  font-family: Quattrocento Sans, sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+  position: absolute;
+  top: 0%;
+  transform: rotate(0deg);
+}
+
+.axis-img {
+  width: 100%;
+}
