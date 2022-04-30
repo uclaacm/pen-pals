@@ -1,5 +1,5 @@
 import TeachLALogo from '../../../assets/teach-la-logo.svg';
-import WhiteHeart from "../../../assets/whiteHeart.svg"
+import WhiteHeart from '../../../assets/whiteHeart.svg';
 import '../../../styles/Footer.scss';
 
 function Footer(): JSX.Element {

@@ -10,7 +10,6 @@ function App(): JSX.Element {
         <LessonSide />
         <ExerciseSide />
       </main>
-      <Footer />
     </div>
   );
 }
