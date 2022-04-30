@@ -6,8 +6,10 @@ function Footer(): JSX.Element {
   return (
     <div id="footer">
       <h3>
-        made with {' '}<img id="tla-logo" src={WhiteHeart} alt="A white heart"/> {'  '}
-        by{' '}
+        made with{'  '}
+        <img id="tla-logo" src={WhiteHeart} alt="A white heart" />
+        {'  '}
+        by
         <a
           href="https://teachla.uclaacm.com"
           target="_blank"
