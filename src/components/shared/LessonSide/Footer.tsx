@@ -7,8 +7,8 @@ function Footer(): JSX.Element {
     <div id="footer">
       <h3>
         made with{'  '}
-        <img id="tla-logo" src={WhiteHeart} alt="A white heart" />
-        {'  '}
+        <img id="white-heart" src={WhiteHeart} alt="A white heart" />
+        {'   '}
         by
         <a
           href="https://teachla.uclaacm.com"
@@ -16,7 +16,7 @@ function Footer(): JSX.Element {
           rel="noopener noreferrer"
           id="footer-link"
         >
-          {' '}
+          {'  '}
           <img id="tla-logo" src={TeachLALogo} alt="teach la logo!" />
           acm.teachLA
         </a>

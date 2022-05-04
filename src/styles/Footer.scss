@@ -5,7 +5,7 @@
   background-color: colors.$footer-green;
   bottom: 0;
   display: flex;
-  font-family: 'Westwood Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   height: 8vh;
   justify-content: center;
   width: 100%;
@@ -30,4 +30,9 @@
 #tla-logo {
   height: 1.66em;
   vertical-align: -0.5em;
+}
+
+#white-heart{
+  height: 1.15em;
+  vertical-align: -0.2em;
 }
