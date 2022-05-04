@@ -1,6 +1,7 @@
 import '../../../styles/LessonSide.scss';
 import encouragingTurtle from '../../../assets/EncouragingTurtle.svg'; // <3 encouraging turtle
 import penPalsLogo from '../../../assets/turtleLogo.svg';
+import Footer from './Footer';
 import LevelSelector from './LevelSelector';
 
 function LessonSide(): JSX.Element {
@@ -41,8 +42,8 @@ function LessonSide(): JSX.Element {
 
         {/* don't change this next line */}
         <LevelSelector numLevels={5} currentLevel={2} maxLevelReached={4} />
-        <div id="footer-space" />
       </div>
+      <Footer />
     </section>
   );
 }
