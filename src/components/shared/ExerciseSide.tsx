@@ -14,7 +14,7 @@ function ExerciseSide(): JSX.Element {
 
       </div>
 
-    
+
       <button id = "button"> Check </button>
 
     </section>
