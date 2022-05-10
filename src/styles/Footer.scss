@@ -1,17 +1,26 @@
+@use '_colors.scss' as colors;
+
 #footer {
   align-items: center;
-  background-color: white;
+  background-color: colors.$footer-green;
   bottom: 0;
   display: flex;
-  font-family: 'Westwood Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   height: 8vh;
   justify-content: center;
-  position: fixed;
   width: 100%;
   z-index: 99;
 }
 
 #footer h3 {
+  color: white;
+  margin: 0;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+#footer a {
+  color: white;
   margin: 0;
 }
 
@@ -23,4 +32,9 @@
 #tla-logo {
   height: 1.66em;
   vertical-align: -0.5em;
+}
+
+#white-heart {
+  height: 1.15em;
+  vertical-align: -0.2em;
 }
