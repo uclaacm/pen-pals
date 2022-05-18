@@ -14,11 +14,13 @@
 }
 
 #speech-bubble-container {
-  position: absolute;
+  position: relative;
+  display: flex;
+  justify-content: center;
   width: 80%;
   height: 60%;
-  left: 10%;
-  top: 20%;
+  //left: 10%;
+  //top: 20%;
 }
 
 #speech-bubble {
