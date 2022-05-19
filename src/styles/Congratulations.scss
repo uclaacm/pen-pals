@@ -9,8 +9,9 @@
 #congratulations-container {
   display: flex;
   background-color: colors.$primary-green;
-  height: 65vmin;
-  width: 100vmin;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 #speech-bubble-container {
@@ -19,8 +20,7 @@
   justify-content: center;
   width: 80%;
   height: 60%;
-  //left: 10%;
-  //top: 20%;
+  top: 15%;
 }
 
 #speech-bubble {
@@ -55,7 +55,6 @@
 
 #header {
   position: absolute;
-  width: 200px;
   left: 40px;
   top: 50px;
 }
@@ -72,7 +71,7 @@
 #dog-box {
   position: absolute;
   background-color: colors.$bg-white;
-  border-radius: 10%;
+  border-radius: 12px;
   width: 80%;
   height: 65%;
   left: 90%;
@@ -81,7 +80,7 @@
 #cat-box {
   position: absolute;
   background-color: colors.$bg-white;
-  border-radius: 10%;
+  border-radius: 12px;
   width: 80%;
   height: 65%;
 }
