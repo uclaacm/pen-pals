@@ -1,0 +1,66 @@
+@use '../_colors.scss' as colors;
+@use '../_vars.scss' as vars;
+
+@mixin font-styles {
+  font-family: Quattrocento Sans, sans-serif;
+  font-size: calc(16px + 1vw);
+  font-style: normal;
+  font-weight: bold;
+}
+
+.axinput-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'PT Sans', sans-serif;
+  text-align: left;
+}
+
+.axinput-wrongbox {
+  padding-bottom: 5vw;
+}
+
+#question-container {
+  align-items: baseline;
+  display: flex;
+}
+
+#check-question {
+  @include font-styles();
+  font-style: italic;
+  margin-bottom: 2vh;
+}
+
+#check-box {
+  background: linear-gradient(#000, #000) center bottom 0 / calc(100% - 10px)
+    2px no-repeat;
+  background-color: colors.$bg-white;
+  border: 0;
+  font-family: Cascadia Code, sans-serif;
+  font-size: calc(16px + 1vw);
+  height: 18pt;
+  margin-left: 2vh;
+  outline: none;
+  size: 64pt;
+  text-align: center;
+  width: calc(1.5 * (16px + 1vw));
+}
+
+#check-box:focus {
+  background-color: colors.$input-grey;
+}
+
+#check-button {
+  @include font-styles();
+  background-color: colors.$primary-green;
+  border: none;
+  border-radius: 10px;
+  color: colors.$text-white;
+  margin-bottom: 2vh;
+  padding: 1.25vw 2.5vw;
+}
+
+#check-wrong {
+  @include font-styles();
+  color: red;
+}

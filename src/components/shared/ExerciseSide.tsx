@@ -1,7 +1,7 @@
 import '../../styles/ExerciseSide.scss';
 import AxisExercise from './Exercises/AxisExercise';
+import AxisInput from './Exercises/AxisInputs';
 ('./Exercises/AxisExercise');
-import UnitCircleExercise from './Exercises/UnitCircleExercise';
 
 function ExerciseSide(): JSX.Element {
   return (
@@ -13,10 +13,16 @@ function ExerciseSide(): JSX.Element {
           labels={['A', '', '', 'B', 'C']}
           turtlePosition={1}
         />
-        <UnitCircleExercise
-          turtleAngle={0}
-          markers={['0', '', '', '', '']}
-          labels={['', 'A', 'B', 'E', 'G']}
+
+        <AxisInput
+          questionLabels={[
+            ['a', 'b', 'c'],
+            ['e', 'f'],
+          ]}
+          answers={[
+            [2, -2, -1],
+            [4, 5],
+          ]}
         />
       </div>
     </section>
