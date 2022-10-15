@@ -11,7 +11,7 @@ interface TurtleProps {
 }
 
 interface TurtleData {
-  [key: string]: [fig: any, altText: string];
+  [key: string]: [fig: string, altText: string];
 }
 
 const turtleIDs: TurtleData = {
