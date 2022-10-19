@@ -35,12 +35,7 @@ function LessonSide(): JSX.Element {
         </div>
       </div>
       <div>
-        <img
-          src={encouragingTurtle}
-          alt='Turtle saying "You can do it!"'
-          id="encouraging-turtle"
-        />
-        <Turtle turtleID='you-can-do-it' />
+        <Turtle turtleID="your-genius" />
 
         {/* don't change this next line */}
         <LevelSelector numLevels={5} currentLevel={2} maxLevelReached={4} />
