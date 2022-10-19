@@ -1,5 +1,4 @@
 import '../../../styles/LessonSide.scss';
-import encouragingTurtle from '../../../assets/EncouragingTurtle.svg'; // <3 encouraging turtle
 import penPalsLogo from '../../../assets/turtleLogo.svg';
 import Footer from './Footer';
 import LevelSelector from './LevelSelector';
