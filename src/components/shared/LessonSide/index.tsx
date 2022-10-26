@@ -1,8 +1,8 @@
 import '../../../styles/LessonSide.scss';
-import encouragingTurtle from '../../../assets/EncouragingTurtle.svg'; // <3 encouraging turtle
 import penPalsLogo from '../../../assets/turtleLogo.svg';
 import Footer from './Footer';
 import LevelSelector from './LevelSelector';
+import Turtle from './Turtle';
 
 function LessonSide(): JSX.Element {
   return (
@@ -34,11 +34,7 @@ function LessonSide(): JSX.Element {
         </div>
       </div>
       <div>
-        <img
-          src={encouragingTurtle}
-          alt='Turtle saying "You can do it!"'
-          id="encouraging-turtle"
-        />
+        <Turtle turtleID="your-genius" />
 
         {/* don't change this next line */}
         <LevelSelector numLevels={5} currentLevel={2} maxLevelReached={4} />
