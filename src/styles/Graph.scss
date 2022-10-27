@@ -1,41 +1,23 @@
 .graph-container {
+  width: 300px;
+  height: 100px;
   border: solid 2px #000;
   border-radius: 12px;
-  height: 0;
-  padding-bottom: 22.5%;
   position: absolute;
-  top: 5%;
-  width: 40%;
 }
 
 .grid-line {
-  outline: 1px solid #c2c2c2;
+  background-color: #000;
+  outline: calc(1px + 0.05vw) solid #c2c2c2;
   position: absolute;
-}
 
-.axis-line {
-  outline: 2px solid #31a19b;
-  position: absolute;
-  z-index: 1;
-}
+  &--vertical {
+    @extend .grid-line;
+    width: 0;
+  }
 
-.vertical {
-  height: 100%;
-  width: 0;
-}
-
-.horizontal {
-  height: 0;
-  width: 100%;
-}
-
-.pointer {
-  position: absolute;
-  z-index: 2;
-}
-
-.point {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  &--horizontal {
+    @extend .grid-line;
+    height: 0;
+  }
 }
