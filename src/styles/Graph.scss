@@ -1,0 +1,23 @@
+.graph-container {
+  width: 300px;
+  height: 100px;
+  border: solid 2px #000;
+  border-radius: 12px;
+  position: absolute;
+}
+
+.grid-line {
+  background-color: #000;
+  outline: calc(1px + 0.05vw) solid #c2c2c2;
+  position: absolute;
+
+  &--vertical {
+    @extend .grid-line;
+    width: 0;
+  }
+
+  &--horizontal {
+    @extend .grid-line;
+    height: 0;
+  }
+}
