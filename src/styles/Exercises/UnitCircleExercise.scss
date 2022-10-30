@@ -1,0 +1,15 @@
+.circle-container {
+    display: flex;
+    position: relative;
+    max-width: 100%;
+}
+
+.circle {
+    position: relative;
+}
+
+.turtle {
+    position: absolute;
+    left: calc(0.4 * 100%);
+    bottom: calc(0.15 * 100%);
+}
