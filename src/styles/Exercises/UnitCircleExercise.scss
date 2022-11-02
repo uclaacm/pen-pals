@@ -1,7 +1,8 @@
 .circle-container {
-    display: flex;
+    display: inline-block;
     position: relative;
     max-width: 100%;
+    margin: 10%;
 }
 
 .circle {
@@ -10,6 +11,25 @@
 
 .turtle {
     position: absolute;
-    left: calc(0.4 * 100%);
+    left: calc(0.38 * 100%);
     bottom: calc(0.15 * 100%);
+}
+
+.circle-exercise {
+    position: absolute;
+    font-family: Quattrocento Sans, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.circle-label {
+    position: absolute;
+    font-family: Cascadia Code, sans-serif;
+    font-weight: regular;
+    font-size: 1.5rem;
+}
+
+.circle-cursor {
+    position: absolute;
 }
