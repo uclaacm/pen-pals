@@ -1,35 +1,43 @@
 .circle-container {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
-    margin: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 25% 10% 15%;
+  position: relative;
+  width: calc(550px + 1vw);
 }
 
 .circle {
-    position: relative;
+  position: relative;
+  width: 100%;
 }
 
 .turtle {
-    position: absolute;
-    left: calc(0.38 * 100%);
-    bottom: calc(0.15 * 100%);
+  bottom: calc(0.15 * 100%);
+  left: calc(0.46 * 100%);
+  position: absolute;
+  width: 10%;
 }
 
 .circle-exercise {
-    position: absolute;
-    font-family: Quattrocento Sans, sans-serif;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.5rem;
+  font-family: Quattrocento Sans, sans-serif;
+  font-size: 4.5vh;
+  font-style: italic;
+  font-weight: bold;
+  position: absolute;
 }
 
 .circle-label {
-    position: absolute;
-    font-family: Cascadia Code, sans-serif;
-    font-weight: regular;
-    font-size: 1.5rem;
+  font-family: Cascadia Code, sans-serif;
+  font-size: 4.5vh;
+  font-weight: regular;
+  position: absolute;
 }
 
 .circle-cursor {
-    position: absolute;
+  position: absolute;
+}
+
+.circle-cursor-big {
+  transform: scale(2);
 }
