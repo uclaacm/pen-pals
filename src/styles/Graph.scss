@@ -8,19 +8,23 @@
   width: 40%;
 }
 
-%grid-line {
+.grid-line {
   outline: 1px solid #c2c2c2;
   position: absolute;
 }
 
-.grid-line--vertical {
-  @extend %grid-line;
+.axis-line {
+  outline: 2px solid #31a19b;
+  position: absolute;
+  z-index: 1;
+}
+
+.vertical {
   height: 100%;
   width: 0;
 }
 
-.grid-line--horizontal {
-  @extend %grid-line;
+.horizontal {
   height: 0;
-  width: 100%
+  width: 100%;
 }

@@ -30,7 +30,9 @@ GraphProps): JSX.Element {
           return (
             <div
               key={i}
-              className="grid-line--vertical"
+              className={
+                i == 3 + origin.x ? 'axis-line vertical' : 'grid-line vertical'
+              }
               style={{
                 left: `${verticalLineSpacing * (i + 1)}%`,
               }}
@@ -44,7 +46,11 @@ GraphProps): JSX.Element {
           return (
             <div
               key={i}
-              className="grid-line--horizontal"
+              className={
+                i == 2 - origin.y
+                  ? 'axis-line horizontal'
+                  : 'grid-line horizontal '
+              }
               style={{
                 top: `${horizontalLineSpacing * (i + 0.25)}%`,
               }}
