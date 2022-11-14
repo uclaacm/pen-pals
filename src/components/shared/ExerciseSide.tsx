@@ -12,8 +12,8 @@ function ExerciseSide(): JSX.Element {
           origin={{ x: 0, y: 0 }}
           points={[]}
           labels={[]}
-          cursorPosition={{ x: 1, y: 2 }}
-          cursorOrientation={0}
+          pointerPosition={{ x: 1, y: 1 }}
+          pointerOrientation={45}
         />
 
         {/*<AxisExercise
