@@ -1,11 +1,12 @@
 import '../../styles/Graph.scss';
+import Pointer from '../../assets/Exercises/pointer.svg';
 
 interface GraphProps {
   origin: { x: number; y: number };
   points: { x: number; y: number }[];
   labels: string[];
-  cursorPosition: { x: number; y: number };
-  cursorOrientation: number; //TODO: radians or degrees?
+  pointerPosition: { x: number; y: number };
+  pointerOrientation: number; //TODO: radians or degrees?
 }
 
 function Graph({
@@ -13,14 +14,22 @@ function Graph({
   origin,
   points,
   labels,
-  cursorPosition,
-  cursorOrientation,
+  pointerPosition,
+  pointerOrientation,
 }: /* eslint-enable @typescript-eslint/no-unused-vars */
 GraphProps): JSX.Element {
   const verticalLineCount = 7;
   const horizontalLineCount = 5;
   const verticalLineSpacing = 100 / (verticalLineCount + 1);
   const horizontalLineSpacing = 100 / (horizontalLineCount - 0.5);
+
+  function xPos(lines: number): number {
+    return verticalLineSpacing * lines;
+  }
+
+  function yPos(lines: number): number {
+    return horizontalLineSpacing * lines;
+  }
 
   return (
     <div className="graph-container">
@@ -34,7 +43,7 @@ GraphProps): JSX.Element {
                 i == 3 + origin.x ? 'axis-line vertical' : 'grid-line vertical'
               }
               style={{
-                left: `${verticalLineSpacing * (i + 1)}%`,
+                left: `${xPos(i + 1)}%`,
               }}
             />
           );
@@ -49,14 +58,26 @@ GraphProps): JSX.Element {
               className={
                 i == 2 - origin.y
                   ? 'axis-line horizontal'
-                  : 'grid-line horizontal '
+                  : 'grid-line horizontal'
               }
               style={{
-                top: `${horizontalLineSpacing * (i + 0.25)}%`,
+                top: `${yPos(i + 0.25)}%`,
               }}
             />
           );
         })}
+
+      {
+        <img
+          className="pointer"
+          src={Pointer}
+          style={{
+            transform: `translate(-50%, -50%) rotate(${-pointerOrientation}deg)`,
+            left: `${xPos(4 + origin.x + pointerPosition.x)}%`,
+            top: `${yPos(2 - origin.y - pointerPosition.y + 0.25)}%`,
+          }}
+        />
+      }
     </div>
   );
 }
