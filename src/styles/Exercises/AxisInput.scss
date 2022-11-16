@@ -16,22 +16,23 @@
   text-align: left;
 }
 
-.axinput-wrongbox {
-  padding-bottom: 5vw;
+.axinput-question-box {
+  display: flex;
+  flex-direction: column;
 }
 
-#question-container {
+#axinput-question-container {
   align-items: baseline;
   display: flex;
 }
 
-#check-question {
+#axinput-check-question {
   @include font-styles();
   font-style: italic;
   margin-bottom: 2vh;
 }
 
-#check-box {
+.axinput-check-box {
   background: linear-gradient(#000, #000) center bottom 0 / calc(100% - 10px)
     2px no-repeat;
   background-color: colors.$bg-white;
@@ -46,21 +47,20 @@
   width: calc(1.5 * (16px + 1vw));
 }
 
-#check-box:focus {
+.axinput-check-box:focus {
   background-color: colors.$input-grey;
 }
 
-#check-button {
+#axinput-check-button {
   @include font-styles();
   background-color: colors.$primary-green;
   border: none;
   border-radius: 10px;
   color: colors.$text-white;
-  margin-bottom: 2vh;
   padding: 1.25vw 2.5vw;
 }
 
-#check-wrong {
+#axinput-check-wrong {
   @include font-styles();
   color: red;
 }

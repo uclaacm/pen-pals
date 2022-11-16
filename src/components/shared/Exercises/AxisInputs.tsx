@@ -4,78 +4,53 @@ import '../../../styles/Exercises/AxisInput.scss';
 interface AxisInputProps {
   questionLabels: string[][];
   answers: number[][];
+  setIsComplete: (a: boolean) => void;
 }
 
 interface AxisQuestion {
   label: string;
   answer: number; // Should change to being strings
-  render: boolean;
-  state: any[]; //This sucks lol
+  id: number; //This sucks lol
 }
 
-function AxisInput({ questionLabels, answers }: AxisInputProps): JSX.Element {
-  function MakeQuestion({ label, render, state }: AxisQuestion): JSX.Element {
-    const handleChange = (event: { target: { value: any } }) => {
-      state[1](event.target.value);
+function AxisInput({
+  questionLabels,
+  answers,
+  setIsComplete,
+}: AxisInputProps): JSX.Element {
+  function MakeQuestion({ label, id }: AxisQuestion): JSX.Element {
+    const handleChange = (event: { target: { value: string } }) => {
+      setText(event.target.value, id);
     };
-    if (render) {
-      return (
-        <div id="question-container">
-          <p id="check-question">{label}: </p>
-          <input
-            type="text"
-            id="check-box"
-            onChange={handleChange}
-            value={state[0]}
-          />
-        </div>
-      );
-    } else {
-      return <div></div>;
-    }
+    return (
+      <div id="axinput-question-container">
+        <p id="axinput-check-question">{label}: </p>
+        <input
+          type="text"
+          className="axinput-check-box"
+          onChange={handleChange}
+          value={inputText[id]}
+        />
+      </div>
+    );
   }
 
-  const [counter, setCounter] = useState(0);
-  const [wrong, setWrong] = useState(false);
-  let questions = [];
-  let maxLength = 0;
-  for (let i = 0; i < questionLabels.length; i++) {
-    if (maxLength < questionLabels[i].length) {
-      maxLength = questionLabels.length + 1;
-    }
-  }
-  const typedInput: any[] = [];
-  for (let i = 0; i < maxLength; i++) {
-    const inputState = useState(0);
-    typedInput.push(inputState);
-  }
-  for (let i = 0; i < questionLabels[counter].length; i++) {
-    questions.push({
-      label: questionLabels[counter][i],
-      answer: answers[counter][i],
-      render: true,
-      state: typedInput[i],
-    });
-  }
-  function incCounter() {
-    for (let i = 0; i < typedInput.length; i++) {
-      if (typedInput[i][0] != answers[counter][i]) {
-        alert(answers[i]);
+  function checkAnswer() {
+    // Invoked to check answers and switch to the next question or set the answer wrong
+    for (let i = 0; i < answers[counter].length; i++) {
+      if (parseInt(inputText[i]) != answers[counter][i]) {
         setWrong(true);
         return;
       }
     }
-    setCounter(counter + 1);
-    alert('Hi!');
-    questions = [];
-    for (let i = 0; i < questionLabels[counter].length; i++) {
-      questions.push({
-        label: questionLabels[counter][i],
-        answer: answers[counter][i],
-        render: true,
-        state: typedInput[i],
-      });
+    if (counter == questionLabels.length - 1) {
+      setIsDone(true);
+      setIsComplete(true);
+      return;
     }
+    setCounter(counter + 1);
+    setWrong(false);
+    setInputText(startInputStrings);
   }
 
   function wrongMessage(isWrong: boolean) {
@@ -86,18 +61,46 @@ function AxisInput({ questionLabels, answers }: AxisInputProps): JSX.Element {
     }
   }
 
+  const [counter, setCounter] = useState(0);
+  const [wrong, setWrong] = useState(false);
+  const [isDone, setIsDone] = useState(false);
+  const questions = [];
+  const startInputStrings: string[] = [];
+  for (let i = 0; i < questionLabels[counter].length; i++) {
+    startInputStrings.push('');
+  }
+  const [inputText, setInputText] = useState<string[]>(startInputStrings);
+  function setText(text: string, id: number) {
+    const tempInputStrings = [...inputText];
+    tempInputStrings[id] = text;
+    setInputText(tempInputStrings);
+  }
+
+  if (!isDone) {
+    for (let i = 0; i < questionLabels[counter].length; i++) {
+      questions.push({
+        label: questionLabels[counter][i],
+        answer: answers[counter][i],
+        id: i,
+      });
+    }
+  } else {
+    return <h2>Done!</h2>;
+  }
+
   //console.log(questionLabels[counter]);
   const questionOutput = questions.map(MakeQuestion);
   return (
     <div className="axinput-container">
-      <h2>What is the difference between a monkey and a bee?</h2>
-      <div className="axinput-questionbox">{questionOutput}</div>
-      <div className="axinput-wrongbox">
-        <h3 id="check-wrong">&nbsp;{wrongMessage(wrong)}&nbsp;</h3>
+      <div className="axinput-question-box">{questionOutput}</div>
+      <div className="axinput-wrong-box">
+        <h3 id="axinput-check-wrong">&nbsp;{wrongMessage(wrong)}&nbsp;</h3>
       </div>
-      <button id="check-button" onClick={incCounter}>
-        Check
-      </button>
+      <div>
+        <button id="axinput-check-button" onClick={checkAnswer}>
+          Check
+        </button>
+      </div>
     </div>
   );
 }

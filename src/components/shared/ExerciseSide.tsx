@@ -1,4 +1,5 @@
 import '../../styles/ExerciseSide.scss';
+
 import AxisExercise from './Exercises/AxisExercise';
 import AxisInput from './Exercises/AxisInputs';
 ('./Exercises/AxisExercise');
@@ -17,12 +18,15 @@ function ExerciseSide(): JSX.Element {
         <AxisInput
           questionLabels={[
             ['a', 'b', 'c'],
+            ['Hi!', 'bye!', '4', '43'],
             ['e', 'f'],
           ]}
           answers={[
-            [2, -2, -1],
+            [2, 2, 1],
+            [1, 4, 5, 6],
             [4, 5],
           ]}
+          setIsComplete={alert}
         />
       </div>
     </section>
