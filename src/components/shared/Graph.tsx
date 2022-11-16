@@ -1,4 +1,5 @@
 import '../../styles/Graph.scss';
+import GraphPoint from '../../assets/Exercises/graphPoint.svg';
 import Pointer from '../../assets/Exercises/pointer.svg';
 
 interface GraphProps {
@@ -78,6 +79,21 @@ GraphProps): JSX.Element {
           }}
         />
       }
+
+      {points.map((point, i) => {
+        //let label = labels[i];
+        return (
+          <img
+            key={i}
+            className="point"
+            src={GraphPoint}
+            style={{
+              left: `${xPos(4 + origin.x + point.x)}%`,
+              top: `${yPos(2 - origin.y - point.y + 0.25)}%`,
+            }}
+          />
+        );
+      })}
     </div>
   );
 }
