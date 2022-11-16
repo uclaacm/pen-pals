@@ -10,8 +10,11 @@ function ExerciseSide(): JSX.Element {
       <div className="exercise-box">
         <Graph
           origin={{ x: 0, y: 0 }}
-          points={[]}
-          labels={[]}
+          points={[
+            { x: -1, y: 1 },
+            { x: 2, y: -1 },
+          ]}
+          labels={['', '']}
           pointerPosition={{ x: 1, y: 1 }}
           pointerOrientation={45}
         />
