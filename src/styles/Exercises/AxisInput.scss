@@ -41,7 +41,6 @@
   font-size: calc(16px + 1vw);
   height: 18pt;
   margin-left: 2vh;
-  outline: none;
   size: 64pt;
   text-align: center;
   width: calc(1.5 * (16px + 1vw));
@@ -54,7 +53,7 @@
 #axinput-check-button {
   @include font-styles();
   background-color: colors.$primary-green;
-  border: none;
+  border: hidden;
   border-radius: 10px;
   color: colors.$text-white;
   padding: 1.25vw 2.5vw;
