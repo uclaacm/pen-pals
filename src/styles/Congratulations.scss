@@ -50,31 +50,31 @@
 }
 
 #congratsTxt {
-  font-family: 'PT Sans', sans-serif;
-  position: absolute;
   color: colors.$primary-green;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  font-size: 5vw;
+  position: absolute;
   top: 26%;
   left: 54%;
   transform: translate(-64%, -26%);
-  font-weight: bold;
-  font-size: 5vw;
 }
 
 #blurb {
-  font-family: 'PT Sans', sans-serif;
-  position: absolute;
   color: colors.$primary-green;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  font-size: 3.8vw;
+  position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-55%, -45%);
-  font-weight: bold;
-  font-size: 3.8vw;
 }
 
 #encouraging-turtle {
+  position: absolute;
   width: 24vw;
   height: 13.69vh;
-  position: absolute;
   bottom: 3vh;
   left: 2vh;
 }
@@ -92,21 +92,21 @@
 }
 
 #tryNext {
-  position: absolute;
-  bottom: 20.5vh;
-  right: 10vw;
   color: colors.$text-white;
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
   font-size: 4vh;
+  position: absolute;
+  bottom: 20.5vh;
+  right: 10vw;
 }
 
 #rectangle1 {
   position: absolute;
-  width: 26.2vh;
-  height: 14.46vh;
   text-align: center;
   background: #e5e5e5;
+  width: 26.2vh;
+  height: 14.46vh;
   box-shadow: 0.12px 0.12px 0.5px rgba(0, 0, 0, 0.25);
   border-radius: 1.48vh;
   float: right;
@@ -116,12 +116,11 @@
 
 #rectangle2 {
   position: absolute;
+  background: #e5e5e5;
   width: 26.2vh;
   height: 14.46vh;
-  right: 31vh;
-  bottom: 3vh;
-  background: #e5e5e5;
   box-shadow: 0.12px 0.12px 0.5px rgba(0, 0, 0, 0.25);
   border-radius: 1.48vh;
-  float: right;
+  right: 31vh;
+  bottom: 3vh;
 }
