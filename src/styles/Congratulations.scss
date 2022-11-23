@@ -15,38 +15,38 @@
 }
 
 #turtle-logo {
-    color: colors.$text-white;
-    padding-left: 2vw;
-    padding-top: 2vh;
-    width: 37vw;
-    text-align: left;
-    float: left;
-  }
-  
-  #turtle-logo-text {
-    display: inline-block;
-    font-family: 'PT Sans', sans-serif;
-    font-size: vars.$logo-font-size;
-    padding-left: vars.$lesson-side-left-padding;
-    vertical-align: middle;
-  }
-  
-  #turtle-image {
-    display: inline-block;
-    vertical-align: middle;
-    //float:left;
-  }
+  color: colors.$text-white;
+  padding-left: 2vw;
+  padding-top: 2vh;
+  width: 37vw;
+  text-align: left;
+  float: left;
+}
 
-  .speech-bubble {
-    position: absolute;
-    padding-right: 16.463vw;
-    padding-left: 12.816vw;
-    padding-top: 6vh;
-  }
+#turtle-logo-text {
+  display: inline-block;
+  font-family: 'PT Sans', sans-serif;
+  font-size: vars.$logo-font-size;
+  padding-left: vars.$lesson-side-left-padding;
+  vertical-align: middle;
+}
 
-#speech-bubble-image { 
-    width: 94%;
-    height: auto;
+#turtle-image {
+  display: inline-block;
+  vertical-align: middle;
+  //float:left;
+}
+
+.speech-bubble {
+  position: absolute;
+  padding-right: 16.463vw;
+  padding-left: 12.816vw;
+  padding-top: 6vh;
+}
+
+#speech-bubble-image {
+  width: 94%;
+  height: auto;
 }
 
 #congratsTxt {
@@ -72,11 +72,11 @@
 }
 
 #encouraging-turtle {
-    width: 24vw;
-    height: 13.69vh;
-    position: absolute;
-    bottom: 3vh;
-    left: 2vh;
+  width: 24vw;
+  height: 13.69vh;
+  position: absolute;
+  bottom: 3vh;
+  left: 2vh;
 }
 
 #turtle-picture {
@@ -84,7 +84,7 @@
 }
 
 #cat-img {
-    width: 12vh;
+  width: 12vh;
 }
 
 #dog-img {
@@ -99,20 +99,19 @@
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
   font-size: 4vh;
-
 }
 
 #rectangle1 {
-    position: absolute;
-    width: 26.2vh;
-    height: 14.46vh;
-    text-align: center;
-    background: #E5E5E5;
-    box-shadow: 0.12px 0.12px 0.5px rgba(0, 0, 0, 0.25);
-    border-radius: 1.48vh;
-    float: right;
-    bottom: 3vh;
-    right: 2.8vh;
+  position: absolute;
+  width: 26.2vh;
+  height: 14.46vh;
+  text-align: center;
+  background: #e5e5e5;
+  box-shadow: 0.12px 0.12px 0.5px rgba(0, 0, 0, 0.25);
+  border-radius: 1.48vh;
+  float: right;
+  bottom: 3vh;
+  right: 2.8vh;
 }
 
 #rectangle2 {
@@ -121,9 +120,8 @@
   height: 14.46vh;
   right: 31vh;
   bottom: 3vh;
-  background: #E5E5E5;
+  background: #e5e5e5;
   box-shadow: 0.12px 0.12px 0.5px rgba(0, 0, 0, 0.25);
   border-radius: 1.48vh;
   float: right;
 }
-
