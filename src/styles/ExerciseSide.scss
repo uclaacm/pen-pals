@@ -9,7 +9,13 @@
 .exercise-box {
   align-items: center;
   display: flex;
+  flex-direction: column;
   height: 85%;
   justify-content: center;
+  padding-top: 12vh;
   width: 100%;
+}
+
+.check-question {
+  font-family: 'PT Sans', sans-serif;
 }
