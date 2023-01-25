@@ -96,7 +96,7 @@ function AxisInput({
       <div className="axinput-wrong-box">
         <h3 id="axinput-check-wrong">&nbsp;{wrongMessage(wrong)}&nbsp;</h3>
       </div>
-      <div>
+      <div className="axinput-check-button-container">
         <button id="axinput-check-button" onClick={checkAnswer}>
           Check
         </button>
