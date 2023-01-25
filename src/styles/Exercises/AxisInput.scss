@@ -9,7 +9,7 @@
 }
 
 .axinput-container {
-  align-items: center;
+  //align-items: center;
   display: flex;
   flex-direction: column;
   font-family: 'PT Sans', sans-serif;
@@ -24,6 +24,9 @@
 #axinput-question-container {
   align-items: baseline;
   display: flex;
+  margin-bottom: -15px;
+  margin-top: -15px;
+  padding-left: 20%;
 }
 
 #axinput-check-question {
@@ -62,4 +65,19 @@
 #axinput-check-wrong {
   @include font-styles();
   color: red;
+}
+
+.axinput-wrong-box {
+  align-self: center;
+}
+
+.axinput-check-button-container {
+  align-self: center;
+}
+
+.instruction {
+  @include font-styles();
+  margin: 0;
+  padding-left: 10%;
+  text-align: left;
 }
