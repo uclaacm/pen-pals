@@ -26,7 +26,7 @@
   display: flex;
   margin-bottom: -15px;
   margin-top: -15px;
-  padding-left: 15%;
+  padding-left: 25%;
 }
 
 #axinput-check-question {
@@ -73,4 +73,9 @@
 
 .axinput-check-button-container {
   align-self: center;
+}
+
+.instruction {
+  @include font-styles();
+  margin: 0;
 }

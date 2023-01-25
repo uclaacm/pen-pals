@@ -14,7 +14,7 @@ function ExerciseSide(): JSX.Element {
           labels={['A', '', '', 'B', 'C']}
           turtlePosition={1}
         />
-
+        <p className="instruction">Type the correct numbers into the blanks below!</p>
         <AxisInput
           questionLabels={[
             ['a', 'b', 'c'],
