@@ -1,32 +1,26 @@
 import '../../styles/Graph.scss';
 
 interface GraphProps {
+  origin: { x: number; y: number };
   points: { x: number; y: number }[];
-  //labels: string[];
-  //cursorPosition: { x: number; y: number };
-  //cursorOrientation: number; //TODO: radians or degrees?
+  labels: string[];
+  cursorPosition: { x: number; y: number };
+  cursorOrientation: number; //TODO: radians or degrees?
 }
 
 function Graph({
+  /* eslint-disable @typescript-eslint/no-unused-vars */
+  origin,
   points,
-}: //labels,
-//cursorPosition,
-//cursorOrientation,
+  labels,
+  cursorPosition,
+  cursorOrientation,
+}: /* eslint-enable @typescript-eslint/no-unused-vars */
 GraphProps): JSX.Element {
-  const leftBound = Math.min(-1, ...points.map((p) => Math.floor(p.x)));
-  const rightBound = Math.max(1, ...points.map((p) => Math.ceil(p.x)));
-  const topBound = Math.min(-1, ...points.map((p) => Math.floor(p.y)));
-  const bottomBound = Math.max(1, ...points.map((p) => Math.ceil(p.y)));
-
-  const verticalLineCount = rightBound - leftBound + 1;
-  const horizontalLineCount = bottomBound - topBound + 1;
-  //TODO: make it so the grid is square. Have to draw more than
-  //`verticalLineCount` or `horizontalLineCount` lines depending
-  //on which dimension the points need
-  const lineSpacing = Math.min(
-    100 / horizontalLineCount,
-    100 / verticalLineCount
-  );
+  const verticalLineCount = 7;
+  const horizontalLineCount = 5;
+  const verticalLineSpacing = 100 / (verticalLineCount + 1);
+  const horizontalLineSpacing = 100 / (horizontalLineCount - 0.5);
 
   return (
     <div className="graph-container">
@@ -38,8 +32,7 @@ GraphProps): JSX.Element {
               key={i}
               className="grid-line--vertical"
               style={{
-                height: '100%',
-                left: `${lineSpacing * (i + 0.5)}%`,
+                left: `${verticalLineSpacing * (i + 1)}%`,
               }}
             />
           );
@@ -53,19 +46,11 @@ GraphProps): JSX.Element {
               key={i}
               className="grid-line--horizontal"
               style={{
-                width: '100%',
-                top: `${lineSpacing * (i + 0.5)}%`,
+                top: `${horizontalLineSpacing * (i + 0.25)}%`,
               }}
             />
           );
         })}
-
-      {/* {<div className="grid-line--vertical"
-                style={{
-                    height: "100%",
-                    left: `${spaceBetweenVertical}%`
-                }}>
-            </div>} */}
     </div>
   );
 }
