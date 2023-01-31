@@ -19,7 +19,7 @@ function ExerciseSide(): JSX.Element {
           pointerOrientation={45}
         />
 
-        {/*<AxisExercise
+        <AxisExercise
           orientation="horizontal"
           markers={[-2, -1, 0, 1, 2]}
           labels={['A', '', '', 'B', 'C']}

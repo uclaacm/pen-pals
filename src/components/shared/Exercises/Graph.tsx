@@ -1,6 +1,6 @@
-import '../../styles/Graph.scss';
-import GraphPoint from '../../assets/Exercises/graphPoint.svg';
-import Pointer from '../../assets/Exercises/pointer.svg';
+import '../../../styles/Graph.scss';
+import GraphPoint from '../../../assets/Exercises/graphPoint.svg';
+import Pointer from '../../../assets/Exercises/pointer.svg';
 
 interface GraphProps {
   origin: { x: number; y: number };
