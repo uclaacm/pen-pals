@@ -1,10 +1,10 @@
 import encouragingTurtle from '../../../assets/EncouragingTurtle.svg';
-import encouragingTurtleWork from '../../../assets/EncouragingTurtleDrawnToWork.svg';
-import encouragingTurtleFullPoints from '../../../assets/EncouragingTurtleFullPoints.svg';
-import encouragingTurtleGenius from '../../../assets/EncouragingTurtleGenius.svg';
-import encouragingTurtleNiceGoing from '../../../assets/EncouragingTurtleNiceGoing.svg';
-import encouragingTurtleSkills from '../../../assets/EncouragingTurtleSkills.svg';
-import encouragingTurtleSuccess from '../../../assets/EncouragingTurtleSuccess.svg';
+import encouragingTurtleWork from '../../../assets/LessonSide/EncouragingTurtleDrawnToWork.svg';
+import encouragingTurtleFullPoints from '../../../assets/LessonSide/EncouragingTurtleFullPoints.svg';
+import encouragingTurtleGenius from '../../../assets/LessonSide/EncouragingTurtleGenius.svg';
+import encouragingTurtleNiceGoing from '../../../assets/LessonSide/EncouragingTurtleNiceGoing.svg';
+import encouragingTurtleSkills from '../../../assets/LessonSide/EncouragingTurtleSkills.svg';
+import encouragingTurtleSuccess from '../../../assets/LessonSide/EncouragingTurtleSuccess.svg';
 
 interface TurtleProps {
   turtleID: string;
