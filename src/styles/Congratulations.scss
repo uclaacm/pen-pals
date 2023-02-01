@@ -16,11 +16,11 @@
 
 #turtle-logo {
   color: colors.$text-white;
+  float: left;
   padding-left: 2vw;
   padding-top: 2vh;
-  width: 37vw;
   text-align: left;
-  float: left;
+  width: 37vw;
 }
 
 #turtle-logo-text {
@@ -38,45 +38,46 @@
 }
 
 .speech-bubble {
-  position: absolute;
-  padding-right: 16.463vw;
   padding-left: 12.816vw;
+  padding-right: 16.463vw;
   padding-top: 6vh;
+  position: absolute;
+
 }
 
 #speech-bubble-image {
-  width: 94%;
   height: auto;
+  width: 94%;
 }
 
 #congratsTxt {
   color: colors.$primary-green;
   font-family: 'PT Sans', sans-serif;
-  font-weight: bold;
   font-size: 5vw;
+  font-weight: bold;
+  left: 54%;
   position: absolute;
   top: 26%;
-  left: 54%;
   transform: translate(-64%, -26%);
 }
 
 #blurb {
   color: colors.$primary-green;
   font-family: 'PT Sans', sans-serif;
-  font-weight: bold;
   font-size: 3.8vw;
+  font-weight: bold;
+  left: 50%;
   position: absolute;
   top: 55%;
-  left: 50%;
   transform: translate(-55%, -45%);
 }
 
 #encouraging-turtle {
+  bottom: 3vh;
+  height: 13.69vh;
+  left: 2vh;
   position: absolute;
   width: 24vw;
-  height: 13.69vh;
-  bottom: 3vh;
-  left: 2vh;
 }
 
 #turtle-picture {
@@ -92,35 +93,35 @@
 }
 
 #tryNext {
+  bottom: 20.5vh;
   color: colors.$text-white;
   font-family: 'PT Sans', sans-serif;
-  font-weight: bold;
   font-size: 4vh;
+  font-weight: bold;
   position: absolute;
-  bottom: 20.5vh;
   right: 10vw;
 }
 
 #rectangle1 {
-  position: absolute;
-  text-align: center;
   background: #e5e5e5;
-  width: 26.2vh;
-  height: 14.46vh;
-  box-shadow: 0.12px 0.12px 0.5px rgba(0, 0, 0, 0.25);
   border-radius: 1.48vh;
-  float: right;
   bottom: 3vh;
+  box-shadow: 0.12px 0.12px 0.5px rgba(0, 0, 0, 0.25);
+  float: right;
+  height: 14.46vh;
+  position: absolute;
   right: 2.8vh;
+  text-align: center;
+  width: 26.2vh;
 }
 
 #rectangle2 {
-  position: absolute;
   background: #e5e5e5;
-  width: 26.2vh;
-  height: 14.46vh;
-  box-shadow: 0.12px 0.12px 0.5px rgba(0, 0, 0, 0.25);
   border-radius: 1.48vh;
-  right: 31vh;
   bottom: 3vh;
+  box-shadow: 0.12px 0.12px 0.5px rgba(0, 0, 0, 0.25);
+  height: 14.46vh;
+  position: absolute;
+  right: 31vh;
+  width: 26.2vh;
 }
