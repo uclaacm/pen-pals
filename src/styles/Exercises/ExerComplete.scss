@@ -1,28 +1,28 @@
 @use '../_colors.scss' as colors;
 
 @mixin font-styles {
-    font-family: Quattrocento Sans, sans-serif;
-    font-size: calc(16px + 1vw);
-    font-style: normal;
-    font-weight: bold;
-  }
+  font-family: Quattrocento Sans, sans-serif;
+  font-size: calc(16px + 1vw);
+  font-style: normal;
+  font-weight: bold;
+}
 
 .exercomplete-continue-button {
-    @include font-styles();
-    background-color: colors.$primary-green;
-    border: hidden;
-    border-radius: 10px;
-    color: colors.$text-white;
-    padding: 1.25vw 2.5vw;
-  }
+  @include font-styles();
+  background-color: colors.$primary-green;
+  border: hidden;
+  border-radius: 10px;
+  color: colors.$text-white;
+  padding: 1.25vw 2.5vw;
+}
 
 .exercomplete-container {
+  align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
+  justify-content: center;
+  margin: auto;
   padding: 20px;
-  box-sizing: border-box;
 }
