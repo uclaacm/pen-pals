@@ -1,7 +1,7 @@
 import '../../styles/ExerciseSide.scss';
 import AxisExercise from './Exercises/AxisExercise';
 import AxisInput from './Exercises/AxisInputs';
-//import ExerComplete from './Exercises/ExerComplete';
+//import ExerciseComplete from './Exercises/ExerciseComplete';
 //import Graph from './Exercises/Graph';
 
 function ExerciseSide(): JSX.Element {

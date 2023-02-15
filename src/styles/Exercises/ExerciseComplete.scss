@@ -7,7 +7,7 @@
   font-weight: bold;
 }
 
-.exercomplete-continue-button {
+.exercisecomplete-continue-button {
   @include font-styles();
   background-color: colors.$primary-green;
   border: hidden;
@@ -16,7 +16,7 @@
   padding: 1.25vw 2.5vw;
 }
 
-.exercomplete-container {
+.exercisecomplete-container {
   align-items: center;
   box-sizing: border-box;
   display: flex;
