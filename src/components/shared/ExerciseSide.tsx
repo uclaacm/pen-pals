@@ -1,11 +1,13 @@
 import '../../styles/ExerciseSide.scss';
 import AxisExercise from './Exercises/AxisExercise';
 import AxisInput from './Exercises/AxisInputs';
+import ExerComplete from './Exercises/ExerComplete';
 //import Graph from './Exercises/Graph';
 
 function ExerciseSide(): JSX.Element {
   return (
     <section id="exercise-side-container">
+      <ExerComplete exerciseName="AxisInput" />
       <div className="exercise-box">
         {/*<Graph
           origin={{ x: 0, y: 0 }}
@@ -17,7 +19,6 @@ function ExerciseSide(): JSX.Element {
           pointerPosition={{ x: 1, y: 1 }}
           pointerOrientation={45}
         />*/}
-
         <AxisExercise
           orientation="horizontal"
           markers={[-2, -1, 0, 1, 2]}
