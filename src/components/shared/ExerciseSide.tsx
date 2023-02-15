@@ -7,7 +7,6 @@ import ExerComplete from './Exercises/ExerComplete';
 function ExerciseSide(): JSX.Element {
   return (
     <section id="exercise-side-container">
-      <ExerComplete exerciseName="AxisInput" />
       <div className="exercise-box">
         {/*<Graph
           origin={{ x: 0, y: 0 }}
