@@ -29,14 +29,8 @@ function ExerciseSide(): JSX.Element {
         /> */}
 
         <AxisParent
-          axisMarkers={[
-            [-2, -1, 0, 1, 2],
-            [-1, 0, 1, 2],
-          ]}
-          axisLabels={[
-            ['A', '', '', 'B', 'C'],
-            ['A', '', '', 'B'],
-          ]}
+          axisMarkers={[[-2, -1, 0, 1, 2], [-1, 0, 1, 2]]}
+          axisLabels={[['A', '', '', 'B', 'C'], ['A', '', '', 'B']]}
         />
       </div>
     </section>
