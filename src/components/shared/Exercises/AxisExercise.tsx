@@ -26,6 +26,7 @@ function AxisExercise({
       <img className="axis-img" src={Axis} alt="single-axis" />
       {markers.map((pos, idx) => {
         // map markers and corresponding labels onto axis
+
         const leftPosition = 45 + markerSpacing * pos; // calculate position for marker
         return (
           <div

@@ -5,6 +5,7 @@ interface AxisInputProps {
   questionLabels: string[][];
   answers: number[][];
   setIsComplete: (a: boolean) => void;
+  nextExercise: () => void;
 }
 
 interface AxisQuestion {
@@ -17,6 +18,7 @@ function AxisInput({
   questionLabels,
   answers,
   setIsComplete,
+  nextExercise,
 }: AxisInputProps): JSX.Element {
   function MakeQuestion({ label, id }: AxisQuestion): JSX.Element {
     const handleChange = (event: { target: { value: string } }) => {
@@ -46,11 +48,13 @@ function AxisInput({
     if (counter == questionLabels.length - 1) {
       setIsDone(true);
       setIsComplete(true);
+      nextExercise();
       return;
     }
     setCounter(counter + 1);
     setWrong(false);
     setInputText(startInputStrings);
+    nextExercise();
   }
 
   function wrongMessage(isWrong: boolean) {
