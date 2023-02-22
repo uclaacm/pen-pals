@@ -18,7 +18,9 @@ function ExerciseSide(): JSX.Element {
             ['A', '', '', 'B', 'C'],
             ['A', '', '', 'B'],
           ]}
-          toNextExercise={() => {return;}}
+          toNextExercise={() => {
+            return;
+          }}
         />
       </div>
     </section>
