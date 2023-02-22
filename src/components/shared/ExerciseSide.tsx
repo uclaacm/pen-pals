@@ -1,46 +1,37 @@
+import { useState } from 'react';
 import '../../styles/ExerciseSide.scss';
 
+//import AxisExercise from './Exercises/AxisExercise';
+//import AxisInput from './Exercises/AxisInputs';
 import AxisParent from './Exercises/AxisParent';
 ('./Exercises/AxisExercise');
 
 function ExerciseSide(): JSX.Element {
-  return (
-    <section id="exercise-side-container">
-      <div className="exercise-box">
-        {/* <AxisExercise
-          orientation="horizontal"
-          markers={[-2, -1, 0, 1, 2]}
-          labels={['A', '', '', 'B', 'C']}
-          turtlePosition={1}
-        />
+  const [exerciseNum, setExerciseNum] = useState(0); //indicates switch from axis input to unit circle exercise
 
-        <AxisInput
-          questionLabels={[
-            ['a', 'b', 'c'],
-            ['Hi!', 'bye!', '4', '43'],
-            ['e', 'f'],
-          ]}
-          answers={[
-            [2, 2, 1],
-            [1, 4, 5, 6],
-            [4, 5],
-          ]}
-          setIsComplete={alert}
-        /> */}
-
-        <AxisParent
-          axisMarkers={[
-            [-2, -1, 0, 1, 2],
-            [-1, 0, 1, 2],
-          ]}
-          axisLabels={[
-            ['A', '', '', 'B', 'C'],
-            ['A', '', '', 'B'],
-          ]}
-        />
-      </div>
-    </section>
-  );
+  function changeExercise() {
+    setExerciseNum(exerciseNum + 1);
+  }
+  if (exerciseNum == 0)
+    return (
+      <section id="exercise-side-container">
+        <div className="exercise-box">
+          <AxisParent
+            axisMarkers={[
+              [-2, -1, 0, 1, 2],
+              [-1, 0, 1, 2],
+            ]}
+            axisLabels={[
+              ['A', '', '', 'B', 'C'],
+              ['A', '', '', 'B'],
+            ]}
+            toNextExercise={changeExercise}
+          />
+          <p>exercise {exerciseNum}</p>
+        </div>
+      </section>
+    );
+  else return <p>exercise {exerciseNum}</p>;
 }
 
 export default ExerciseSide;

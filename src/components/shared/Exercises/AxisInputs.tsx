@@ -48,6 +48,7 @@ function AxisInput({
     if (counter == questionLabels.length - 1) {
       setIsDone(true);
       setIsComplete(true);
+      nextExercise();
       return;
     }
     setCounter(counter + 1);

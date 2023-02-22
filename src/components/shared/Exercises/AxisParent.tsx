@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../../../styles/Exercises/AxisExercise.scss';
 import AxisExercise from './AxisExercise';
 import AxisInput from './AxisInputs';
@@ -7,6 +7,7 @@ import AxisInput from './AxisInputs';
 interface AxisParentProps {
   axisMarkers: number[][]; //2-D array for different sets of problems
   axisLabels: string[][];
+  toNextExercise: () => void;
 }
 
 /*
@@ -23,7 +24,11 @@ interface AxisQuestion {
 }
 */
 
-function AxisParent({ axisMarkers, axisLabels }: AxisParentProps): JSX.Element {
+function AxisParent({
+  axisMarkers,
+  axisLabels,
+  toNextExercise,
+}: AxisParentProps): JSX.Element {
   //make 2d array for answers using the non-empty elements of axisLabels
   const axisAnswers: number[][] = [];
   const questionLabels: string[][] = [];
@@ -44,13 +49,20 @@ function AxisParent({ axisMarkers, axisLabels }: AxisParentProps): JSX.Element {
   const [exerciseNum, setExerciseNum] = useState(0);
   function nextExercise() {
     setExerciseNum(exerciseNum + 1);
-  }
+  } // advance to next exercise within axis inputs exercise
+
+  useEffect(() => {
+    if (exerciseNum == axisMarkers.length) {
+      toNextExercise(); // update parent exercise side that axis input exercise is complete
+    }
+  });
+
   return (
     <div>
       <AxisExercise
         orientation="horizontal"
-        markers={axisMarkers[exerciseNum]}
-        labels={axisLabels[exerciseNum]}
+        markers={axisMarkers[Math.min(exerciseNum, axisMarkers.length - 1)]}
+        labels={axisLabels[Math.min(exerciseNum, axisLabels.length - 1)]}
         turtlePosition={1}
       />
       <AxisInput
