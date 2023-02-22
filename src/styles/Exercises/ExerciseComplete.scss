@@ -1,0 +1,28 @@
+@use '../_colors.scss' as colors;
+
+@mixin font-styles {
+  font-family: Quattrocento Sans, sans-serif;
+  font-size: calc(16px + 1vw);
+  font-style: normal;
+  font-weight: bold;
+}
+
+.exercisecomplete-continue-button {
+  @include font-styles();
+  background-color: colors.$primary-green;
+  border: hidden;
+  border-radius: 10px;
+  color: colors.$text-white;
+  padding: 1.25vw 2.5vw;
+}
+
+.exercisecomplete-container {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+}
