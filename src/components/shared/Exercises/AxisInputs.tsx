@@ -18,7 +18,7 @@ function AxisInput({
   questionLabels,
   answers,
   setIsComplete,
-  nextExercise
+  nextExercise,
 }: AxisInputProps): JSX.Element {
   function MakeQuestion({ label, id }: AxisQuestion): JSX.Element {
     const handleChange = (event: { target: { value: string } }) => {
