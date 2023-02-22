@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import '../../../styles/Exercises/AxisExercise.scss';
 import AxisExercise from './AxisExercise';
 import AxisInput from './AxisInputs';
@@ -40,17 +41,22 @@ function AxisParent({ axisMarkers, axisLabels }: AxisParentProps): JSX.Element {
     questionLabels.push(currentLabels);
   }
 
+  const [exerciseNum, setExerciseNum] = useState(0);
+  function nextExercise() {
+    setExerciseNum(exerciseNum + 1);
+  }
   return (
     <div>
       <AxisExercise
         orientation="horizontal"
-        markers={axisMarkers[0]}
-        labels={axisLabels[0]}
+        markers={axisMarkers[exerciseNum]}
+        labels={axisLabels[exerciseNum]}
         turtlePosition={1}
       />
       <AxisInput
         questionLabels={questionLabels}
         answers={axisAnswers}
+        nextExercise={nextExercise}
         setIsComplete={alert}
       />
     </div>
