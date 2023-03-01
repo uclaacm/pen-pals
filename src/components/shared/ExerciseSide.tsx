@@ -3,11 +3,15 @@ import '../../styles/ExerciseSide.scss';
 
 //import AxisExercise from './Exercises/AxisExercise';
 //import AxisInput from './Exercises/AxisInputs';
-import CongratsPage from './Congratulations';
 import AxisParent from './Exercises/AxisParent';
+import UnitCircleExercise from './Exercises/UnitCircleExercise';
 ('./Exercises/AxisExercise');
 
-function ExerciseSide(): JSX.Element {
+interface ExerciseSideProps {
+  incrementExercise: () => void;
+}
+
+function ExerciseSide({incrementExercise}: ExerciseSideProps): JSX.Element {
   const [completeExercises, setCompleteExercises] = useState(0);
   type availableExercises = 'axis' | 'congrats';
 
@@ -29,6 +33,7 @@ function ExerciseSide(): JSX.Element {
             ]}
             toNextExercise={() => {
               setCompleteExercises(completeExercises + 1);
+              incrementExercise();
               return;
             }}
           />
@@ -36,10 +41,15 @@ function ExerciseSide(): JSX.Element {
       </section>
     );
   } else if (exercises[completeExercises] === 'congrats') {
-    curExercise = <CongratsPage></CongratsPage>;
+    curExercise = <UnitCircleExercise turtleAngle={1} markers={['A','','B']} labels={['B','C','D']}/>;
   }
 
-  return <div>{curExercise}</div>;
+  return (
+    <section id="exercise-side-container">
+      <div className="exercise-box">
+        {curExercise}
+      </div>
+    </section>);
 }
 
 export default ExerciseSide;
