@@ -2,19 +2,22 @@ import '../../../styles/Graph.scss';
 import GraphPoint from '../../../assets/Exercises/graphPoint.svg';
 import Pointer from '../../../assets/Exercises/pointer.svg';
 
+export enum LineStyles {
+  Solid,
+  Dashed,
+}
+
 interface GraphProps {
   origin: { x: number; y: number };
-  points: { x: number; y: number }[];
-  labels: string[];
+  points: { x: number; y: number; label?: string; line?: LineStyles }[];
   pointerPosition: { x: number; y: number };
-  pointerOrientation: number; //TODO: radians or degrees?
+  pointerOrientation: number;
 }
 
 function Graph({
   /* eslint-disable @typescript-eslint/no-unused-vars */
   origin,
   points,
-  labels,
   pointerPosition,
   pointerOrientation,
 }: /* eslint-enable @typescript-eslint/no-unused-vars */
@@ -81,7 +84,6 @@ GraphProps): JSX.Element {
       }
 
       {points.map((point, i) => {
-        //let label = labels[i];
         return (
           <img
             key={i}
@@ -92,6 +94,62 @@ GraphProps): JSX.Element {
               top: `${yPos(2 - origin.y - point.y + 0.25)}%`,
             }}
           />
+        );
+      })}
+
+      {points
+        .filter((p) => p.label !== undefined)
+        .map((point, i) => {
+          const offsetX = 0.2;
+          const offsetY = -0.2;
+          return (
+            <div
+              key={i}
+              className="point-label"
+              style={{
+                left: `${xPos(4 + origin.x + point.x + offsetX)}%`,
+                top: `${yPos(2 - origin.y - point.y + 0.25 + offsetY)}%`,
+              }}
+            >
+              {point.label}
+            </div>
+          );
+        })}
+
+      {points.map((point, i) => {
+        if (point.line === undefined || i == 0) {
+          return;
+        }
+        const startX = points[i - 1].x;
+        const startY = points[i - 1].y;
+        const endX = point.x;
+        const endY = point.y;
+        const dxPercent = xPos(endX) - xPos(startX);
+        const dyPercent = yPos(endY) - yPos(startY);
+        // use this factor because dyPercent is relative to height,
+        // but we express a line's length as a percentage of width.
+        const yxRatio = 22.5 / 40;
+        const lineLengthPercent =
+          Math.sqrt(
+            (dxPercent / 100) ** 2 + ((dyPercent * yxRatio) / 100) ** 2
+          ) * 100;
+        const angleRadians = Math.atan2(dyPercent * yxRatio, dxPercent);
+        return (
+          <div
+            key={i}
+            className={
+              point.line == LineStyles.Dashed
+                ? 'line-segment-dashed'
+                : 'line-segment-solid'
+            }
+            style={{
+              left: `${xPos(4 + origin.x + startX)}%`,
+              top: `${yPos(2 - origin.y - startY + 0.25)}%`,
+              transformOrigin: 'center left',
+              transform: `rotate(${-angleRadians}rad)`,
+              width: `${lineLengthPercent}%`,
+            }}
+          ></div>
         );
       })}
     </div>
