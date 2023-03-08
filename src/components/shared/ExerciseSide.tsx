@@ -1,6 +1,6 @@
 import '../../styles/ExerciseSide.scss';
-import AxisExercise from './Exercises/AxisExercise';
-import AxisInput from './Exercises/AxisInputs';
+//import AxisExercise from './Exercises/AxisExercise';
+//import AxisInput from './Exercises/AxisInputs';
 import UnitCircleExercise from './Exercises/UnitCircleExercise';
 import UnitCircleInput from './Exercises/UnitCircleInput';
 //import ExerciseComplete from './Exercises/ExerciseComplete';
@@ -22,22 +22,16 @@ function ExerciseSide(): JSX.Element {
         />*/}
         <UnitCircleExercise
           turtleAngle={0}
-          markers={["", "45°", "0°", "", ""]}
+          markers={['', '45°', '0°', '', '']}
           labels={['A', '', '', 'B', 'C']}
         />
         <p className="instruction">
           Type the correct numbers into the blanks below!
         </p>
         <UnitCircleInput
-          questionLabels={[
-            ['A', 'B', 'C'],
-          ]}
-          answers={[
-            [90, 45, 90]
-          ]}
-          left={[
-            [true, false, true]
-          ]}
+          questionLabels={[['A', 'B', 'C']]}
+          answers={[[90, 45, 90]]}
+          left={[[true, false, true]]}
           setIsComplete={alert}
         />
       </div>

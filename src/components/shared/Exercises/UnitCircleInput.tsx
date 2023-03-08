@@ -4,7 +4,7 @@ import '../../../styles/Exercises/UnitCircleInput.scss';
 interface UnitCircleInputProps {
   questionLabels: string[][];
   answers: number[][];
-  left: boolean[][] // T if left, F if right, can change later to string for readability
+  left: boolean[][]; // T if left, F if right, can change later to string for readability
   setIsComplete: (a: boolean) => void;
 }
 
@@ -18,7 +18,7 @@ function UnitCircleInput({
   questionLabels,
   answers,
   left,
-  setIsComplete
+  setIsComplete,
 }: UnitCircleInputProps): JSX.Element {
   function MakeQuestion({ label, id }: UnitCircleQuestion): JSX.Element {
     const handleChange = (event: { target: { value: string } }) => {
