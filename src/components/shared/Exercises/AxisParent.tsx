@@ -69,7 +69,6 @@ function AxisParent({
         questionLabels={questionLabels}
         answers={axisAnswers}
         nextExercise={nextExercise}
-        setIsComplete={alert}
       />
     </div>
   );
