@@ -11,11 +11,11 @@ interface ExerciseSideProps {
   incrementExercise: () => void;
 }
 
-function ExerciseSide({incrementExercise}: ExerciseSideProps): JSX.Element {
+function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
   const [completeExercises, setCompleteExercises] = useState(0);
-  type availableExercises = 'axis' | 'congrats';
+  type availableExercises = 'axis' | 'congrats' | 'circle';
 
-  const exercises: availableExercises[] = ['axis', 'congrats'];
+  const exercises: availableExercises[] = ['axis', 'circle', 'congrats'];
   let curExercise;
 
   if (exercises[completeExercises] == 'axis') {
@@ -40,16 +40,21 @@ function ExerciseSide({incrementExercise}: ExerciseSideProps): JSX.Element {
         </div>
       </section>
     );
-  } else if (exercises[completeExercises] === 'congrats') {
-    curExercise = <UnitCircleExercise turtleAngle={1} markers={['A','','B']} labels={['B','C','D']}/>;
+  } else if (exercises[completeExercises] === 'circle') {
+    curExercise = (
+      <UnitCircleExercise
+        turtleAngle={1}
+        markers={['A', '', 'B']}
+        labels={['B', 'C', 'D']}
+      />
+    );
   }
 
   return (
     <section id="exercise-side-container">
-      <div className="exercise-box">
-        {curExercise}
-      </div>
-    </section>);
+      <div className="exercise-box">{curExercise}</div>
+    </section>
+  );
 }
 
 export default ExerciseSide;

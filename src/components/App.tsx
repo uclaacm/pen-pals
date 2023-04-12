@@ -6,10 +6,10 @@ import '../assets/WestwoodSans-Regular.ttf';
 
 function App(): JSX.Element {
   const [exerciseCount, setExerciseCount] = useState(0);
-  if(exerciseCount == 1){
+  if (exerciseCount == 2) {
     return (
       <main>
-        <CongratsPage/>
+        <CongratsPage />
       </main>
     );
   }
@@ -17,7 +17,9 @@ function App(): JSX.Element {
     <div>
       <main>
         <LessonSide />
-        <ExerciseSide incrementExercise={() => setExerciseCount(exerciseCount + 1)}/>
+        <ExerciseSide
+          incrementExercise={() => setExerciseCount(exerciseCount + 1)}
+        />
       </main>
     </div>
   );
