@@ -14,7 +14,7 @@ interface GraphProps {
   pointerOrientation: number;
 }
 
-function Graph({
+function GraphExercise({
   /* eslint-disable @typescript-eslint/no-unused-vars */
   origin,
   points,
@@ -156,4 +156,4 @@ GraphProps): JSX.Element {
   );
 }
 
-export default Graph;
+export default GraphExercise;
