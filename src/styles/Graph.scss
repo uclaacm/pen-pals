@@ -2,10 +2,12 @@
   border: solid 2px #000;
   border-radius: 12px;
   height: 0;
+  // If editing the sizing of graph-container (padding-bottom or width),
+  // modify the value of `yxRatio` in Graph.tsx
   padding-bottom: 22.5%;
   position: absolute;
   top: 5%;
-  width: 40%;
+  width: 40%; // see above warning
 }
 
 .grid-line {
@@ -31,11 +33,37 @@
 
 .pointer {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 
 .point {
   position: absolute;
   transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.point-label {
+  font-family: Quattrocento Sans, sans-serif;
+  font-size: 2vw;
+  font-style: italic;
+  font-weight: bold;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+%line-segment {
+  height: 0;
+  position: absolute;
   z-index: 2;
+}
+
+.line-segment-solid {
+  @extend %line-segment;
+  outline: 1px solid #000;
+}
+
+.line-segment-dashed {
+  @extend %line-segment;
+  border-top: 2px dashed #000;
 }
