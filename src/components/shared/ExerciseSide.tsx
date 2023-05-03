@@ -4,6 +4,7 @@ import '../../styles/ExerciseSide.scss';
 //import AxisExercise from './Exercises/AxisExercise';
 //import AxisInput from './Exercises/AxisInputs';
 import AxisParent from './Exercises/AxisParent';
+import GraphInput from './Exercises/GraphInput';
 import UnitCircleExercise from './Exercises/UnitCircleExercise';
 ('./Exercises/AxisExercise');
 
@@ -21,7 +22,8 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
   if (exercises[completeExercises] == 'axis') {
     curExercise = (
       <section id="exercise-side-container">
-        <div className="exercise-box">
+        <GraphInput />
+        {/*<div className="exercise-box">
           <AxisParent
             axisMarkers={[
               [-2, -1, 0, 1, 2],
@@ -37,7 +39,7 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
               return;
             }}
           />
-        </div>
+        </div>*/}
       </section>
     );
   } else if (exercises[completeExercises] === 'circle') {
