@@ -10,7 +10,8 @@ interface LessonTextProps {
 }
 
 function LessonText({ text_array }: LessonTextProps): JSX.Element {
-  const list = text_array.map((body) => <div id={body.id}>{body.text}</div>);
+  const list = text_array.map(body => <div id={body.id}>
+    {body.text}</div>);
   return <div>{list}</div>;
 }
 
