@@ -39,11 +39,25 @@
     2px no-repeat;
   background-color: colors.$bg-white;
   border: 0;
-  font-family: Quattrocento Sans, sans-serif;
-  font-size: calc(16px + 1vw);
+  font-family: Cascadia Code, sans-serif;
+  font-size: 24px;
   height: 18pt;
   margin-left: 1vh;
   margin-right: 1vh;
   size: 64pt;
   text-align: center;
+}
+
+#graphinput-check-button-container {
+  align-self: center;
+  padding-top: 4vh;
+}
+
+#graphinput-check-button {
+  @include font-styles();
+  background-color: colors.$primary-green;
+  border: hidden;
+  border-radius: 10px;
+  color: colors.$text-white;
+  padding: 1.25vw 2.5vw;
 }
