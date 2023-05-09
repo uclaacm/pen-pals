@@ -23,7 +23,7 @@
   display: flex;
   margin-bottom: -15px;
   margin-top: -15px;
-  padding-left: 20%;
+  //padding-left: 20%;
 }
 
 #graphinput-container {
@@ -35,7 +35,7 @@
   text-align: left;
 }
 
-#graphinput-check-box {
+.graphinput-check-box {
   background: linear-gradient(#000, #000) center bottom 0 / calc(100% - 10px)
     2px no-repeat;
   background-color: colors.$bg-white;
@@ -43,10 +43,14 @@
   font-family: Cascadia Code, sans-serif;
   font-size: 24px;
   height: 18pt;
-  margin-left: 1vh;
-  margin-right: 1vh;
+  margin-left: 0.5vh;
+  margin-right: 0.5vh;
   size: 64pt;
   text-align: center;
+}
+
+.graphinput-check-box:focus {
+  background-color: colors.$input-grey;
 }
 
 #graphinput-check-button-container {

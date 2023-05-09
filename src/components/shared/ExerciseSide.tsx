@@ -36,22 +36,44 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
             pointerOrientation={45}
           />
         </div>
-        <div>
+        <div style={{paddingTop: '10vw'}}>
           <GraphInput
             questionArray={[
               {
                 textArray: [
-                  { text: 'Hi!', type: 'text' },
-                  { type: 'input', width: 10 },
-                  { text: 'more!', type: 'text' },
+                  {type: 'text', text: '# Goto point A and draw on the dotted line'}
+                ]
+              },
+              {
+                textArray: [
+                  {type: 'text', text: 'turtle.goto('},
+                  {type: 'input', width: 2},
+                  {type: 'text', text: ', -1)'},
                 ],
               },
               {
                 textArray: [
-                  { text: 'Bye!', type: 'text' },
-                  { type: 'input', width: 10 },
-                ],
+                  {type: 'text', text: 'turtle.setheading('},
+                  {type: 'input', width: 4},
+                  {type: 'text', text: ')'}
+                ]
               },
+              {
+                textArray: [
+                  {type: 'text', text: 'turtle.'},
+                  {type: 'input', width: 8},
+                  {type: 'text', text: '()'}
+                ]
+              },
+              {
+                textArray: [
+                  {type: 'text', text: 'turtle.goto('},
+                  {type: 'input', width: 2},
+                  {type: 'text', text: ', '},
+                  {type: 'input', width: 2},
+                  {type: 'text', text: ')'}
+                ]
+              }
             ]}
             nextExercise={() => incrementExercise()}
           />

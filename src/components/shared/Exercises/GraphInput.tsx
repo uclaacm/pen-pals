@@ -28,7 +28,7 @@ function GraphStringElement({
     return (
       <input
         type="text"
-        id="graphinput-check-box"
+        className="graphinput-check-box"
         style={{ width: `${width * 16}px` }}
       />
     );
