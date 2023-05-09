@@ -4,6 +4,7 @@ import '../../styles/ExerciseSide.scss';
 //import AxisExercise from './Exercises/AxisExercise';
 //import AxisInput from './Exercises/AxisInputs';
 import AxisParent from './Exercises/AxisParent';
+import GraphExercise from './Exercises/GraphExercise';
 import GraphInput from './Exercises/GraphInput';
 import UnitCircleExercise from './Exercises/UnitCircleExercise';
 ('./Exercises/AxisExercise');
@@ -14,16 +15,51 @@ interface ExerciseSideProps {
 
 function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
   const [completeExercises, setCompleteExercises] = useState(0);
-  type availableExercises = 'axis' | 'congrats' | 'circle';
+  type availableExercises = 'axis' | 'congrats' | 'circle' | 'graph';
 
-  const exercises: availableExercises[] = ['axis', 'circle', 'congrats'];
+  const exercises: availableExercises[] = ['axis', 'graph', 'congrats'];
   let curExercise;
 
-  if (exercises[completeExercises] == 'axis') {
+  if (exercises[completeExercises] == 'graph') {
     curExercise = (
-      <section id="exercise-side-container">
-        <GraphInput />
-        {/*<div className="exercise-box">
+      <div>
+        <div>
+          <GraphExercise
+            origin={{ x: 0, y: 0 }}
+            points={[
+              { x: -1, y: 1, label: 'A' },
+              { x: 2, y: -1, label: 'B', line: 1 },
+              { x: 1, y: 0, label: 'C', line: 0 },
+              { x: 0, y: -2, label: 'D', line: 0 },
+            ]}
+            pointerPosition={{ x: 1, y: 1 }}
+            pointerOrientation={45}
+          />
+        </div>
+        <div>
+          <GraphInput
+            questionArray={[
+              {
+                textArray: [
+                  { text: 'Hi!', type: 'text' },
+                  { type: 'input', width: 10 },
+                  { text: 'more!', type: 'text' },
+                ],
+              },
+              {
+                textArray: [
+                  { text: 'Bye!', type: 'text' },
+                  { type: 'input', width: 10 },
+                ],
+              },
+            ]}
+            nextExercise={() => incrementExercise()}
+          />
+        </div>
+      </div>
+    );
+
+    /*<div className="exercise-box">
           <AxisParent
             axisMarkers={[
               [-2, -1, 0, 1, 2],
@@ -39,8 +75,27 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
               return;
             }}
           />
-        </div>*/}
-      </section>
+        </div>
+    );*/
+  } else if (exercises[completeExercises] == 'axis') {
+    curExercise = (
+      <div className="exercise-box">
+        <AxisParent
+          axisMarkers={[
+            [-2, -1, 0, 1, 2],
+            [-1, 0, 1, 2],
+          ]}
+          axisLabels={[
+            ['A', '', '', 'B', 'C'],
+            ['A', '', '', 'B'],
+          ]}
+          toNextExercise={() => {
+            setCompleteExercises(completeExercises + 1);
+            incrementExercise();
+            return;
+          }}
+        />
+      </div>
     );
   } else if (exercises[completeExercises] === 'circle') {
     curExercise = (
