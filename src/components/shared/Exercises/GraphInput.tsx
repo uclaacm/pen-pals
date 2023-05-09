@@ -20,6 +20,7 @@ function GraphStringElement({
   type,
   text,
   width,
+  // eslint-disable-next-line no-unused-vars
   answer,
 }: GraphQuestionElement) {
   if (type == 'text') {
