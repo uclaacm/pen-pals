@@ -16,13 +16,7 @@ interface GraphInputProps {
   nextExercise: () => void;
 }
 
-function GraphStringElement({
-  type,
-  text,
-  width,
-  // eslint-disable-next-line no-unused-vars
-  answer,
-}: GraphQuestionElement) {
+function GraphStringElement({ type, text, width }: GraphQuestionElement) {
   if (type == 'text') {
     return <p id="graphinput-check-question">{text}</p>;
   } else {
