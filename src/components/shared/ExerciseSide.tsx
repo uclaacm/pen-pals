@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import '../../styles/ExerciseSide.scss';
+import AxisInput from './Exercises/AxisInputs';
 
 //import AxisExercise from './Exercises/AxisExercise';
 //import AxisInput from './Exercises/AxisInputs';
 import AxisParent from './Exercises/AxisParent';
 import UnitCircleExercise from './Exercises/UnitCircleExercise';
 ('./Exercises/AxisExercise');
+import UnitCircleInput from './Exercises/UnitCircleInput';
 
 interface ExerciseSideProps {
   incrementExercise: () => void;
@@ -21,22 +23,9 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
   if (exercises[completeExercises] == 'axis') {
     curExercise = (
       <section id="exercise-side-container">
+       
         <div className="exercise-box">
-          <AxisParent
-            axisMarkers={[
-              [-2, -1, 0, 1, 2],
-              [-1, 0, 1, 2],
-            ]}
-            axisLabels={[
-              ['A', '', '', 'B', 'C'],
-              ['A', '', '', 'B'],
-            ]}
-            toNextExercise={() => {
-              setCompleteExercises(completeExercises + 1);
-              incrementExercise();
-              return;
-            }}
-          />
+        <UnitCircleInput/>
         </div>
       </section>
     );
