@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import '../../styles/ExerciseSide.scss';
-import AxisInput from './Exercises/AxisInputs';
+//import AxisInput from './Exercises/AxisInputs';
 
 //import AxisExercise from './Exercises/AxisExercise';
 //import AxisInput from './Exercises/AxisInputs';
-import AxisParent from './Exercises/AxisParent';
+//import AxisParent from './Exercises/AxisParent';
 import UnitCircleExercise from './Exercises/UnitCircleExercise';
 ('./Exercises/AxisExercise');
 import UnitCircleInput from './Exercises/UnitCircleInput';
@@ -12,11 +12,11 @@ import UnitCircleInput from './Exercises/UnitCircleInput';
 interface ExerciseSideProps {
   incrementExercise: () => void;
 }
-
+/* eslint-disable*/
 function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
   const [completeExercises, setCompleteExercises] = useState(0);
   type availableExercises = 'axis' | 'congrats' | 'circle';
-
+/* eslint-enable */
   const exercises: availableExercises[] = ['axis', 'circle', 'congrats'];
   let curExercise;
 
