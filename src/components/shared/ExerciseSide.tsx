@@ -23,9 +23,8 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
   if (exercises[completeExercises] == 'axis') {
     curExercise = (
       <section id="exercise-side-container">
-       
         <div className="exercise-box">
-        <UnitCircleInput/>
+          <UnitCircleInput />
         </div>
       </section>
     );
