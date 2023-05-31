@@ -4,9 +4,13 @@ import '../../../styles/Exercises/UnitCircleInput.scss';
 function UnitCircleInput(): JSX.Element {
   return (
     <div id="unitcircle-question-container">
+      <div id="unitcircle-check-question">
       Type the correct numbers into the blanks below!
-      <p id="unitcircle-check-question"> </p>
-      <p>
+      </div>
+     
+      
+      <div id="unitcircle-check-question">
+      
         {' '}
         <i>A</i> = left
         <input
@@ -15,7 +19,7 @@ function UnitCircleInput(): JSX.Element {
           //onChange={handleChange}
           //value={inputText[id]}
         />
-      </p>
+      
       <p>
         {' '}
         <i>B</i> = right
@@ -36,6 +40,7 @@ function UnitCircleInput(): JSX.Element {
           //value={inputText[id]}
         />
       </p>
+      </div>
     </div>
   );
 }
