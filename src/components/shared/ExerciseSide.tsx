@@ -16,7 +16,7 @@ interface ExerciseSideProps {
 function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
   const [completeExercises, setCompleteExercises] = useState(0);
   type availableExercises = 'axis' | 'congrats' | 'circle';
-/* eslint-enable */
+  /* eslint-enable */
   const exercises: availableExercises[] = ['axis', 'circle', 'congrats'];
   let curExercise;
 
