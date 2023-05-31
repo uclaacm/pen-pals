@@ -8,32 +8,57 @@
   font-weight: bold;
 }
 
-.unitcircle-question-container {
-  align-items: center;
+#unitcircle-container
+{
   display: flex;
   flex-direction: column;
-  font-family: 'PT Sans', sans-serif;
-  text-align: left;
-}
-
-.unitcircle-question-box {
-  display: flex;
-  flex-direction: column;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: calc(16px + 1vw);
+  font-style: normal;
+  font-weight: bold;
+  //padding-bottom: 20%;
 }
 
 #unitcircle-question-container {
+  align-items: baseline;
+  //display: flex;
+  //flex-direction: column;
+  //font-family: 'Quattrocento Sans', sans-serif;
+  text-align: left;
+}
+
+#unitcircle-prompt-question {
+  align-self: start;
+  //display: flx;
+  //flex-direction: column;
+  //font-family: 'Quattrocento Sans', sans-serif;
+  text-align: left;
+  //padding-bottom: 50px;
+  
+
+}
+
+
+.unitcircle-question-box {
+  //display: flex;
+  //flex-direction: column;
+}
+
+/*#unitcircle-question-container {
   align-items: baseline;
   display: flex;
   flex-direction: column;
   margin-bottom: -15px;
   margin-top: -15px;
   padding-left: 20%;
-}
+}*/
 
-#unitcircle-check-question {
+.unitcircle-check-question {
   @include font-styles();
   font-style: normal;
   margin-bottom: 2vh;
+  text-align: left;
+  padding-left: 20%;
 }
 
 .unitcircle-check-box {
