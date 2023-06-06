@@ -50,30 +50,30 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
               {
                 textArray: [
                   { type: 'text', text: 'turtle.goto(' },
-                  { type: 'input', width: 2 },
+                  { type: 'input', width: 2, id: 0, answer: '1' },
                   { type: 'text', text: ', -1)' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.setheading(' },
-                  { type: 'input', width: 4 },
+                  { type: 'input', width: 4, id: 1 },
                   { type: 'text', text: ')' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.' },
-                  { type: 'input', width: 8 },
+                  { type: 'input', width: 8, id: 2 },
                   { type: 'text', text: '()' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.goto(' },
-                  { type: 'input', width: 2 },
+                  { type: 'input', width: 2, id: 3 },
                   { type: 'text', text: ', ' },
-                  { type: 'input', width: 2 },
+                  { type: 'input', width: 2, id: 4 },
                   { type: 'text', text: ')' },
                 ],
               },
