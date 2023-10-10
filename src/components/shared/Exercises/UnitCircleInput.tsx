@@ -5,12 +5,10 @@ function UnitCircleInput(): JSX.Element {
   return (
     <div id="unitcircle-question-container">
       <div id="unitcircle-check-question">
-      Type the correct numbers into the blanks below!
+        Type the correct numbers into the blanks below!
       </div>
-     
-      
+
       <div id="unitcircle-check-question">
-      
         {' '}
         <i>A</i> = left
         <input
@@ -19,27 +17,26 @@ function UnitCircleInput(): JSX.Element {
           //onChange={handleChange}
           //value={inputText[id]}
         />
-      
-      <p>
-        {' '}
-        <i>B</i> = right
-        <input
-          type="text"
-          className="unitcircle-check-box"
-          //onChange={handleChange}
-          //value={inputText[id]}
-        />
-      </p>
-      <p>
-        {' '}
-        <i>C</i> = right
-        <input
-          type="text"
-          className="unitcircle-check-box"
-          //onChange={handleChange}
-          //value={inputText[id]}
-        />
-      </p>
+        <p>
+          {' '}
+          <i>B</i> = right
+          <input
+            type="text"
+            className="unitcircle-check-box"
+            //onChange={handleChange}
+            //value={inputText[id]}
+          />
+        </p>
+        <p>
+          {' '}
+          <i>C</i> = right
+          <input
+            type="text"
+            className="unitcircle-check-box"
+            //onChange={handleChange}
+            //value={inputText[id]}
+          />
+        </p>
       </div>
     </div>
   );
