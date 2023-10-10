@@ -22,6 +22,7 @@ function AxisInput({
     const handleChange = (event: { target: { value: string } }) => {
       setText(event.target.value, id);
     };
+    /* lines 25-35, try to get component to look like this */
     return (
       <div id="axinput-question-container">
         <p id="axinput-check-question">{label}: </p>

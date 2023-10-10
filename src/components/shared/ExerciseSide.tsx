@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import '../../styles/ExerciseSide.scss';
+//import AxisInput from './Exercises/AxisInputs';
 
 //import AxisExercise from './Exercises/AxisExercise';
 //import AxisInput from './Exercises/AxisInputs';
 import AxisParent from './Exercises/AxisParent';
 import GraphExercise from './Exercises/GraphExercise';
 import GraphInput from './Exercises/GraphInput';
+//import AxisParent from './Exercises/AxisParent';
 import UnitCircleExercise from './Exercises/UnitCircleExercise';
 ('./Exercises/AxisExercise');
 
@@ -17,7 +19,12 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
   const [completeExercises, setCompleteExercises] = useState(0);
   type availableExercises = 'axis' | 'congrats' | 'circle' | 'graph';
 
-  const exercises: availableExercises[] = ['axis', 'graph', 'congrats'];
+  const exercises: availableExercises[] = [
+    'axis',
+    'graph',
+    'circle',
+    'congrats',
+  ];
   let curExercise;
 
   if (exercises[completeExercises] == 'graph') {
@@ -124,11 +131,13 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
     );
   } else if (exercises[completeExercises] === 'circle') {
     curExercise = (
-      <UnitCircleExercise
-        turtleAngle={1}
-        markers={['A', '', 'B']}
-        labels={['B', 'C', 'D']}
-      />
+      <div>
+        <UnitCircleExercise
+          turtleAngle={1}
+          markers={['A', '', 'B']}
+          labels={['B', 'C', 'D']}
+        />
+      </div>
     );
   }
 
