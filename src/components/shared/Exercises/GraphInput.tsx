@@ -1,49 +1,76 @@
+//import { useState } from 'react';
 import '../../../styles/Exercises/GraphInput.scss';
 
-interface GraphQuestionElement {
+interface GraphQuestionData {
   type: string;
   text?: string;
   width?: number;
   answer?: string;
+  id?: number;
 }
 
-interface GraphQuestion {
-  textArray: GraphQuestionElement[];
+interface GraphQuestionGrouping {
+  questionData: GraphQuestionData;
+  setCorrect: (id: number, value: boolean) => void;
+}
+
+interface GraphLineGrouping {
+  data: GraphLineData;
+  setCorrect: (id: number, value: boolean) => void;
 }
 
 interface GraphInputProps {
-  questionArray: GraphQuestion[];
+  questionArray: GraphLineData[];
   nextExercise: () => void;
 }
 
-function GraphStringElement({ type, text, width }: GraphQuestionElement) {
-  if (type == 'text') {
-    return <p id="graphinput-check-question">{text}</p>;
+interface GraphLineData {
+  textArray: GraphQuestionData[];
+}
+
+function GraphStringElement({
+  questionData,
+  setCorrect,
+}: GraphQuestionGrouping) {
+  if (questionData.type == 'text') {
+    return <p id="graphinput-check-question">{questionData?.text ?? ''}</p>;
   } else {
+    //const [inputText, setInputText] = useState("");
+    const handleChange = (event: { target: { value: string } }) => {
+      console.log(`input text: ${event.target.value}`);
+      console.log(questionData?.answer ?? '');
+      if (event.target.value == (questionData?.answer ?? '')) {
+        console.log('Correct!');
+        setCorrect(questionData?.id ?? -1, true);
+      } else {
+        setCorrect(questionData?.id ?? -1, false);
+      }
+      //setInputText(event.target.value);
+    };
     return (
-      <input
-        type="text"
-        className="graphinput-check-box"
-        style={{ width: `${width * 16}px` }}
-      />
+      <div>
+        <input
+          type="text"
+          className="graphinput-check-box"
+          style={{ width: `${(questionData?.width ?? 3) * 16}px` }}
+          onChange={handleChange}
+        />
+      </div>
     );
   }
 }
 
-function GraphLine({ textArray }: GraphQuestion) {
+function GraphLine({ data, setCorrect }: GraphLineGrouping) {
   //Map all elements of TextArray
-  const makeElement = (elementData: GraphQuestionElement): JSX.Element => {
+  const makeElement = (elementData: GraphQuestionData): JSX.Element => {
     return (
-      <GraphStringElement
-        type={elementData?.type}
-        text={elementData?.text}
-        width={elementData?.width}
-        answer={elementData?.answer}
-      />
+      <GraphStringElement questionData={elementData} setCorrect={setCorrect} />
     );
   };
   return (
-    <div id={'graphinput-question-container'}>{textArray.map(makeElement)}</div>
+    <div id={'graphinput-question-container'}>
+      {data.textArray.map(makeElement)}
+    </div>
   );
   /*return (
     <div id="graphinput-question-container">
@@ -58,32 +85,45 @@ function GraphInput({
   questionArray,
   nextExercise,
 }: GraphInputProps): JSX.Element {
-  const makeLine = (lineArray: GraphQuestion): JSX.Element => {
-    return <GraphLine textArray={lineArray.textArray} />;
+  const valueMap = new Map<number, boolean>();
+  //const [wrong, setWrong] = useState(false);
+  const setValueCorrect = (id: number, value: boolean): void => {
+    console.log(`Setting ${id} to ${value}`);
+    valueMap.set(id, value);
+  };
+
+  const checkCorrect = (): void => {
+    console.log('Checking correct');
+    // @ts-ignore
+    for (const i of valueMap.values()) {
+      console.log(i);
+      if (!i) {
+        console.log(`${i} is incorrect`);
+        //setWrong(true);
+        return;
+      }
+      nextExercise();
+    }
+  };
+
+  const makeLine = (
+    data: GraphLineData,
+    setCorrect: (id: number, value: boolean) => void
+  ): JSX.Element => {
+    return <GraphLine data={data} setCorrect={setCorrect} />;
   };
   return (
     <div id="graphinput-container">
-      <div id="graphinput-question-box">{questionArray.map(makeLine)}</div>
+      <div id="graphinput-question-box">
+        {questionArray.map((x) => makeLine(x, setValueCorrect))}
+      </div>
       <div id="graphinput-check-button-container">
-        <button id="graphinput-check-button" onClick={nextExercise}>
+        <button id="graphinput-check-button" onClick={checkCorrect}>
           Check
         </button>
       </div>
     </div>
   );
-  /*
-  return (
-    <div id="graphinput-container">
-      <div id="graphinput-question-box">
-        <GraphLine
-          textArray={[
-            { text: 'Hi!', type: 'text' },
-            { type: 'input', width: 10 },
-          ]}
-        />
-      </div>
-    </div>
-  );*/
 }
 
 export default GraphInput;
