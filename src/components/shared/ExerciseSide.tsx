@@ -17,7 +17,7 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
   const [completeExercises, setCompleteExercises] = useState(0);
   type availableExercises = 'axis' | 'congrats' | 'circle' | 'graph';
 
-  const exercises: availableExercises[] = ['axis', 'graph', 'congrats'];
+  const exercises: availableExercises[] = ['graph', 'congrats'];
   let curExercise;
 
   if (exercises[completeExercises] == 'graph') {
@@ -50,35 +50,39 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
               {
                 textArray: [
                   { type: 'text', text: 'turtle.goto(' },
-                  { type: 'input', width: 2, id: 0, answer: '1' },
+                  { type: 'input', width: 2, id: 0, answer: '0' },
                   { type: 'text', text: ', -1)' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.setheading(' },
-                  { type: 'input', width: 4, id: 1 },
+                  { type: 'input', width: 4, id: 1, answer: '2' },
                   { type: 'text', text: ')' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.' },
-                  { type: 'input', width: 8, id: 2 },
+                  { type: 'input', width: 8, id: 2, answer: '4' },
                   { type: 'text', text: '()' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.goto(' },
-                  { type: 'input', width: 2, id: 3 },
+                  { type: 'input', width: 2, id: 3, answer: '6' },
                   { type: 'text', text: ', ' },
-                  { type: 'input', width: 2, id: 4 },
+                  { type: 'input', width: 2, id: 4, answer: '8' },
                   { type: 'text', text: ')' },
                 ],
               },
             ]}
-            nextExercise={() => incrementExercise()}
+            nextExercise={() => {
+              setCompleteExercises(completeExercises + 1);
+              incrementExercise();
+              return;
+            }}
           />
         </div>
       </div>

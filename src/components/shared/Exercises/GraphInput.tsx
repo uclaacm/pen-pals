@@ -1,4 +1,5 @@
 //import { useState } from 'react';
+//import { useState } from 'react';
 import '../../../styles/Exercises/GraphInput.scss';
 
 interface GraphQuestionData {
@@ -86,7 +87,13 @@ function GraphInput({
   nextExercise,
 }: GraphInputProps): JSX.Element {
   const valueMap = new Map<number, boolean>();
-  //const [wrong, setWrong] = useState(false);
+  for (const question of questionArray) {
+    for (const item of question.textArray) {
+      if (item.type == 'input') {
+        valueMap.set(item.id ?? -1, false);
+      }
+    }
+  }
   const setValueCorrect = (id: number, value: boolean): void => {
     console.log(`Setting ${id} to ${value}`);
     valueMap.set(id, value);
@@ -102,8 +109,9 @@ function GraphInput({
         //setWrong(true);
         return;
       }
-      nextExercise();
     }
+    console.log('all right!');
+    nextExercise();
   };
 
   const makeLine = (
