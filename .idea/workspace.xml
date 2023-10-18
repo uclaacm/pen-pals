@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b759cfba-bbf3-4d32-baab-f8f0b9c450e3" name="Changes" comment="Fixed lint issues (#54)">
+      <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/ExerciseSide.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/ExerciseSide.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/LessonSide/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/LessonSide/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="ProjectId" id="2Fh5liEvwsrdECDyvC3HdtoG7Ys" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/LessonSide" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b759cfba-bbf3-4d32-baab-f8f0b9c450e3" name="Changes" comment="" />
+      <created>1664931628058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664931628058</updated>
+      <workItem from="1664931630258" duration="3141000" />
+      <workItem from="1665532824567" duration="4756000" />
+      <workItem from="1665556572221" duration="800000" />
+      <workItem from="1666744727782" duration="6689000" />
+      <workItem from="1667244660380" duration="635000" />
+      <workItem from="1667275067579" duration="12000" />
+      <workItem from="1667351521918" duration="3125000" />
+      <workItem from="1667802459414" duration="10078000" />
+      <workItem from="1667887639383" duration="599000" />
+      <workItem from="1667959810180" duration="3582000" />
+      <workItem from="1668564898363" duration="2854000" />
+      <workItem from="1668816430089" duration="599000" />
+      <workItem from="1669169553090" duration="62000" />
+      <workItem from="1669169628467" duration="1876000" />
+      <workItem from="1673388865517" duration="3778000" />
+      <workItem from="1673731507489" duration="2308000" />
+      <workItem from="1673734132315" duration="3002000" />
+      <workItem from="1673776112626" duration="41000" />
+      <workItem from="1673947565373" duration="3207000" />
+      <workItem from="1674614093835" duration="1806000" />
+      <workItem from="1675217220511" duration="2794000" />
+      <workItem from="1675804257884" duration="1635000" />
+      <workItem from="1675913630659" duration="600000" />
+      <workItem from="1676082059189" duration="598000" />
+      <workItem from="1676342662149" duration="341000" />
+      <workItem from="1676427972103" duration="2696000" />
+      <workItem from="1677636992015" duration="1318000" />
+      <workItem from="1678691119879" duration="359000" />
+      <workItem from="1678749644641" duration="663000" />
+      <workItem from="1679871898934" duration="35000" />
+      <workItem from="1680588887455" duration="15000" />
+      <workItem from="1680661933581" duration="287000" />
+      <workItem from="1681263190188" duration="3140000" />
+      <workItem from="1681328773553" duration="1198000" />
+      <workItem from="1682041776821" duration="5413000" />
+      <workItem from="1682450910024" duration="7126000" />
+      <workItem from="1683071785999" duration="6810000" />
+      <workItem from="1683656352187" duration="12985000" />
+      <workItem from="1684266015816" duration="14323000" />
+      <workItem from="1684865139278" duration="6638000" />
+      <workItem from="1685495720782" duration="2194000" />
+      <workItem from="1686037936221" duration="14258000" />
+      <workItem from="1686093848620" duration="2258000" />
+      <workItem from="1687397130274" duration="14000" />
+      <workItem from="1696383851451" duration="999000" />
+      <workItem from="1696972018850" duration="4766000" />
+      <workItem from="1696977092721" duration="5933000" />
+      <workItem from="1697055916440" duration="12000" />
+      <workItem from="1697436661116" duration="661000" />
+      <workItem from="1697577094762" duration="13168000" />
+      <workItem from="1698194717812" duration="3346000" />
+      <workItem from="1698795236423" duration="3339000" />
+      <workItem from="1699406347944" duration="4179000" />
+      <workItem from="1700013844650" duration="639000" />
+    </task>
+    <task id="LOCAL-00004" summary="Added axis input interface with poorly thought out state passing thing #24">
+      <created>1665539499373</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665539499373</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Start of fix for axisinput #24">
+      <created>1666747204143</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666747204143</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Got AxisInput working except no way of passing to parent #24">
+      <created>1667845437064</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667845437064</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Got AxisInput working except no way of passing to parent #24">
+      <created>1667845449613</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667845449613</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added basic state passing from AxisInputs to ExerciseSide #24">
+      <created>1667960844559</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667960844559</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Made some minor CSS fixes #24">
+      <created>1667962883509</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667962883509</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changed placeholder to avoid unused state for now #24">
+      <created>1668566536184</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668566536184</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixed CSS for prettier...">
+      <created>1668566860535</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668566860535</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Implemented better way of running AxisInput and added to ExerciseSide">
+      <created>1668567188366</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668567188366</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fixed linting issue in AxisInput.scss">
+      <created>1669170099207</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669170099207</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Moved EncouragingTurtle #15">
+      <created>1675217812572</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675217812572</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Reordered css tags to fix linting #15">
+      <created>1675219322556</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1675219322556</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Reran Prettier to fix linting #15">
+      <created>1675219405114</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1675219405114</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Rebased on top of main #32">
+      <created>1677033070394</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1677033070394</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Ran Prettier #32">
+      <created>1677033103752</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1677033103752</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Rebasing #32">
+      <created>1677033227083</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1677033227083</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Rebasing #32">
+      <created>1677033245023</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1677033245023</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Rebasing #32">
+      <created>1677033280954</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1677033280954</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Renamed Graph to GraphExercise #22">
+      <created>1682043954521</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1682043954521</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Rebased onto main #22">
+      <created>1682044045859</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1682044045859</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Rebased onto main #22">
+      <created>1682044072307</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1682044072307</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added documentation for GraphExercise #22">
+      <created>1682451745093</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1682451745093</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added documentation for GraphExercise #22">
+      <created>1682451775174</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1682451775174</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Created skeleton for GraphInput">
+      <created>1683075569906</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1683075569906</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Created skeleton for GraphInput #43">
+      <created>1683077239578</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1683077239578</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Changed key= to id= so CSS displayed correctly #44">
+      <created>1683656793667</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1683656793667</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Created dummy graphinput component #43">
+      <created>1683662970490</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1683662970490</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Created dummy graphinput component and made it run in succession with ExerciseSide #43">
+      <created>1683667225808</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1683667225808</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Created dummy graphinput component and made it run in succession with ExerciseSide #43">
+      <created>1683667232128</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1683667232128</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Made graphinput component run with AxisExercise and CongratsPage #43">
+      <created>1683667301326</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1683667301326</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Made graphinput component run with AxisExercise and CongratsPage #43">
+      <created>1683667320740</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1683667320740</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Fixed GraphInput styling and changed text to fit the give GraphExerise #43">
+      <created>1683668953275</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1683668953275</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Fixed GraphInput styling and changed text to fit the give GraphExercise #43">
+      <created>1683668966664</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1683668966664</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Added a key using the text of the LessonText entry #44">
+      <created>1683669158275</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1683669158275</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added a key using the text of the LessonText entry #44">
+      <created>1683669168615</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1683669168615</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Tried to add a lint override #43">
+      <created>1683669643572</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1683669643572</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Removed unused answers variable to tame linter #43">
+      <created>1683669750922</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1683669750922</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Removed unused answers variable to tame linter #43">
+      <created>1683669760340</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1683669760340</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Reran prettier I do not like lint #43">
+      <created>1683669875912</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1683669875912</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Implemented validation for GraphInput #53">
+      <created>1686093384225</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1686093384225</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Implemented validation for GraphInput #53">
+      <created>1686093393095</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1686093393095</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Fixed exercise order #42">
+      <created>1696974827287</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1696974827287</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Fixed exercise order #42">
+      <created>1696974848341</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1696974848341</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Fixed map initialization and added more answers #53">
+      <created>1697584421291</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1697584421291</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Fixed map initialization and added more answers #53">
+      <created>1697584430220</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1697584430220</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Attempt to fix github actions issues #68">
+      <created>1698195227552</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1698195227552</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Attempt to fix github actions issues #54">
+      <created>1698195491292</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1698195491293</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Attempt to fix yarn actions issues #64">
+      <created>1698797714416</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1698797714416</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Fixed lint issues (#54)">
+      <created>1699410496923</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1699410496924</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added documentation for GraphExercise #22" />
+    <MESSAGE value="Created skeleton for GraphInput" />
+    <MESSAGE value="Ran prettier #43" />
+    <MESSAGE value="Created skeleton for GraphInput #43" />
+    <MESSAGE value="Changed key= to id= so CSS displayed correctly #44" />
+    <MESSAGE value="Created dummy graphinput component #43" />
+    <MESSAGE value="Created dummy graphinput component and made it run in succession with ExerciseSidee #43" />
+    <MESSAGE value="Created dummy graphinput component and made it run in succession with ExerciseSide #43" />
+    <MESSAGE value="Made graphinput component run with AxisExercise and CongratsPage" />
+    <MESSAGE value="Made graphinput component run with AxisExercise and CongratsPage #43" />
+    <MESSAGE value="Fixed GraphInput styling and changed text to fit the give GraphExerise #43" />
+    <MESSAGE value="Fixed GraphInput styling and changed text to fit the give GraphExercise #43" />
+    <MESSAGE value="Added a key using the text of the LessonText entry" />
+    <MESSAGE value="Added a key using the text of the LessonText entry #44" />
+    <MESSAGE value="Tried to add a lint override #43" />
+    <MESSAGE value="Removed unused answers variable to tame linter #43" />
+    <MESSAGE value="Reran prettier I do not like lint #43" />
+    <MESSAGE value="Implemented validation for GraphInput #53" />
+    <MESSAGE value="Unit circle input module rebase #42" />
+    <MESSAGE value="Fixed exercise order #42" />
+    <MESSAGE value="Fixed map initialization and added more answers #53" />
+    <MESSAGE value="Attempt to fix github actions issues #68" />
+    <MESSAGE value="Attempt to fix github actions issues #54" />
+    <MESSAGE value="Attempt to fix yarn actions issues #64" />
+    <MESSAGE value="Fixed lint issues (#54)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed lint issues (#54)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/shared/ExerciseSide.tsx</url>
+          <line>163</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
