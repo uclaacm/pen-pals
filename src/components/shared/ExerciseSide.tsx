@@ -5,9 +5,12 @@ import '../../styles/ExerciseSide.scss';
 //import AxisExercise from './Exercises/AxisExercise';
 //import AxisInput from './Exercises/AxisInputs';
 //import AxisParent from './Exercises/AxisParent';
-import UnitCircleExercise from './Exercises/UnitCircleExercise';
+//import UnitCircleExercise from './Exercises/UnitCircleExercise';
+//('./Exercises/AxisExercise');
+//import UnitCircleInput from './Exercises/UnitCircleInput';
+import GraphExercise from './Exercises/GraphExercise';
 ('./Exercises/AxisExercise');
-import UnitCircleInput from './Exercises/UnitCircleInput';
+import GraphInput from './Exercises/GraphInput';
 
 interface ExerciseSideProps {
   incrementExercise: () => void;
@@ -24,13 +27,13 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
     curExercise = (
       <section id="exercise-side-container">
         <div className="exercise-box">
-          <UnitCircleInput />
+          <GraphInput />
         </div>
       </section>
     );
   } else if (exercises[completeExercises] === 'circle') {
     curExercise = (
-      <UnitCircleExercise
+      <GraphExercise
         turtleAngle={1}
         markers={['A', '', 'B']}
         labels={['B', 'C', 'D']}

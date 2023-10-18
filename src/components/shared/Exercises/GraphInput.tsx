@@ -1,9 +1,14 @@
-//import { useState } from 'react';
-import '../../../styles/Exercises/UnitCircleInput.scss';
+import { useState } from 'react';
+import '../../../styles/Exercises/GraphInput.scss';
 
-function UnitCircleInput(): JSX.Element {
-  return (
-    <div id="unitcircle-container">
+interface GraphInput {
+  questionLabels: string[][];
+  answers: number[][];
+  nextExercise: () => void;
+}
+function GraphInput(): JSX.Element {
+    return (
+      <div id="unitcircle-container">
       <div id="unitcircle-prompt-question ">
         Type the correct numbers into the blanks below!
         <p></p>
@@ -43,5 +48,6 @@ function UnitCircleInput(): JSX.Element {
       </div>
     </div>
   );
-}
-export default UnitCircleInput;
+  }
+  export default GraphInput;
+  
