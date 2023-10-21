@@ -1,7 +1,11 @@
 //import { useState } from 'react';
 import '../../../styles/Exercises/UnitCircleInput.scss';
 
-function UnitCircleInput(): JSX.Element {
+interface UnitCircleInputProps {
+  nextExercise: () => void;
+}
+
+function UnitCircleInput({nextExercise}:UnitCircleInputProps): JSX.Element {
   return (
     <div id="unitcircle-question-container">
       <div id="unitcircle-check-question">
@@ -37,6 +41,11 @@ function UnitCircleInput(): JSX.Element {
             //value={inputText[id]}
           />
         </p>
+        <div id="unitcircleinput-check-button-container">
+          <button id="unitcircleinput-check-button" onClick={nextExercise}>
+              Check
+          </button>
+        </div>
       </div>
     </div>
   );
