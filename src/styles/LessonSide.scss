@@ -62,10 +62,12 @@
 }
 
 #encouraging-turtle {
+  box-sizing: border-box;
   align-items: flex-end;
   display: flex;
   padding: 5vh;
-  width: calc(100px + 15vw);
+  width: 100%;
+  height: auto;
 }
 
 #footer-space {
