@@ -5,7 +5,7 @@ interface UnitCircleInputProps {
   nextExercise: () => void;
 }
 
-function UnitCircleInput({nextExercise}:UnitCircleInputProps): JSX.Element {
+function UnitCircleInput({ nextExercise }: UnitCircleInputProps): JSX.Element {
   return (
     <div id="unitcircle-question-container">
       <div id="unitcircle-check-question">
@@ -43,7 +43,7 @@ function UnitCircleInput({nextExercise}:UnitCircleInputProps): JSX.Element {
         </p>
         <div id="unitcircleinput-check-button-container">
           <button id="unitcircleinput-check-button" onClick={nextExercise}>
-              Check
+            Check
           </button>
         </div>
       </div>
