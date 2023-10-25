@@ -69,6 +69,10 @@ function GraphInput({
           Check
         </button>
       </div>
+      explanation,
+      <p className="explanation">
+        Type the correct numbers into the blank below!
+      </p>
     </div>
   );
   /*
