@@ -10,7 +10,6 @@ function UnitCircleInput({ nextExercise }: UnitCircleInputProps): JSX.Element {
     <div id="unitcircle-question-container">
       <div id="unitcircle-check-question">
         Type the correct numbers into the blanks below!
-        
       </div>
 
       <div id="unitcircle-check-question">
