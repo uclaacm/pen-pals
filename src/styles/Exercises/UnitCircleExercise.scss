@@ -1,22 +1,31 @@
 .circle-container {
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+  // margin: 25% 10% 15%;
+  // position: relative;
+  // width: calc(550px + 1vw);
+  align-items: center;
+  align-self: center;
   display: flex;
   flex-direction: row;
+  height: calc(150px + 1vw);
   justify-content: center;
-  margin: 25% 10% 15%;
-  position: relative;
-  width: calc(550px + 1vw);
+  margin: 2%;
+  max-width: 100%;
+  width: 50%;
 }
 
 .circle {
   position: relative;
-  width: 100%;
+  width: 70%;
 }
 
 .turtle {
   bottom: calc(0.15 * 100%);
   left: calc(0.46 * 100%);
   position: absolute;
-  width: 10%;
+ // width: 10%;
 }
 
 .circle-exercise {

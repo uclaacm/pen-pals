@@ -21,9 +21,9 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
   type availableExercises = 'axis' | 'congrats' | 'graph' | 'unitcircle';
 
   const exercises: availableExercises[] = [
+    'unitcircle',
     'axis',
     'graph',
-    'unitcircle',
     'congrats',
   ];
   let curExercise;
@@ -132,19 +132,21 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
     );
   } else if (exercises[completeExercises] === 'unitcircle') {
     curExercise = (
-      <div>
-        <UnitCircleExercise
-          turtleAngle={1}
-          markers={['A', '', 'B']}
-          labels={['B', 'C', 'D']}
-        />
-        <UnitCircleInput
-          nextExercise={() => {
-            setCompleteExercises(completeExercises + 1);
-            incrementExercise();
-            return;
-          }}
-        />
+      <div className="exercise-box">
+        <div>
+          <UnitCircleExercise
+            turtleAngle={1}
+            markers={['A', '', 'B']}
+            labels={['B', 'C', 'D']}
+          />
+          <UnitCircleInput
+            nextExercise={() => {
+              setCompleteExercises(completeExercises + 1);
+              incrementExercise();
+              return;
+            }}
+          />
+        </div>
       </div>
     );
   }

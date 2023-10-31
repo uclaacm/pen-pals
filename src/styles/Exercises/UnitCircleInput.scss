@@ -54,7 +54,7 @@
   background-color: colors.$input-grey;
 }
 
-/*#unitcircle-check-button {
+#unitcircleinput-check-button {
   @include font-styles();
   background-color: colors.$primary-green;
   border: hidden;
@@ -72,9 +72,9 @@
   align-self: center;
 }
 
-.unitcircle-check-button-container {
+.unitcircleinput-check-button-container {
   align-self: center;
-}*/
+}
 
 .instruction {
   @include font-styles();
