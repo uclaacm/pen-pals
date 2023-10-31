@@ -27,13 +27,16 @@
   flex-direction: column;
   margin-bottom: -15px;
   margin-top: -15px;
-  padding-left: 20%;
+  padding-left: 8%;
 }
 
 #unitcircle-check-question {
   @include font-styles();
+  font-size: calc(13px + 1vw);
   font-style: normal;
   margin-bottom: 2vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .unitcircle-check-box {
@@ -54,7 +57,7 @@
   background-color: colors.$input-grey;
 }
 
-/*#unitcircle-check-button {
+#unitcircleinput-check-button {
   @include font-styles();
   background-color: colors.$primary-green;
   border: hidden;
@@ -72,9 +75,9 @@
   align-self: center;
 }
 
-.unitcircle-check-button-container {
+.unitcircleinput-check-button-container {
   align-self: center;
-}*/
+}
 
 .instruction {
   @include font-styles();

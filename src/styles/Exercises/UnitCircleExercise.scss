@@ -2,26 +2,29 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 25% 10% 15%;
+  //margin: 25% 10% 15%;
+  //width: calc(550px + 1vw);
+  margin-bottom: 5%;
+  margin-left: 30%;
   position: relative;
-  width: calc(550px + 1vw);
+  width: 400px;
 }
 
 .circle {
   position: relative;
-  width: 100%;
+  width: 70%;
 }
 
 .turtle {
   bottom: calc(0.15 * 100%);
   left: calc(0.46 * 100%);
   position: absolute;
-  width: 10%;
+  // width: 10%;
 }
 
 .circle-exercise {
   font-family: Quattrocento Sans, sans-serif;
-  font-size: 4.5vh;
+  font-size: 2vh;
   font-style: italic;
   font-weight: bold;
   position: absolute;
@@ -29,7 +32,7 @@
 
 .circle-label {
   font-family: Cascadia Code, sans-serif;
-  font-size: 4.5vh;
+  font-size: 2vh;
   font-weight: regular;
   position: absolute;
 }
