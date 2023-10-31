@@ -27,13 +27,16 @@
   flex-direction: column;
   margin-bottom: -15px;
   margin-top: -15px;
-  padding-left: 20%;
+  padding-left: 8%;
 }
 
 #unitcircle-check-question {
   @include font-styles();
+  font-size: calc(13px + 1vw);
   font-style: normal;
   margin-bottom: 2vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .unitcircle-check-box {

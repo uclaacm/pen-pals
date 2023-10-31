@@ -132,7 +132,7 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
     );
   } else if (exercises[completeExercises] === 'unitcircle') {
     curExercise = (
-      <div className="exercise-box">
+      <div>
         <div>
           <UnitCircleExercise
             turtleAngle={1}
