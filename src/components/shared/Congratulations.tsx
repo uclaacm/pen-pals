@@ -31,7 +31,7 @@ function CongratsPage(): JSX.Element {
         </div>
       </div>
 
-      <div id="encouraging-turtle">
+      <div id="encouraging-turtle-congratulations">
         <img src={encouragingTurtle} alt="turtle image" id="turtle-picture" />
       </div>
 

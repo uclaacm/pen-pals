@@ -63,9 +63,11 @@
 
 #encouraging-turtle {
   align-items: flex-end;
+  box-sizing: border-box;
   display: flex;
+  height: auto;
   padding: 5vh;
-  width: calc(100px + 15vw);
+  width: 100%;
 }
 
 #footer-space {
