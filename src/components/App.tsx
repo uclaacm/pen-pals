@@ -16,9 +16,7 @@ function App(): JSX.Element {
   return (
     <div>
       <main>
-        <LessonSide 
-          levelNum={exerciseCount+1}
-        />
+        <LessonSide levelNum={exerciseCount + 1} />
         <ExerciseSide
           incrementExercise={() => setExerciseCount(exerciseCount + 1)}
         />

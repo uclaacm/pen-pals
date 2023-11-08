@@ -17,7 +17,7 @@ const exArray: { id: string; text: string }[] = [
   },
 ];
 
-function LessonSide(props: any): JSX.Element {
+function LessonSide(levelNum: number): JSX.Element {
   return (
     <section id="lesson-side-container">
       <div>
@@ -35,7 +35,11 @@ function LessonSide(props: any): JSX.Element {
         <Turtle turtleID="your-genius" />
 
         {/* passed from parent component */}
-        <LevelSelector numLevels={6} currentLevel={props.levelNum} maxLevelReached={6} />
+        <LevelSelector
+          numLevels={6}
+          currentLevel={levelNum}
+          maxLevelReached={6}
+        />
       </div>
       <Footer />
     </section>
