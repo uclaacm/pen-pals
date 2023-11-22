@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import CongratsPage from './shared/Congratulations';
 import ExerciseSide from './shared/ExerciseSide';
-import LessonSide from './shared/LessonSide';
+import LessonSide from './shared/LessonSide/LessonSide';
 import '../assets/WestwoodSans-Regular.ttf';
 
 function App(): JSX.Element {
