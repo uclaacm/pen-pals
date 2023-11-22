@@ -17,7 +17,11 @@ const exArray: { id: string; text: string }[] = [
   },
 ];
 
-function LessonSide(levelNum: number): JSX.Element {
+interface lessonSideProps {
+  levelNum: number;
+}
+
+function LessonSide({ levelNum }: lessonSideProps): JSX.Element {
   return (
     <section id="lesson-side-container">
       <div>
