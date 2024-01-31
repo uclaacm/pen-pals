@@ -8,6 +8,16 @@
   font-weight: bold;
 }
 
+#code-text {
+  color: colors.$text-white;
+  font-family: Cascadia Code, sans-serif;
+  font-size: vars.$body-font-size;
+  padding-left: vars.$lesson-side-left-padding;
+  padding-right: vars.$lesson-side-left-padding;
+  padding-top: 2.5vh;
+  text-align: center;
+}
+
 #lesson-side-container {
   background-color: colors.$primary-green;
   display: flex;

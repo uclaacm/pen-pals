@@ -16,6 +16,7 @@
             "id": "lesson-side-body",
             "text": "There are many commands that allow us to move the cursor with Turtle. The simplest such command is goto(), which accepts arguments in the form of the pairs of numbers we saw before. In order to use it, we simply call it like this:"
         },
+        {"id": "code-text", "text": "turtle.goto(-1,2)"},
         {
             "id": "lesson-side-body",
             "text": "The above line tells the Turtle cursor to move 1 unit to the left and 2 units up from the center. Now try it yourself!"
@@ -27,6 +28,8 @@
             "id": "lesson-side-body",
             "text": "If we don't know exactly what position to move to, we can also tell the cursor to move some number of units either forward or backward. In order to use the forward() and backward() functions, you call them like this:"
         },
+        {"id": "code-text", "text": "turtle.forward(1)"},
+        {"id": "code-text", "text": "turtle.backward(2)"},
         {
             "id": "lesson-side-body",
             "text": "The above code tells the cursor to move 1 unit forward, then 2 units backward. Since the cursor points to the right at the beginning, the forward() function makes it move right and the backward() function goes left."
@@ -49,6 +52,8 @@
             "id": "lesson-side-body",
             "text": "Sometimes, you may want to move the cursor in a different direction than the one it's currently pointing in. You could use goto(), but that can be messy and hard to understand. Another solution is to use the left() and right() commands to turn the cursor to the direction you want it to go, like this:"
         },
+        {"id": "code-text", "text": "turtle.left(90"},
+        {"id": "code-text", "text": "turtle.right(180)"},
         {
             "id": "lesson-side-body",
             "text": "These functions use the 360-degree circle to figure out how much to turn. For example, if your cursor is pointing right and you turn left 90 degrees, you'll then be pointing up."
