@@ -95,6 +95,9 @@ function AxisInput({
   const questionOutput = questions.map(MakeQuestion);
   return (
     <div className="axinput-container">
+      <div id="axinput-question">
+        Type the correct numbers into the blanks below!
+      </div>
       <div className="axinput-question-box">{questionOutput}</div>
       <div className="axinput-wrong-box">
         <h3 id="axinput-check-wrong">&nbsp;{wrongMessage(wrong)}&nbsp;</h3>
