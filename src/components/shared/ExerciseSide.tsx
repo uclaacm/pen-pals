@@ -13,10 +13,14 @@ import UnitCircleInput from './Exercises/UnitCircleInput';
 ('./Exercises/AxisExercise');
 
 interface ExerciseSideProps {
+  ExercisesNum: number;
   incrementExercise: () => void;
 }
 
-function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
+function ExerciseSide({
+  incrementExercise,
+  ExercisesNum,
+}: ExerciseSideProps): JSX.Element {
   const [completeExercises, setCompleteExercises] = useState(0);
   type availableExercises = 'axis' | 'congrats' | 'graph' | 'unitcircle';
 
@@ -27,6 +31,10 @@ function ExerciseSide({ incrementExercise }: ExerciseSideProps): JSX.Element {
     'congrats',
   ];
   let curExercise;
+
+  if (completeExercises != ExercisesNum) {
+    setCompleteExercises(ExercisesNum);
+  }
 
   if (exercises[completeExercises] == 'graph') {
     curExercise = (
