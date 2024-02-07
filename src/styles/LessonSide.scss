@@ -132,6 +132,7 @@
 .level-button:hover {
   background-color: colors.$bg-white;
   color: colors.$primary-green;
+  cursor: pointer;
 }
 
 .level-connector {

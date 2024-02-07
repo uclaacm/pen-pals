@@ -6,6 +6,12 @@ import '../assets/WestwoodSans-Regular.ttf';
 
 function App(): JSX.Element {
   const [exerciseCount, setExerciseCount] = useState(0);
+  // const [completeExercises, setCompleteExercises] = useState(0);
+
+  const updateLevel = (newLevel: number): void => {
+    setExerciseCount(newLevel - 1);
+  };
+
   if (exerciseCount == 5) {
     return (
       <main>
@@ -16,8 +22,9 @@ function App(): JSX.Element {
   return (
     <div>
       <main>
-        <LessonSide levelNum={exerciseCount + 1} />
+        <LessonSide levelNum={exerciseCount + 1} updateLevel={updateLevel} />
         <ExerciseSide
+          ExercisesNum={exerciseCount}
           incrementExercise={() => setExerciseCount(exerciseCount + 1)}
         />
       </main>
