@@ -63,6 +63,10 @@ function GraphInput({
   };
   return (
     <div id="graphinput-container">
+      <div id="graphinput-question">
+        Fill in the blanks to move the cursor along the path!
+      </div>
+      <div id="graphinput-check-question"></div>
       <div id="graphinput-question-box">{questionArray.map(makeLine)}</div>
       <div id="graphinput-check-button-container">
         <button id="graphinput-check-button" onClick={nextExercise}>
