@@ -7,10 +7,9 @@ import AxisInput from './AxisInputs';
 interface AxisParentProps {
   axisMarkers: number[][]; //2-D array for different sets of problems
   axisLabels: string[][];
-  orientations: string[]
+  orientations: string[];
   toNextExercise: () => void;
 }
-
 
 function AxisParent({
   axisMarkers,
@@ -50,7 +49,9 @@ function AxisParent({
     <div>
       <AxisExercise
         //orientation="horizontal"
-        orientation = {orientations[Math.min(exerciseNum, axisMarkers.length - 1)]}
+        orientation={
+          orientations[Math.min(exerciseNum, axisMarkers.length - 1)]
+        }
         markers={axisMarkers[Math.min(exerciseNum, axisMarkers.length - 1)]}
         labels={axisLabels[Math.min(exerciseNum, axisLabels.length - 1)]}
         turtlePosition={1}
