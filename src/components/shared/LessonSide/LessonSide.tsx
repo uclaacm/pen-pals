@@ -12,7 +12,11 @@ interface lessonSideProps {
   maxLevel: number;
 }
 
-function LessonSide({ levelNum, updateLevel, maxLevel }: lessonSideProps): JSX.Element {
+function LessonSide({
+  levelNum,
+  updateLevel,
+  maxLevel,
+}: lessonSideProps): JSX.Element {
   const lesson_info = LessonSideContent[levelNum] || [];
   // console.log("max:" + maxLevel);
   return (

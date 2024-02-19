@@ -21,8 +21,8 @@ interface ExerciseSideProps {
 function ExerciseSide({
   incrementExercise,
   ExercisesNum,
-  // maxLevel,
-}: ExerciseSideProps): JSX.Element {
+}: // maxLevel,
+ExerciseSideProps): JSX.Element {
   const [displayExercise, setDisplayExercise] = useState(0);
 
   type availableExercises = 'axis' | 'congrats' | 'graph' | 'unitcircle';
@@ -152,7 +152,7 @@ function ExerciseSide({
           />
           <UnitCircleInput
             nextExercise={() => {
-              console.log("unit")
+              // console.log('unit');
               setDisplayExercise(displayExercise + 1);
               incrementExercise();
               return;

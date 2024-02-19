@@ -18,12 +18,11 @@ function App(): JSX.Element {
   };
 
   const updateComplete = (): void => {
-    console.log(exerciseCount);
-    if( exerciseCount >= completeExercises)
-    {
-      setCompleteExercises(completeExercises+1);
+    // console.log(exerciseCount);
+    if (exerciseCount >= completeExercises) {
+      setCompleteExercises(completeExercises + 1);
     }
-  }
+  };
 
   if (exerciseCount == 5) {
     return (
@@ -35,10 +34,14 @@ function App(): JSX.Element {
   return (
     <div>
       <main>
-        <LessonSide levelNum={exerciseCount + 1} updateLevel={updateLevel} maxLevel={completeExercises} />
+        <LessonSide
+          levelNum={exerciseCount + 1}
+          updateLevel={updateLevel}
+          maxLevel={completeExercises}
+        />
         <ExerciseSide
           ExercisesNum={exerciseCount}
-          incrementExercise={()=> setExerciseCount(exerciseCount + 1)}
+          incrementExercise={() => setExerciseCount(exerciseCount + 1)}
         />
       </main>
     </div>
