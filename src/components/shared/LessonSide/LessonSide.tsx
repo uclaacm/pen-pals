@@ -9,10 +9,12 @@ import Turtle from './Turtle';
 interface lessonSideProps {
   levelNum: number;
   updateLevel: (newCount: number) => void;
+  maxLevel: number;
 }
 
-function LessonSide({ levelNum, updateLevel }: lessonSideProps): JSX.Element {
+function LessonSide({ levelNum, updateLevel, maxLevel }: lessonSideProps): JSX.Element {
   const lesson_info = LessonSideContent[levelNum] || [];
+  // console.log("max:" + maxLevel);
   return (
     <section id="lesson-side-container">
       <div>
@@ -33,7 +35,7 @@ function LessonSide({ levelNum, updateLevel }: lessonSideProps): JSX.Element {
         <LevelSelector
           numLevels={6}
           currentLevel={levelNum}
-          maxLevelReached={6}
+          maxLevelReached={maxLevel}
           updateLevel={updateLevel}
         />
       </div>

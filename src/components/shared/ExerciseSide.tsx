@@ -15,13 +15,16 @@ import UnitCircleInput from './Exercises/UnitCircleInput';
 interface ExerciseSideProps {
   ExercisesNum: number;
   incrementExercise: () => void;
+  // maxLevel: number
 }
 
 function ExerciseSide({
   incrementExercise,
   ExercisesNum,
+  // maxLevel,
 }: ExerciseSideProps): JSX.Element {
-  const [completeExercises, setCompleteExercises] = useState(0);
+  const [displayExercise, setDisplayExercise] = useState(0);
+
   type availableExercises = 'axis' | 'congrats' | 'graph' | 'unitcircle';
 
   const exercises: availableExercises[] = [
@@ -32,11 +35,11 @@ function ExerciseSide({
   ];
   let curExercise;
 
-  if (completeExercises != ExercisesNum) {
-    setCompleteExercises(ExercisesNum);
+  if (displayExercise != ExercisesNum) {
+    setDisplayExercise(ExercisesNum);
   }
 
-  if (exercises[completeExercises] == 'graph') {
+  if (exercises[displayExercise] == 'graph') {
     curExercise = (
       <div>
         <div>
@@ -118,7 +121,7 @@ function ExerciseSide({
           />
         </div>
     );*/
-  } else if (exercises[completeExercises] == 'axis') {
+  } else if (exercises[displayExercise] == 'axis') {
     curExercise = (
       <div className="exercise-box">
         <AxisParent
@@ -131,14 +134,14 @@ function ExerciseSide({
             ['A', '', '', 'B'],
           ]}
           toNextExercise={() => {
-            setCompleteExercises(completeExercises + 1);
+            setDisplayExercise(displayExercise + 1);
             incrementExercise();
             return;
           }}
         />
       </div>
     );
-  } else if (exercises[completeExercises] === 'unitcircle') {
+  } else if (exercises[displayExercise] === 'unitcircle') {
     curExercise = (
       <div>
         <div>
@@ -149,7 +152,8 @@ function ExerciseSide({
           />
           <UnitCircleInput
             nextExercise={() => {
-              setCompleteExercises(completeExercises + 1);
+              console.log("unit")
+              setDisplayExercise(displayExercise + 1);
               incrementExercise();
               return;
             }}
