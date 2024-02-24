@@ -14,7 +14,9 @@ function UnitCircleExercise({
   labels,
 }: UnitCircleProps): JSX.Element {
   const rotateString = turtleAngle + 'deg';
-  const angleBetweenTicks = Math.PI / (labels.length - 1);
+  const angleBetweenTicks = Math.PI / (labels.length - 3);
+  const cursorTicks = Math.PI / (labels.length - 1);
+  let cursorAngle = 0 - cursorTicks;
   let curAngle = 0 - angleBetweenTicks;
   const scaleCursor = 'scale(1.5)';
   return (
@@ -29,6 +31,7 @@ function UnitCircleExercise({
       />
       {labels.map((element, idx) => {
         curAngle += angleBetweenTicks;
+        cursorAngle += cursorTicks;
         return (
           <div key={element}>
             <div
@@ -38,11 +41,18 @@ function UnitCircleExercise({
                   (1 - Math.cos(curAngle)) * 40 +
                   (curAngle <= Math.PI / 2
                     ? curAngle == Math.PI / 2
-                      ? 7.5
-                      : 5
-                    : 10)
+                      ? -12
+                      : 19
+                    : -12)
                 }%`,
-                bottom: `${Math.sin(curAngle) * 50 + 30}%`,
+                bottom: `${
+                  Math.sin(curAngle) * 50 +
+                  (curAngle <= Math.PI / 2
+                    ? curAngle == Math.PI / 2
+                      ? 13
+                      : 25
+                    : 63)
+                }%`,
               }}
             >
               {element}
@@ -54,11 +64,18 @@ function UnitCircleExercise({
                   (1 - Math.cos(curAngle)) * 45 +
                   (curAngle <= Math.PI / 2
                     ? curAngle == Math.PI / 2
-                      ? 2.5
-                      : 5
-                    : 0)
+                      ? 2
+                      : 49
+                    : -15)
                 }%`,
-                bottom: `${Math.sin(curAngle) * 50 + 30}%`,
+                bottom: `${
+                  Math.sin(curAngle) * 50 +
+                  (curAngle <= Math.PI / 2
+                    ? curAngle == Math.PI / 2
+                      ? 2
+                      : 83
+                    : 26)
+                }%`,
               }}
             >
               {markers[idx]}
@@ -69,15 +86,22 @@ function UnitCircleExercise({
               className="circle-cursor"
               style={{
                 left: `${
-                  (1 - Math.cos(curAngle)) * 50 +
-                  (curAngle <= Math.PI / 2
-                    ? curAngle == Math.PI / 2
-                      ? -2.5
-                      : -10
-                    : 5)
+                  (1 - Math.cos(cursorAngle)) * 43 +
+                  (cursorAngle <= Math.PI / 2
+                    ? cursorAngle == Math.PI / 2
+                      ? 5
+                      : 7
+                    : 2)
                 }%`,
-                bottom: `${Math.sin(curAngle) * 75 + 30}%`,
-                transform: `rotate(${curAngle}rad) ${
+                bottom: `${
+                  Math.sin(cursorAngle) * 80 +
+                  (cursorAngle <= Math.PI / 2
+                    ? cursorAngle == Math.PI / 2
+                      ? 25
+                      : 28
+                    : 28)
+                }%`,
+                transform: `rotate(${cursorAngle}rad) ${
                   labels.length % 2 === 1 &&
                   idx === Math.floor(labels.length / 2)
                     ? scaleCursor

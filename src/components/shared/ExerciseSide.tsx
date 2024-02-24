@@ -150,8 +150,8 @@ ExerciseSideProps): JSX.Element {
         <div>
           <UnitCircleExercise
             turtleAngle={1}
-            markers={['A', '', 'B']}
-            labels={['B', 'C', 'D']}
+            markers={['0\xB0', '', '90\xB0', '', '']}
+            labels={['A', 'C', 'B', '', '']}
           />
           <UnitCircleInput
             nextExercise={() => {
