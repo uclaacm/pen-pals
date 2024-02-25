@@ -14,10 +14,10 @@ function UnitCircleExercise({
   labels,
 }: UnitCircleProps): JSX.Element {
   const rotateString = turtleAngle + 'deg';
-  const angleBetweenTicks = Math.PI / (labels.length - 3);
+  const angleBetweenTicks = Math.PI / (labels.length - 1);
+  let curAngle = 0 - angleBetweenTicks;
   const cursorTicks = Math.PI / (labels.length - 1);
   let cursorAngle = 0 - cursorTicks;
-  let curAngle = 0 - angleBetweenTicks;
   const scaleCursor = 'scale(1.5)';
   return (
     <div className="circle-container">
@@ -38,48 +38,50 @@ function UnitCircleExercise({
               className="circle-exercise"
               style={{
                 left: `${
-                  (1 - Math.cos(curAngle)) * 40 +
+                  (1 - Math.cos(curAngle)) * 31 + //middle right and left
                   (curAngle <= Math.PI / 2
                     ? curAngle == Math.PI / 2
-                      ? -12
-                      : 19
-                    : -12)
+                      ? 17 //middle
+                      : 19 //left
+                    : 14) //right
                 }%`,
                 bottom: `${
-                  Math.sin(curAngle) * 50 +
+                  Math.sin(curAngle) * 53 + //middle right and left
                   (curAngle <= Math.PI / 2
                     ? curAngle == Math.PI / 2
-                      ? 13
-                      : 25
-                    : 63)
+                      ? 28 //middle
+                      : 25 //left
+                    : 25) //right
                 }%`,
               }}
             >
               {element}
             </div>
-            <div
-              className="circle-label"
-              style={{
-                left: `${
-                  (1 - Math.cos(curAngle)) * 45 +
-                  (curAngle <= Math.PI / 2
-                    ? curAngle == Math.PI / 2
-                      ? 2
-                      : 49
-                    : -15)
-                }%`,
-                bottom: `${
-                  Math.sin(curAngle) * 50 +
-                  (curAngle <= Math.PI / 2
-                    ? curAngle == Math.PI / 2
-                      ? 2
-                      : 83
-                    : 26)
-                }%`,
-              }}
-            >
-              {markers[idx]}
-            </div>
+            {labels[idx] === '' ? (
+              <div
+                className="circle-label"
+                style={{
+                  left: `${
+                    (1 - Math.cos(curAngle)) * 30 + //middle left and right
+                    (curAngle <= Math.PI / 2
+                      ? curAngle == Math.PI / 2
+                        ? 19 //middle
+                        : 20 //left
+                      : 15) //right
+                  }%`,
+                  bottom: `${
+                    Math.sin(curAngle) * 55 + //middle left and right
+                    (curAngle <= Math.PI / 2
+                      ? curAngle == Math.PI / 2
+                        ? 30 //middle
+                        : 25 //left
+                      : 25) //right
+                  }%`,
+                }}
+              >
+                {markers[idx]}
+              </div>
+            ) : null}
 
             <img
               src={Cursor}

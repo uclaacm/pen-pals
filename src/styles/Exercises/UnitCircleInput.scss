@@ -21,20 +21,25 @@
   flex-direction: column;
 }
 
+#unitcircle-question {
+  @include font-styles();
+  margin-bottom: 2vh;
+  margin-left: 2vh;
+}
+
 #unitcircle-question-container {
   align-items: baseline;
   display: flex;
-  flex-direction: column;
   margin-bottom: -15px;
   margin-top: -15px;
-  padding-left: 8%;
+  padding-left: 0;
 }
 
 #unitcircle-check-question {
   @include font-styles();
   font-size: calc(13px + 1vw);
   font-style: normal;
-  margin-bottom: 2vh;
+  margin-bottom: 4vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -47,6 +52,7 @@
   font-family: Cascadia Code, sans-serif;
   font-size: calc(16px + 1vw);
   height: 18pt;
+  margin-bottom: 0;
   margin-left: 2vh;
   size: 64pt;
   text-align: center;
