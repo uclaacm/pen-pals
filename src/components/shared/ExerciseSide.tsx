@@ -25,7 +25,12 @@ function ExerciseSide({
 ExerciseSideProps): JSX.Element {
   const [displayExercise, setDisplayExercise] = useState(0);
 
-  type availableExercises = 'axis' | 'congrats' | 'graph0' | 'unitcircle' | 'graph1';
+  type availableExercises =
+    | 'axis'
+    | 'congrats'
+    | 'graph0'
+    | 'unitcircle'
+    | 'graph1';
 
   const exercises: availableExercises[] = [
     'unitcircle',
@@ -46,8 +51,8 @@ ExerciseSideProps): JSX.Element {
           <GraphExercise
             origin={{ x: 0, y: 0 }}
             points={[
-              {x: 0, y: 0, label: ''},
-              { x: 2, y: 1, label: 'A', line: 1},
+              { x: 0, y: 0, label: '' },
+              { x: 2, y: 1, label: 'A', line: 1 },
               { x: 1, y: -1, label: 'B', line: 1 },
               { x: 0, y: -1, label: 'C', line: 1 },
             ]}
@@ -121,8 +126,7 @@ ExerciseSideProps): JSX.Element {
           />
         </div>
     );*/
-  } 
-  else if (exercises[displayExercise] == 'graph1') {
+  } else if (exercises[displayExercise] == 'graph1') {
     curExercise = (
       <div>
         <div>
@@ -204,8 +208,7 @@ ExerciseSideProps): JSX.Element {
           />
         </div>
     );*/
-  }
-  else if (exercises[displayExercise] == 'axis') {
+  } else if (exercises[displayExercise] == 'axis') {
     curExercise = (
       <div className="exercise-box">
         <AxisParent

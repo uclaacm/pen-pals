@@ -110,7 +110,6 @@ GraphProps): JSX.Element {
                 left: `${xPos(4 + origin.x + point.x + offsetX)}%`,
                 top: `${yPos(2 - origin.y - point.y + 0.25 + offsetY)}%`,
               }}
-              
             >
               {point.label}
             </div>

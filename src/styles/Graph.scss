@@ -3,13 +3,13 @@
   border: solid 1px rgb(209, 209, 209);
   border-radius: 12px;
   height: 0;
+  margin-left: 5%;
   // If editing the sizing of graph-container (padding-bottom or width),
   // modify the value of `yxRatio` in Graph.tsx
   padding-bottom: 22.5%;
   position: absolute;
   top: 5%;
   width: 50%; // see above warning
-  margin-left: 5%;
 }
 
 .grid-line {
