@@ -14,13 +14,11 @@
   flex-direction: column;
   font-family: 'PT Sans', sans-serif;
   text-align: left;
-
 }
 
 .axinput-question-box {
   display: flex;
   flex-direction: column;
-
 }
 
 #axinput-question-container {
@@ -33,7 +31,7 @@
 
 #axinput-question {
   @include font-styles();
-  margin: 2vh
+  margin: 2vh;
 }
 
 #axinput-check-question {
