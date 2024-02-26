@@ -30,7 +30,7 @@ function LevelSelector({
               // If index is even, add a level button. Else, add a level connector.
               return i % 2 == 0 ? (
                 <div
-                  // key={i}
+                  key={i}
                   onClick={() => handleLevelClick(level)}
                   className={
                     'level-button' +
@@ -43,7 +43,7 @@ function LevelSelector({
                 <div
                   className="level-connector"
                   style={{
-                    visibility: level < maxLevelReached ? 'visible' : 'hidden',
+                    visibility: level < 6 ? 'visible' : 'hidden',
                   }}
                 ></div>
               );

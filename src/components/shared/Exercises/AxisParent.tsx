@@ -43,7 +43,7 @@ function AxisParent({
     if (exerciseNum == axisMarkers.length) {
       toNextExercise(); // update parent exercise side that axis input exercise is complete
     }
-  });
+  }, [exerciseNum]);
 
   return (
     <div>
