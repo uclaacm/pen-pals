@@ -16,11 +16,16 @@ function AxisExercise({
   turtlePosition,
 }: AxisExerciseProps): JSX.Element {
   const markerSpacing = 60 / (markers.length - 1);
+  const isHorizontal = orientation === 'horizontal';
+  const size = isHorizontal ? '70%' : '30%';
   return (
     <div
       className="axis-container"
       style={{
-        transform: `rotate(${orientation === 'horizontal' ? '0deg' : '90deg'})`, // axis orientation
+        //transform: `rotate(${orientation === 'horizontal' ? '0deg' : '90deg'})`, // axis orientation
+        transform: `rotate(${isHorizontal ? '0deg' : '90deg'})`, // axis orientation
+        width: size,
+        marginLeft: !isHorizontal ? '25%' : '2%',
       }}
     >
       <img className="axis-img" src={Axis} alt="single-axis" />

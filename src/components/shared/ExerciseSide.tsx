@@ -128,11 +128,14 @@ ExerciseSideProps): JSX.Element {
           axisMarkers={[
             [-2, -1, 0, 1, 2],
             [-1, 0, 1, 2],
+            [-2, -1, 0, 1],
           ]}
           axisLabels={[
             ['A', '', '', 'B', 'C'],
             ['A', '', '', 'B'],
+            ['A', '', 'B', 'C'],
           ]}
+          orientations={['horizontal', 'horizontal', 'vertical']}
           toNextExercise={() => {
             setDisplayExercise(displayExercise + 1);
             incrementExercise();
