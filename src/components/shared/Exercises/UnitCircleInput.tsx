@@ -61,7 +61,7 @@ function UnitCircleInput({
     nextExercise();
   }
 
-  const answers: string[][] = [];
+  const answers: number[][] = [];
   const questionLabels: string[][] = [];
   const questionDirections: string[][] = [];
   for (let i = 0; i < markers.length; i++) {
@@ -71,7 +71,11 @@ function UnitCircleInput({
     const length = markers[i].length;
     for (let j = 0; j < length; j++) {
       if (labels[i][j] !== '') {
-        currentAnswers.push(markers[i][j].slice(0, -1));
+        let multiplier = 1;
+        if (directions[i][j] == 'left') {
+          multiplier = -1;
+        }
+        currentAnswers.push(parseInt(markers[i][j].slice(0, -1)) * multiplier);
         currentLabels.push(labels[i][j]);
         currentDirections.push(directions[i][j]);
       }
