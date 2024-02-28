@@ -43,7 +43,7 @@ function LevelSelector({
                 <div
                   className="level-connector"
                   style={{
-                    visibility: level < 6 ? 'visible' : 'hidden',
+                    visibility: level < maxLevelReached ? 'visible' : 'hidden',
                   }}
                 ></div>
               );
