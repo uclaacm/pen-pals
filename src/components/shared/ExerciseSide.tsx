@@ -215,11 +215,14 @@ ExerciseSideProps): JSX.Element {
           axisMarkers={[
             [-2, -1, 0, 1, 2],
             [-1, 0, 1, 2],
+            [-2, -1, 0, 1],
           ]}
           axisLabels={[
             ['A', '', '', 'B', 'C'],
             ['A', '', '', 'B'],
+            ['A', '', 'B', 'C'],
           ]}
+          orientations={['horizontal', 'horizontal', 'vertical']}
           toNextExercise={() => {
             setDisplayExercise(displayExercise + 1);
             incrementExercise();
@@ -234,8 +237,8 @@ ExerciseSideProps): JSX.Element {
         <div>
           <UnitCircleExercise
             turtleAngle={1}
-            markers={['A', '', 'B']}
-            labels={['B', 'C', 'D']}
+            markers={['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0']}
+            labels={['A', 'C', '', 'B', '']}
           />
           <UnitCircleInput
             nextExercise={() => {
@@ -244,6 +247,9 @@ ExerciseSideProps): JSX.Element {
               incrementExercise();
               return;
             }}
+            markers={[['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0']]}
+            labels={[['A', 'C', '', 'B', '']]}
+            directions={[['left', 'right', '', 'right', '']]}
           />
         </div>
       </div>
