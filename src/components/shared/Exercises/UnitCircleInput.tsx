@@ -1,34 +1,39 @@
 import { useState } from 'react';
-import '../../../styles/Exercises/AxisInput.scss';
+import '../../../styles/Exercises/UnitCircleInput.scss';
 
-interface AxisInputProps {
-  questionLabels: string[][];
-  answers: number[][];
+interface UnitCircleInputProps {
   nextExercise: () => void;
+  markers: string[][];
+  labels: string[][];
+  directions: string[][];
 }
 
-interface AxisQuestion {
+interface CircleQuestion {
   label: string;
-  answer: number; // Should change to being strings
+  answer: string; // Should change to being strings
+  direction: string;
   id: number; //This sucks lol
 }
 
-function AxisInput({
-  questionLabels,
-  answers,
+function UnitCircleInput({
   nextExercise,
-}: AxisInputProps): JSX.Element {
-  function MakeQuestion({ label, id }: AxisQuestion): JSX.Element {
+  markers,
+  labels,
+  directions,
+}: UnitCircleInputProps): JSX.Element {
+  function MakeQuestion({ label, id, direction }: CircleQuestion): JSX.Element {
     const handleChange = (event: { target: { value: string } }) => {
       setText(event.target.value, id);
     };
     /* lines 25-35, try to get component to look like this */
     return (
-      <div id="axinput-question-container">
-        <p id="axinput-check-question">{label}: </p>
+      <div id="unitcircle-question-container">
+        <p id="unitcircle-check-question">
+          {label} = {direction}{' '}
+        </p>
         <input
           type="text"
-          className="axinput-check-box"
+          className="unitcircle-check-box"
           onChange={handleChange}
           value={inputText[id]}
         />
@@ -39,7 +44,7 @@ function AxisInput({
   function checkAnswer() {
     // Invoked to check answers and switch to the next question or set the answer wrong
     for (let i = 0; i < answers[counter].length; i++) {
-      if (parseInt(inputText[i]) != answers[counter][i]) {
+      if (inputText[i] != answers[counter][i]) {
         setWrong(true);
         return;
       }
@@ -54,6 +59,30 @@ function AxisInput({
     setWrong(false);
     setInputText(startInputStrings);
     nextExercise();
+  }
+
+  const answers: number[][] = [];
+  const questionLabels: string[][] = [];
+  const questionDirections: string[][] = [];
+  for (let i = 0; i < markers.length; i++) {
+    const currentAnswers = [];
+    const currentLabels = [];
+    const currentDirections = [];
+    const length = markers[i].length;
+    for (let j = 0; j < length; j++) {
+      if (labels[i][j] !== '') {
+        let multiplier = 1;
+        if (directions[i][j] == 'left') {
+          multiplier = -1;
+        }
+        currentAnswers.push(parseInt(markers[i][j].slice(0, -1)) * multiplier);
+        currentLabels.push(labels[i][j]);
+        currentDirections.push(directions[i][j]);
+      }
+    }
+    answers.push(currentAnswers);
+    questionLabels.push(currentLabels);
+    questionDirections.push(currentDirections);
   }
 
   function wrongMessage(isWrong: boolean) {
@@ -83,6 +112,7 @@ function AxisInput({
     for (let i = 0; i < questionLabels[counter].length; i++) {
       questions.push({
         label: questionLabels[counter][i],
+        direction: questionDirections[counter][i],
         answer: answers[counter][i],
         id: i,
       });
@@ -94,21 +124,20 @@ function AxisInput({
   //console.log(questionLabels[counter]);
   const questionOutput = questions.map(MakeQuestion);
   return (
-    <div className="axinput-container">
-      <div id="axinput-question">
+    <div className="unitcircle-question-container">
+      <div id="unitcircle-question">
         Type the correct numbers into the blanks below!
       </div>
-      <div className="axinput-question-box">{questionOutput}</div>
-      <div className="axinput-wrong-box">
-        <h3 id="axinput-check-wrong">&nbsp;{wrongMessage(wrong)}&nbsp;</h3>
+      <div className="unitcircle-question-box">{questionOutput}</div>
+      <div className="unitcircle-wrong-box">
+        <h3 id="unitcircle-check-wrong">&nbsp;{wrongMessage(wrong)}&nbsp;</h3>
       </div>
-      <div className="axinput-check-button-container">
-        <button id="axinput-check-button" onClick={checkAnswer}>
+      <div className="unitcircleinput-check-button-container">
+        <button id="unitcircleinput-check-button" onClick={checkAnswer}>
           Check
         </button>
       </div>
     </div>
   );
 }
-
-export default AxisInput;
+export default UnitCircleInput;

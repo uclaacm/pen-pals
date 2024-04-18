@@ -4,14 +4,16 @@
   background-color: colors.$bg-white;
   flex-grow: 1;
   height: 100%;
+  margin: 0;
 }
 
 .exercise-box {
   //align-items: center;
   display: flex;
   flex-direction: column;
-  height: 85%;
+  height: 75%;
   justify-content: center;
+  padding-bottom: 12vh;
   padding-top: 12vh;
   width: 100%;
 }

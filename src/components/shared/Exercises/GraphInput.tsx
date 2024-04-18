@@ -38,10 +38,9 @@ function GraphStringElement({
   } else {
     //const [inputText, setInputText] = useState("");
     const handleChange = (event: { target: { value: string } }) => {
-      console.log(`input text: ${event.target.value}`);
-      console.log(questionData?.answer ?? '');
+      //console.log(`input text: ${event.target.value}`);
+      //console.log(questionData?.answer ?? '');
       if (event.target.value == (questionData?.answer ?? '')) {
-        console.log('Correct!');
         setCorrect(questionData?.id ?? -1, true);
       } else {
         setCorrect(questionData?.id ?? -1, false);
@@ -95,22 +94,22 @@ function GraphInput({
     }
   }
   const setValueCorrect = (id: number, value: boolean): void => {
-    console.log(`Setting ${id} to ${value}`);
+    //console.log(`Setting ${id} to ${value}`);
     valueMap.set(id, value);
   };
 
   const checkCorrect = (): void => {
-    console.log('Checking correct');
-    // @ts-ignore
-    for (const i of valueMap.values()) {
-      console.log(i);
+    //console.log('Checking correct');
+    const valuesArray = Array.from(valueMap.values());
+    for (const i of valuesArray) {
+      //console.log(i);
       if (!i) {
-        console.log(`${i} is incorrect`);
+        //console.log(`${i} is incorrect`);
         //setWrong(true);
         return;
       }
     }
-    console.log('all right!');
+    //console.log('all right!');
     nextExercise();
   };
 
@@ -122,6 +121,10 @@ function GraphInput({
   };
   return (
     <div id="graphinput-container">
+      <div id="graphinput-question">
+        Fill in the blanks to move the cursor along the path!
+      </div>
+      <div id="graphinput-check-question"></div>
       <div id="graphinput-question-box">
         {questionArray.map((x) => makeLine(x, setValueCorrect))}
       </div>

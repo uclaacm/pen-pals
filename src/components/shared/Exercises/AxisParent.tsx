@@ -7,26 +7,14 @@ import AxisInput from './AxisInputs';
 interface AxisParentProps {
   axisMarkers: number[][]; //2-D array for different sets of problems
   axisLabels: string[][];
+  orientations: string[];
   toNextExercise: () => void;
 }
-
-/*
-interface AxisInputProps {
-  questionLabels: string[][];
-  answers: number[][];
-  setIsComplete: (a: boolean) => void;
-}
-
-interface AxisQuestion {
-  label: string;
-  answer: number; // Should change to being strings
-  id: number; //This sucks lol
-}
-*/
 
 function AxisParent({
   axisMarkers,
   axisLabels,
+  orientations,
   toNextExercise,
 }: AxisParentProps): JSX.Element {
   //make 2d array for answers using the non-empty elements of axisLabels
@@ -55,12 +43,15 @@ function AxisParent({
     if (exerciseNum == axisMarkers.length) {
       toNextExercise(); // update parent exercise side that axis input exercise is complete
     }
-  });
+  }, [exerciseNum]);
 
   return (
     <div>
       <AxisExercise
-        orientation="horizontal"
+        //orientation="horizontal"
+        orientation={
+          orientations[Math.min(exerciseNum, axisMarkers.length - 1)]
+        }
         markers={axisMarkers[Math.min(exerciseNum, axisMarkers.length - 1)]}
         labels={axisLabels[Math.min(exerciseNum, axisLabels.length - 1)]}
         turtlePosition={1}

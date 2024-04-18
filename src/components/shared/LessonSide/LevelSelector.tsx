@@ -4,13 +4,20 @@ interface LevelSelectorProps {
   numLevels: number;
   currentLevel: number;
   maxLevelReached: number;
+  updateLevel: (newCount: number) => void;
 }
 
 function LevelSelector({
   numLevels,
   currentLevel,
   maxLevelReached,
+  updateLevel,
 }: LevelSelectorProps): JSX.Element {
+  const handleLevelClick = (level: number): void => {
+    if (level <= maxLevelReached) {
+      updateLevel(level);
+    }
+  };
   return (
     <div className="selector-box">
       <div className="level-selector">
@@ -23,6 +30,8 @@ function LevelSelector({
               // If index is even, add a level button. Else, add a level connector.
               return i % 2 == 0 ? (
                 <div
+                  key={i}
+                  onClick={() => handleLevelClick(level)}
                   className={
                     'level-button' +
                     (level === currentLevel ? ' current-level' : '')

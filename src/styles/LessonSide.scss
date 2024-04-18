@@ -8,6 +8,16 @@
   font-weight: bold;
 }
 
+#code-text {
+  color: colors.$text-white;
+  font-family: Cascadia Code, sans-serif;
+  font-size: vars.$body-font-size;
+  padding-left: vars.$lesson-side-left-padding;
+  padding-right: vars.$lesson-side-left-padding;
+  padding-top: 2.5vh;
+  text-align: center;
+}
+
 #lesson-side-container {
   background-color: colors.$primary-green;
   display: flex;
@@ -63,9 +73,11 @@
 
 #encouraging-turtle {
   align-items: flex-end;
+  box-sizing: border-box;
   display: flex;
+  height: auto;
   padding: 5vh;
-  width: calc(100px + 15vw);
+  width: 100%;
 }
 
 #footer-space {
@@ -115,6 +127,12 @@
 .level-button.current-level {
   background-color: colors.$bg-white;
   color: colors.$primary-green;
+}
+
+.level-button:hover {
+  background-color: colors.$bg-white;
+  color: colors.$primary-green;
+  cursor: pointer;
 }
 
 .level-connector {
