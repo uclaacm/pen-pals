@@ -74,30 +74,30 @@ ExerciseSideProps): JSX.Element {
               {
                 textArray: [
                   { type: 'text', text: 'turtle.goto(' },
-                  { type: 'input', width: 2 },
-                  { type: 'text', text: ', -1)' },
+                  { type: 'input', width: 2, id: 0, answer: '2' },
+                  { type: 'text', text: ', 1)' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.setheading(' },
-                  { type: 'input', width: 4 },
+                  { type: 'input', width: 4, id: 1, answer: '225' },
                   { type: 'text', text: ')' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.' },
-                  { type: 'input', width: 8 },
+                  { type: 'input', width: 8, id: 2, answer: 'forward' },
                   { type: 'text', text: '()' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.goto(' },
-                  { type: 'input', width: 2 },
+                  { type: 'input', width: 2, id: 3, answer: '0' },
                   { type: 'text', text: ', ' },
-                  { type: 'input', width: 2 },
+                  { type: 'input', width: 2, id: 4, answer: '-1' },
                   { type: 'text', text: ')' },
                 ],
               },
@@ -189,25 +189,6 @@ ExerciseSideProps): JSX.Element {
         </div>
       </div>
     );
-
-    /*<div className="exercise-box">
-          <AxisParent
-            axisMarkers={[
-              [-2, -1, 0, 1, 2],
-              [-1, 0, 1, 2],
-            ]}
-            axisLabels={[
-              ['A', '', '', 'B', 'C'],
-              ['A', '', '', 'B'],
-            ]}
-            toNextExercise={() => {
-              setCompleteExercises(completeExercises + 1);
-              incrementExercise();
-              return;
-            }}
-          />
-        </div>
-    );*/
   } else if (exercises[displayExercise] == 'axis') {
     curExercise = (
       <div className="exercise-box">
