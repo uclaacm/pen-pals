@@ -12,12 +12,17 @@ interface lessonSideProps {
   maxLevel: number;
 }
 
+function getRandomNumber(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function LessonSide({
   levelNum,
   updateLevel,
   maxLevel,
 }: lessonSideProps): JSX.Element {
   const lesson_info = LessonSideContent[levelNum] || [];
+  const randomTurtleMessage = getRandomNumber(1, 7);
   // console.log("max:" + maxLevel);
   return (
     <section id="lesson-side-container">
@@ -33,7 +38,7 @@ function LessonSide({
         <LessonText text_array={lesson_info} />
       </div>
       <div>
-        <Turtle turtleID="your-genius" />
+        <Turtle turtleID={randomTurtleMessage} />
 
         {/* passed from parent component */}
         <LevelSelector
