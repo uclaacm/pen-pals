@@ -7,33 +7,33 @@ import encouragingTurtleSkills from '../../../assets/LessonSide/EncouragingTurtl
 import encouragingTurtleSuccess from '../../../assets/LessonSide/EncouragingTurtleSuccess.svg';
 
 interface TurtleProps {
-  turtleID: string;
+  turtleID: number;
 }
 
 interface TurtleData {
-  [key: string]: [fig: string, altText: string];
+  [key: number]: [fig: string, altText: string];
 }
 
 const turtleIDs: TurtleData = {
-  'full-points': [
+  1: [
     encouragingTurtleFullPoints,
     'Turtle saying Full points for you!',
   ],
-  'you-can-do-it': [encouragingTurtle, 'Turtle saying You can do it!'],
-  'numerous-skills': [
+  2: [encouragingTurtle, 'Turtle saying You can do it!'],
+  3: [
     encouragingTurtleSkills,
     'Turtle saying Your skills are numerous!',
   ],
-  'your-genius': [
+  4: [
     encouragingTurtleGenius,
     "Turtle saying There's no end to your genius!",
   ],
-  'nice-going': [encouragingTurtleNiceGoing, 'Turtle saying Nice going!'],
-  'drawn-to-work': [
+  5: [encouragingTurtleNiceGoing, 'Turtle saying Nice going!'],
+  6: [
     encouragingTurtleWork,
     "Turtle saying I'm drawn to your work!",
   ],
-  'large-success': [
+  7: [
     encouragingTurtleSuccess,
     'Turtle saying A large degree of success!',
   ],
