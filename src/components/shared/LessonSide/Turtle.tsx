@@ -15,28 +15,13 @@ interface TurtleData {
 }
 
 const turtleIDs: TurtleData = {
-  1: [
-    encouragingTurtleFullPoints,
-    'Turtle saying Full points for you!',
-  ],
+  1: [encouragingTurtleFullPoints, 'Turtle saying Full points for you!'],
   2: [encouragingTurtle, 'Turtle saying You can do it!'],
-  3: [
-    encouragingTurtleSkills,
-    'Turtle saying Your skills are numerous!',
-  ],
-  4: [
-    encouragingTurtleGenius,
-    "Turtle saying There's no end to your genius!",
-  ],
+  3: [encouragingTurtleSkills, 'Turtle saying Your skills are numerous!'],
+  4: [encouragingTurtleGenius, "Turtle saying There's no end to your genius!"],
   5: [encouragingTurtleNiceGoing, 'Turtle saying Nice going!'],
-  6: [
-    encouragingTurtleWork,
-    "Turtle saying I'm drawn to your work!",
-  ],
-  7: [
-    encouragingTurtleSuccess,
-    'Turtle saying A large degree of success!',
-  ],
+  6: [encouragingTurtleWork, "Turtle saying I'm drawn to your work!"],
+  7: [encouragingTurtleSuccess, 'Turtle saying A large degree of success!'],
 };
 
 function Turtle({ turtleID }: TurtleProps): JSX.Element {

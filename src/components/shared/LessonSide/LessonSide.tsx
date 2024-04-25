@@ -22,7 +22,7 @@ function LessonSide({
   maxLevel,
 }: lessonSideProps): JSX.Element {
   const lesson_info = LessonSideContent[levelNum] || [];
-  const randomTurtleMessage = getRandomNumber(1, 7)
+  const randomTurtleMessage = getRandomNumber(1, 7);
   // console.log("max:" + maxLevel);
   return (
     <section id="lesson-side-container">
