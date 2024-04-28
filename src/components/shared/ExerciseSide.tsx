@@ -8,8 +8,8 @@ import AxisParent from './Exercises/AxisParent';
 import GraphExercise from './Exercises/GraphExercise';
 import GraphInput from './Exercises/GraphInput';
 //import AxisParent from './Exercises/AxisParent';
-import UnitCircleExercise from './Exercises/UnitCircleExercise';
-import UnitCircleInput from './Exercises/UnitCircleInput';
+import UnitCircleParent from './Exercises/UnitCircleParent';
+
 ('./Exercises/AxisExercise');
 
 interface ExerciseSideProps {
@@ -216,21 +216,27 @@ ExerciseSideProps): JSX.Element {
     curExercise = (
       <div>
         <div>
-          <UnitCircleExercise
-            turtleAngle={1}
-            markers={['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0']}
-            labels={['A', 'C', '', 'B', '']}
-          />
-          <UnitCircleInput
-            nextExercise={() => {
-              // console.log('unit');
+          <UnitCircleParent
+            unitCircleMarkers={[
+              ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
+              ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
+              ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
+            ]}
+            unitCircleLabels={[
+              ['A', 'C', '', 'B', ''],
+              ['B', 'A', '', 'C', ''],
+              ['', '', 'C', 'A', 'B'],
+            ]}
+            directions={[
+              ['left', 'right', '', 'right', ''],
+              ['left', 'left', '', 'left', ''],
+              ['', '', 'right', 'right', 'left'],
+            ]}
+            toNextExercise={() => {
               setDisplayExercise(displayExercise + 1);
               incrementExercise();
               return;
             }}
-            markers={[['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0']]}
-            labels={[['A', 'C', '', 'B', '']]}
-            directions={[['left', 'right', '', 'right', '']]}
           />
         </div>
       </div>

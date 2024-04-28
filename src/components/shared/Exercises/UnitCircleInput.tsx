@@ -3,22 +3,22 @@ import '../../../styles/Exercises/UnitCircleInput.scss';
 
 interface UnitCircleInputProps {
   nextExercise: () => void;
-  markers: string[][];
-  labels: string[][];
+  answers: number[][];
+  questionLabels: string[][];
   directions: string[][];
 }
 
 interface CircleQuestion {
   label: string;
-  answer: string; // Should change to being strings
+  answer: number; // Should change to being strings
   direction: string;
   id: number; //This sucks lol
 }
 
 function UnitCircleInput({
   nextExercise,
-  markers,
-  labels,
+  answers,
+  questionLabels,
   directions,
 }: UnitCircleInputProps): JSX.Element {
   function MakeQuestion({ label, id, direction }: CircleQuestion): JSX.Element {
@@ -27,7 +27,7 @@ function UnitCircleInput({
     };
     /* lines 25-35, try to get component to look like this */
     return (
-      <div id="unitcircle-question-container">
+      <div id="unitcircle-question-container" key={id}>
         <p id="unitcircle-check-question">
           {label} = {direction}{' '}
         </p>
@@ -44,7 +44,7 @@ function UnitCircleInput({
   function checkAnswer() {
     // Invoked to check answers and switch to the next question or set the answer wrong
     for (let i = 0; i < answers[counter].length; i++) {
-      if (inputText[i] != answers[counter][i]) {
+      if (parseInt(inputText[i]) != answers[counter][i]) {
         setWrong(true);
         return;
       }
@@ -59,30 +59,6 @@ function UnitCircleInput({
     setWrong(false);
     setInputText(startInputStrings);
     nextExercise();
-  }
-
-  const answers: number[][] = [];
-  const questionLabels: string[][] = [];
-  const questionDirections: string[][] = [];
-  for (let i = 0; i < markers.length; i++) {
-    const currentAnswers = [];
-    const currentLabels = [];
-    const currentDirections = [];
-    const length = markers[i].length;
-    for (let j = 0; j < length; j++) {
-      if (labels[i][j] !== '') {
-        let multiplier = 1;
-        if (directions[i][j] == 'left') {
-          multiplier = -1;
-        }
-        currentAnswers.push(parseInt(markers[i][j].slice(0, -1)) * multiplier);
-        currentLabels.push(labels[i][j]);
-        currentDirections.push(directions[i][j]);
-      }
-    }
-    answers.push(currentAnswers);
-    questionLabels.push(currentLabels);
-    questionDirections.push(currentDirections);
   }
 
   function wrongMessage(isWrong: boolean) {
@@ -112,8 +88,8 @@ function UnitCircleInput({
     for (let i = 0; i < questionLabels[counter].length; i++) {
       questions.push({
         label: questionLabels[counter][i],
-        direction: questionDirections[counter][i],
         answer: answers[counter][i],
+        direction: directions[counter][i],
         id: i,
       });
     }
@@ -121,7 +97,6 @@ function UnitCircleInput({
     return <h2>Done!</h2>;
   }
 
-  //console.log(questionLabels[counter]);
   const questionOutput = questions.map(MakeQuestion);
   return (
     <div className="unitcircle-question-container">
