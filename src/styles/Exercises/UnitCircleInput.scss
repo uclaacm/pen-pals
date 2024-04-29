@@ -75,6 +75,8 @@
 #unitcircle-check-wrong {
   @include font-styles();
   color: red;
+  margin-bottom: 3%;
+  margin-top: 3%;
 }
 
 .unitcircle-wrong-box {
