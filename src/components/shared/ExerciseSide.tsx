@@ -8,8 +8,8 @@ import AxisParent from './Exercises/AxisParent';
 import GraphExercise from './Exercises/GraphExercise';
 import GraphInput from './Exercises/GraphInput';
 //import AxisParent from './Exercises/AxisParent';
-import UnitCircleExercise from './Exercises/UnitCircleExercise';
-import UnitCircleInput from './Exercises/UnitCircleInput';
+import UnitCircleParent from './Exercises/UnitCircleParent';
+
 ('./Exercises/AxisExercise');
 
 interface ExerciseSideProps {
@@ -25,12 +25,17 @@ function ExerciseSide({
 ExerciseSideProps): JSX.Element {
   const [displayExercise, setDisplayExercise] = useState(0);
 
-  type availableExercises = 'axis' | 'congrats' | 'graph' | 'unitcircle';
+  type availableExercises =
+    | 'axis'
+    | 'congrats'
+    | 'graph0'
+    | 'unitcircle'
+    | 'graph1';
 
   const exercises: availableExercises[] = [
     'unitcircle',
     'axis',
-    'graph',
+    'graph0',
     'congrats',
   ];
   let curExercise;
@@ -39,7 +44,89 @@ ExerciseSideProps): JSX.Element {
     setDisplayExercise(ExercisesNum);
   }
 
-  if (exercises[displayExercise] == 'graph') {
+  if (exercises[displayExercise] == 'graph0') {
+    curExercise = (
+      <div>
+        <div>
+          <GraphExercise
+            origin={{ x: 0, y: 0 }}
+            points={[
+              { x: 0, y: 0, label: '' },
+              { x: 2, y: 1, label: 'A', line: 1 },
+              { x: 1, y: -1, label: 'B', line: 1 },
+              { x: 0, y: -1, label: 'C', line: 1 },
+            ]}
+            pointerPosition={{ x: 0, y: 0 }}
+            pointerOrientation={0}
+          />
+        </div>
+        <div style={{ paddingTop: '10vw' }}>
+          <GraphInput
+            questionArray={[
+              {
+                textArray: [
+                  {
+                    type: 'text',
+                    text: '# Goto point A and draw on the dotted line',
+                  },
+                ],
+              },
+              {
+                textArray: [
+                  { type: 'text', text: 'turtle.goto(' },
+                  { type: 'input', width: 2, id: 0, answer: '2' },
+                  { type: 'text', text: ', 1)' },
+                ],
+              },
+              {
+                textArray: [
+                  { type: 'text', text: 'turtle.setheading(' },
+                  { type: 'input', width: 4, id: 1, answer: '225' },
+                  { type: 'text', text: ')' },
+                ],
+              },
+              {
+                textArray: [
+                  { type: 'text', text: 'turtle.' },
+                  { type: 'input', width: 8, id: 2, answer: 'forward' },
+                  { type: 'text', text: '()' },
+                ],
+              },
+              {
+                textArray: [
+                  { type: 'text', text: 'turtle.goto(' },
+                  { type: 'input', width: 2, id: 3, answer: '0' },
+                  { type: 'text', text: ', ' },
+                  { type: 'input', width: 2, id: 4, answer: '-1' },
+                  { type: 'text', text: ')' },
+                ],
+              },
+            ]}
+            nextExercise={() => incrementExercise()}
+          />
+        </div>
+      </div>
+    );
+
+    /*<div className="exercise-box">
+          <AxisParent
+            axisMarkers={[
+              [-2, -1, 0, 1, 2],
+              [-1, 0, 1, 2],
+            ]}
+            axisLabels={[
+              ['A', '', '', 'B', 'C'],
+              ['A', '', '', 'B'],
+            ]}
+            toNextExercise={() => {
+              setCompleteExercises(completeExercises + 1);
+              incrementExercise();
+              return;
+            }}
+          />
+        </div>
+    );*/
+  } else if (exercises[displayExercise] == 'graph1') {
     curExercise = (
       <div>
         <div>
@@ -102,25 +189,6 @@ ExerciseSideProps): JSX.Element {
         </div>
       </div>
     );
-
-    /*<div className="exercise-box">
-          <AxisParent
-            axisMarkers={[
-              [-2, -1, 0, 1, 2],
-              [-1, 0, 1, 2],
-            ]}
-            axisLabels={[
-              ['A', '', '', 'B', 'C'],
-              ['A', '', '', 'B'],
-            ]}
-            toNextExercise={() => {
-              setCompleteExercises(completeExercises + 1);
-              incrementExercise();
-              return;
-            }}
-          />
-        </div>
-    );*/
   } else if (exercises[displayExercise] == 'axis') {
     curExercise = (
       <div className="exercise-box">
@@ -148,21 +216,27 @@ ExerciseSideProps): JSX.Element {
     curExercise = (
       <div>
         <div>
-          <UnitCircleExercise
-            turtleAngle={1}
-            markers={['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0']}
-            labels={['A', 'C', '', 'B', '']}
-          />
-          <UnitCircleInput
-            nextExercise={() => {
-              // console.log('unit');
+          <UnitCircleParent
+            unitCircleMarkers={[
+              ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
+              ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
+              ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
+            ]}
+            unitCircleLabels={[
+              ['A', 'C', '', 'B', ''],
+              ['B', 'A', '', 'C', ''],
+              ['', '', 'C', 'A', 'B'],
+            ]}
+            directions={[
+              ['left', 'right', '', 'right', ''],
+              ['left', 'left', '', 'left', ''],
+              ['', '', 'right', 'right', 'left'],
+            ]}
+            toNextExercise={() => {
               setDisplayExercise(displayExercise + 1);
               incrementExercise();
               return;
             }}
-            markers={[['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0']]}
-            labels={[['A', 'C', '', 'B', '']]}
-            directions={[['left', 'right', '', 'right', '']]}
           />
         </div>
       </div>

@@ -128,7 +128,7 @@ GraphProps): JSX.Element {
         const dyPercent = yPos(endY) - yPos(startY);
         // use this factor because dyPercent is relative to height,
         // but we express a line's length as a percentage of width.
-        const yxRatio = 22.5 / 40;
+        const yxRatio = 22.5 / 50;
         const lineLengthPercent =
           Math.sqrt(
             (dxPercent / 100) ** 2 + ((dyPercent * yxRatio) / 100) ** 2
