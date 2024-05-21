@@ -33,7 +33,7 @@ function UnitCircleExercise({
         curAngle += angleBetweenTicks;
         cursorAngle += cursorTicks;
         return (
-          <div key={element}>
+          <div key={idx}>
             <div
               className="circle-exercise"
               style={{
