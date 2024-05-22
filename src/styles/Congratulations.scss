@@ -10,8 +10,10 @@
 
 #congrats-page-container {
   background-color: colors.$primary-green;
-  flex-grow: 1;
+  display: flex;
   height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 #turtle-logo {
@@ -34,27 +36,28 @@
 #turtle-image {
   display: inline-block;
   vertical-align: middle;
-  //float:left;
 }
 
 .speech-bubble {
   padding-left: 12.816vw;
-  padding-right: 16.463vw;
+  padding-right: 18.463vw;
   padding-top: 6vh;
   position: absolute;
+  height: auto;
+  width: auto;
 }
 
 #speech-bubble-image {
   height: auto;
-  width: 94%;
+  width: 75%;
 }
 
 #congratsTxt {
   color: colors.$primary-green;
   font-family: 'PT Sans', sans-serif;
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: bold;
-  left: 54%;
+  left: 52%;
   position: absolute;
   top: 26%;
   transform: translate(-64%, -26%);
@@ -63,7 +66,7 @@
 #blurb {
   color: colors.$primary-green;
   font-family: 'PT Sans', sans-serif;
-  font-size: 3.8vw;
+  font-size: 2.8vw;
   font-weight: bold;
   left: 50%;
   position: absolute;
@@ -81,6 +84,7 @@
 
 #turtle-picture {
   width: 14vw;
+  padding-left: 6vw;
 }
 
 #cat-img {
@@ -99,6 +103,8 @@
   font-weight: bold;
   position: absolute;
   right: 10vw;
+  height: auto;
+  width: auto;
 }
 
 #rectangle1 {
