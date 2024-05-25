@@ -1,5 +1,5 @@
 //import { useState } from 'react';
-//import { useState } from 'react';
+import { useState } from 'react';
 import '../../../styles/Exercises/GraphInput.scss';
 
 interface GraphQuestionData {
@@ -105,13 +105,23 @@ function GraphInput({
       //console.log(i);
       if (!i) {
         //console.log(`${i} is incorrect`);
-        //setWrong(true);
+        setWrong(true);
         return;
       }
     }
     //console.log('all right!');
     nextExercise();
   };
+
+  function wrongMessage(isWrong: boolean) {
+    if (isWrong) {
+      return "That's not quite right. Try again!";
+    } else {
+      return;
+    }
+  }
+
+  const [wrong, setWrong] = useState(false);
 
   const makeLine = (
     data: GraphLineData,
@@ -127,6 +137,9 @@ function GraphInput({
       <div id="graphinput-check-question"></div>
       <div id="graphinput-question-box">
         {questionArray.map((x) => makeLine(x, setValueCorrect))}
+      </div>
+      <div className="axinput-wrong-box">
+        <h3 id="axinput-check-wrong">&nbsp;{wrongMessage(wrong)}&nbsp;</h3>
       </div>
       <div id="graphinput-check-button-container">
         <button id="graphinput-check-button" onClick={checkCorrect}>

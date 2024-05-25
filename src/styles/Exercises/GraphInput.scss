@@ -24,7 +24,7 @@
   margin-bottom: 2vh;
   margin-left: 0;
   margin-right: auto;
-  margin-top: 150px;
+  margin-top: 210px;
   padding-left: 8%;
 }
 
@@ -78,7 +78,8 @@
 
 #graphinput-check-button-container {
   align-self: center;
-  padding-top: 4vh;
+  //padding-top: 4vh;
+  padding-bottom: 5vh;
 }
 
 #graphinput-check-button {
@@ -88,4 +89,13 @@
   border-radius: 10px;
   color: colors.$text-white;
   padding: 1.25vw 2.5vw;
+}
+
+#graphinput-check-wrong {
+  @include font-styles();
+  color: red;
+}
+
+.graphinput-wrong-box {
+  align-self: center;
 }
