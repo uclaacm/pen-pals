@@ -142,7 +142,7 @@ ExerciseSideProps): JSX.Element {
             pointerOrientation={45}
           />
         </div>
-        <div style={{ paddingTop: '5vw' }}>
+        <div style={{ paddingTop: '10vw' }}>
           <GraphInput
             questionArray={[
               {
