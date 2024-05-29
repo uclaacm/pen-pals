@@ -4,6 +4,7 @@ import '../../styles/ExerciseSide.scss';
 
 //import AxisExercise from './Exercises/AxisExercise';
 //import AxisInput from './Exercises/AxisInputs';
+import CongratsPage from './Congratulations';
 import AxisParent from './Exercises/AxisParent';
 import GraphExercise from './Exercises/GraphExercise';
 import GraphInput from './Exercises/GraphInput';
@@ -26,8 +27,8 @@ ExerciseSideProps): JSX.Element {
   const [displayExercise, setDisplayExercise] = useState(0);
 
   type availableExercises =
-    | 'axis'
     | 'congrats'
+    | 'axis'
     | 'graph0'
     | 'unitcircle'
     | 'graph1';
@@ -260,6 +261,8 @@ ExerciseSideProps): JSX.Element {
         </div>
       </div>
     );
+  } else if (exercises[displayExercise] === 'congrats') {
+    return (curExercise = <CongratsPage></CongratsPage>);
   }
 
   return (
