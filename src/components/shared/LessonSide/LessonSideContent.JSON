@@ -1,41 +1,5 @@
 {
     "1": [
-        { "id": "lesson-side-header", "text": "Positioning of Computers" },
-        {
-            "id": "lesson-side-body",
-            "text": "In order to tell computers where to move the cursor, we have to use the coordinate system. The coordinate system is a grid with lots of small chunks, called units. To figure out where to move, the cursor uses its starting point at the center of the grid and counts out some number of units. For example, the point (2, 1) would be two units RIGHT and one unit UP from the center."
-        },
-        {
-            "id": "lesson-side-body",
-            "text": "When looking at these numbers, remember that the number to move sideways comes first. A positive number means you move right, and a negative number means you move left. And when moving up and down with the second number, a positive number means you move up and a negative means down."
-        }
-    ],
-    "2": [
-        { "id": "lesson-side-header", "text": "Moving the Cursor: turtle.goto()" },
-        {
-            "id": "lesson-side-body",
-            "text": "There are many commands that allow us to move the cursor with Turtle. The simplest such command is goto(), which accepts arguments in the form of the pairs of numbers we saw before. In order to use it, we simply call it like this:"
-        },
-        {"id": "code-text", "text": "turtle.goto(-1,2)"},
-        {
-            "id": "lesson-side-body",
-            "text": "The above line tells the Turtle cursor to move 1 unit to the left and 2 units up from the center. Now try it yourself!"
-        }
-    ],
-    "3": [
-        { "id": "lesson-side-header", "text": "Moving the Cursor: forward() and backward()" },
-        {
-            "id": "lesson-side-body",
-            "text": "If we don't know exactly what position to move to, we can also tell the cursor to move some number of units either forward or backward. In order to use the forward() and backward() functions, you call them like this:"
-        },
-        {"id": "code-text", "text": "turtle.forward(1)"},
-        {"id": "code-text", "text": "turtle.backward(2)"},
-        {
-            "id": "lesson-side-body",
-            "text": "The above code tells the cursor to move 1 unit forward, then 2 units backward. Since the cursor points to the right at the beginning, the forward() function makes it move right and the backward() function goes left."
-        }
-    ],
-    "4": [
         { "id": "lesson-side-header", "text": "Rotations in Computers" },
         {
             "id": "lesson-side-body",
@@ -44,6 +8,43 @@
         {
             "id": "lesson-side-body",
             "text": "Just like the coordinate system, degrees can be either positive or negative."
+        }
+    ],
+    "2": [
+        { "id": "lesson-side-header", "text": "Positioning in Computers" },
+        {
+            "id": "lesson-side-body",
+            "text": "Computers use the coordinate system to tell the cursor where to move. The coordinate system is a grid made of small chunks called units. The cursor starts out at the center of the grid and counts out some number of units to move. For example, the point (2, 1) would be two units RIGHT and one unit UP from the center."
+        },
+        {"id": "code-text", "text": "turtle.goto(-1,2)"},
+        {
+            "id": "lesson-side-body",
+            "text": "When looking at these numbers, remember that the number to move sideways comes first. A positive number means you move right, and a negative number means you move left. And when moving up and down with the second number, a positive number means you move up and a negative means down."
+        }
+    ],
+    "3": [
+        { "id": "lesson-side-header", "text": "Moving the Cursor: turtle.goto()" },
+        {
+            "id": "lesson-side-body",
+            "text": "There are many commands that allow us to move the cursor with Turtle. The simplest such command is goto(), which accepts arguments in the form of the pairs of numbers we saw before. In order to use it, we simply call it like this:"
+        },
+        {"id": "code-text", "text": "turtle.goto(-1, 2)"},
+        {
+            "id": "lesson-side-body",
+            "text": "The above line tells the Turtle cursor to move 1 unit to the left and 2 units up from the center. Now try it yourself!"
+        }
+    ],
+    "4": [
+        { "id": "lesson-side-header", "text": "Moving the Cursor: forward() and backward()" },
+        {
+            "id": "lesson-side-body",
+            "text": "If we don’t know exactly what position to move to, we can also tell the cursor to move some number of units either forward or backward. In order to use the forward() and backward() functions, you call them like this:"
+        },
+        {"id": "code-text", "text": "turtle.forward(1)"},
+        {"id": "code-text", "text": "turtle.backward(2)"},
+        {
+            "id": "lesson-side-body",
+            "text": "The above code tells the cursor to move 1 unit forward, then 2 units backward. Since the cursor points to the right at the beginning, the forward() function makes it move right and the backward() function goes left."
         }
     ],
     "5": [

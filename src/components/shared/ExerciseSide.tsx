@@ -221,17 +221,36 @@ ExerciseSideProps): JSX.Element {
             unitCircleMarkers={[
               ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
               ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
-              ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
+              [
+                '-90\xB0',
+                '-60\xB0',
+                '-30\xB0',
+                '0\xB0',
+                '30\xB0',
+                '60\xB0',
+                '90\xB0',
+              ],
+              [
+                '-90\xB0',
+                '-60\xB0',
+                '-30\xB0',
+                '0\xB0',
+                '30\xB0',
+                '60\xB0',
+                '90\xB0',
+              ],
             ]}
             unitCircleLabels={[
               ['A', 'C', '', 'B', ''],
-              ['B', 'A', '', 'C', ''],
-              ['', '', 'C', 'A', 'B'],
+              ['', 'A', 'B', '', 'C'],
+              ['', '', 'A', 'B', '', 'C', ''],
+              ['', 'A', '', '', 'B', '', 'C'],
             ]}
             directions={[
               ['left', 'right', '', 'right', ''],
-              ['left', 'left', '', 'left', ''],
-              ['', '', 'right', 'right', 'left'],
+              ['', 'left', 'left', '', 'left'],
+              ['', '', 'right', 'left', '', 'right', ''],
+              ['', 'right', '', '', 'right', '', 'left'],
             ]}
             toNextExercise={() => {
               setDisplayExercise(displayExercise + 1);
