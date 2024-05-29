@@ -12,8 +12,8 @@
   background-color: colors.$primary-green;
   display: flex;
   height: 100%;
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 #turtle-logo {
@@ -39,11 +39,11 @@
 }
 
 .speech-bubble {
+  height: auto;
   padding-left: 12.816vw;
   padding-right: 18.463vw;
   padding-top: 6vh;
   position: absolute;
-  height: auto;
   width: auto;
 }
 
@@ -83,8 +83,8 @@
 }
 
 #turtle-picture {
-  width: 14vw;
   padding-left: 6vw;
+  width: 14vw;
 }
 
 #cat-img {
@@ -101,9 +101,9 @@
   font-family: 'PT Sans', sans-serif;
   font-size: 4vh;
   font-weight: bold;
+  height: auto;
   position: absolute;
   right: 10vw;
-  height: auto;
   width: auto;
 }
 

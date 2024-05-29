@@ -23,29 +23,28 @@ function App(): JSX.Element {
     }
   };
 
-  // change this to be max exercise
-  if (exerciseCount == 0) {
-    return (
-      <main>
-        <ExerciseSide
-          ExercisesNum={exerciseCount}
-          incrementExercise={() => setExerciseCount(exerciseCount + 1)}
-        />
-      </main>
-    );
-  }
+  // change it to be max exercise
   return (
     <div>
       <main>
-        <LessonSide
-          levelNum={exerciseCount + 1}
-          updateLevel={updateLevel}
-          maxLevel={completeExercises}
-        />
-        <ExerciseSide
-          ExercisesNum={exerciseCount}
-          incrementExercise={() => setExerciseCount(exerciseCount + 1)}
-        />
+        {exerciseCount < 7 ? (
+          <>
+            <LessonSide
+              levelNum={exerciseCount + 1}
+              updateLevel={updateLevel}
+              maxLevel={completeExercises}
+            />
+            <ExerciseSide
+              ExercisesNum={exerciseCount}
+              incrementExercise={() => setExerciseCount(exerciseCount + 1)}
+            />
+          </>
+        ) : (
+          <ExerciseSide
+            ExercisesNum={exerciseCount}
+            incrementExercise={() => setExerciseCount(exerciseCount + 1)}
+          />
+        )}
       </main>
     </div>
   );
