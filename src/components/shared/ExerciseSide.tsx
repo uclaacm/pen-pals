@@ -4,6 +4,7 @@ import '../../styles/ExerciseSide.scss';
 
 //import AxisExercise from './Exercises/AxisExercise';
 //import AxisInput from './Exercises/AxisInputs';
+import CongratsPage from './Congratulations';
 import AxisParent from './Exercises/AxisParent';
 import GraphExercise from './Exercises/GraphExercise';
 import GraphInput from './Exercises/GraphInput';
@@ -26,8 +27,8 @@ ExerciseSideProps): JSX.Element {
   const [displayExercise, setDisplayExercise] = useState(0);
 
   type availableExercises =
-    | 'axis'
     | 'congrats'
+    | 'axis'
     | 'graph0'
     | 'unitcircle'
     | 'graph1';
@@ -220,17 +221,36 @@ ExerciseSideProps): JSX.Element {
             unitCircleMarkers={[
               ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
               ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
-              ['-90\xB0', '-45\xB0', '0\xB0', '45\xB0', '90\xB0'],
+              [
+                '-90\xB0',
+                '-60\xB0',
+                '-30\xB0',
+                '0\xB0',
+                '30\xB0',
+                '60\xB0',
+                '90\xB0',
+              ],
+              [
+                '-90\xB0',
+                '-60\xB0',
+                '-30\xB0',
+                '0\xB0',
+                '30\xB0',
+                '60\xB0',
+                '90\xB0',
+              ],
             ]}
             unitCircleLabels={[
               ['A', 'C', '', 'B', ''],
-              ['B', 'A', '', 'C', ''],
-              ['', '', 'C', 'A', 'B'],
+              ['', 'A', 'B', '', 'C'],
+              ['', '', 'A', 'B', '', 'C', ''],
+              ['', 'A', '', '', 'B', '', 'C'],
             ]}
             directions={[
               ['left', 'right', '', 'right', ''],
-              ['left', 'left', '', 'left', ''],
-              ['', '', 'right', 'right', 'left'],
+              ['', 'left', 'left', '', 'left'],
+              ['', '', 'right', 'left', '', 'right', ''],
+              ['', 'right', '', '', 'right', '', 'left'],
             ]}
             toNextExercise={() => {
               setDisplayExercise(displayExercise + 1);
@@ -241,6 +261,8 @@ ExerciseSideProps): JSX.Element {
         </div>
       </div>
     );
+  } else if (exercises[displayExercise] === 'congrats') {
+    return (curExercise = <CongratsPage></CongratsPage>);
   }
 
   return (

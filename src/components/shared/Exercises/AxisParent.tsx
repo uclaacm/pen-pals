@@ -54,7 +54,7 @@ function AxisParent({
         }
         markers={axisMarkers[Math.min(exerciseNum, axisMarkers.length - 1)]}
         labels={axisLabels[Math.min(exerciseNum, axisLabels.length - 1)]}
-        turtlePosition={1}
+        turtlePosition={0}
       />
       <AxisInput
         questionLabels={questionLabels}

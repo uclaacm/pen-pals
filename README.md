@@ -1,4 +1,4 @@
-# Your Teach LA Project Here!
+# Pen Pals
 
 ![Production Build](https://github.com/uclaacm/teach-la-react-starter-barebones/workflows/Production%20Build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -28,7 +28,7 @@ Thanks for using our template! We hope this makes your life developing significa
 
 Things you should do **after using this as a template**:
 
-- [ ] find-and-replace `YOUR_PROJECT_URL_HERE` with your GitHub repo's project name in this README (it's in a few places, so use an editor!)
+- [ ] find-and-replace `pen-pals` with your GitHub repo's project name in this README (it's in a few places, so use an editor!)
 - [x] set up [Netlify](https://www.netlify.com/) for this app - talk to jiin (`@doubleiis02`) if you need access to the Teach LA Netlify team.
 - [x] turn on "Automatically delete head branches" in GitHub `Settings > Options`
 - [x] in `Settings > Branches`, create a branch protection rule for `main` that requires PR reviews. Also require status checks, like passing `build`.
@@ -46,8 +46,8 @@ We'll use a really common Node.js project workflow + Yarn!
 First, let's clone our repository, and install all of our yarn dependencies:
 
 ```
-git clone https://github.com/uclaacm/YOUR_PROJECT_URL_HERE.git
-cd YOUR_PROJECT_URL_HERE
+git clone https://github.com/uclaacm/pen-pals.git
+cd pen-pals
 ```
 
 The instructions to install Node.js will be different based on which platform you're running. It's heavily advised to install your Node.js using NVM (Node Version Manager) because it's easy to manage a standardized version and update it as needed.
@@ -92,7 +92,7 @@ yarn run build
 
 ## Contribution Workflow
 
-Thanks for your interest in contributing to YOUR_PROJECT_URL_HERE! ❤️
+Thanks for your interest in contributing to pen-pals! ❤️
 
 Here's a quick guide on how to get started.
 
@@ -101,7 +101,7 @@ Here's a quick guide on how to get started.
 3. Beep boop away!
 4. **Before you push**, make sure your app runs with `yarn start`. If there are any errors, our CI/CD service will **reject your build**.
 5. Once you're ready, stage and commit your changes!
-6. Make a [pull request](https://github.com/uclaacm/YOUR_PROJECT_URL_HERE/pulls) with your changes, and let someone on your project team know.
+6. Make a [pull request](https://github.com/uclaacm/pen-pals/pulls) with your changes, and let someone on your project team know.
    a. Netlify has a neat feature called "Deploy Previews" that give you a link to preview your changes; [see the blog post](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) for more info!
 7. If your code passes code review, then we can **squash and merge** it into `main`. Congratulations! If you'd like, it's now safe to delete your branch/fork.
 
