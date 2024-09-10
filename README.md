@@ -87,6 +87,7 @@ yarn lint-fix
 With Husky, we run `yarn lint-staged` automatically before you commit! If you want to lint before committing, you can run `yarn lint-fix`.
 
 ## Template Repository Features
+
 What's this? This is a template repository that sets up a few minor systems for a React micro-app, which is something that we've done frequently at Teach LA. Here's what it does:
 
 - has GitHub Actions automatically set up for testing and linting builds
@@ -99,7 +100,6 @@ What's this? This is a template repository that sets up a few minor systems for 
 - includes the [Contributor Covenant](https://www.contributor-covenant.org/) in `CODE_OF_CONDUCT.md`
 - has a little bit of documentation for new people!
 - Some extra stuff like changing the app logo to TeachLA's logo and setting up the `src` directory for further development!
-
 
 ## FAQs
 
@@ -196,7 +196,6 @@ Things you should do **after using this as a template**:
 - [ ] this is a reminder to periodically run accessibility checks & Search Engine Optimization on your project by running `inspect element / developer tools > Lighthouse`
 - [ ] update and delete this documentation!
 - [ ] contact Regina Wang (`@reginawang99`), Matthew Nieva (`@matthewcn56`), or Jiin Kim (`@doubleiis02`) with any questions about our quickstarter template set-up.
-
 
 ## Some More Helpful Tools
 
