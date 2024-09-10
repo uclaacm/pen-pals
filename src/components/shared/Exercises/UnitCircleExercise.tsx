@@ -66,7 +66,7 @@ function UnitCircleExercise({
                     (curAngle <= Math.PI / 2
                       ? curAngle == Math.PI / 2
                         ? 19 //middle
-                        : 20 //left
+                        : 17 //left
                       : 15) //right
                   }%`,
                   bottom: `${
@@ -82,7 +82,6 @@ function UnitCircleExercise({
                 {markers[idx]}
               </div>
             ) : null}
-
             <img
               src={Cursor}
               className="circle-cursor"
@@ -92,8 +91,8 @@ function UnitCircleExercise({
                   (cursorAngle <= Math.PI / 2
                     ? cursorAngle == Math.PI / 2
                       ? 5
-                      : 7
-                    : 2)
+                      : 6
+                    : 6)
                 }%`,
                 bottom: `${
                   Math.sin(cursorAngle) * 80 +
@@ -101,7 +100,7 @@ function UnitCircleExercise({
                     ? cursorAngle == Math.PI / 2
                       ? 25
                       : 28
-                    : 28)
+                    : 27)
                 }%`,
                 transform: `rotate(${cursorAngle}rad) ${
                   labels.length % 2 === 1 &&

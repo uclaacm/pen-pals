@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import CongratsPage from './shared/Congratulations';
 import ExerciseSide from './shared/ExerciseSide';
 import LessonSide from './shared/LessonSide/LessonSide';
 import '../assets/WestwoodSans-Regular.ttf';
@@ -24,25 +23,28 @@ function App(): JSX.Element {
     }
   };
 
-  if (exerciseCount == 5) {
-    return (
-      <main>
-        <CongratsPage />
-      </main>
-    );
-  }
+  // change it to be max exercise
   return (
     <div>
       <main>
-        <LessonSide
-          levelNum={exerciseCount + 1}
-          updateLevel={updateLevel}
-          maxLevel={completeExercises}
-        />
-        <ExerciseSide
-          ExercisesNum={exerciseCount}
-          incrementExercise={() => setExerciseCount(exerciseCount + 1)}
-        />
+        {exerciseCount < 7 ? (
+          <>
+            <LessonSide
+              levelNum={exerciseCount + 1}
+              updateLevel={updateLevel}
+              maxLevel={completeExercises}
+            />
+            <ExerciseSide
+              ExercisesNum={exerciseCount}
+              incrementExercise={() => setExerciseCount(exerciseCount + 1)}
+            />
+          </>
+        ) : (
+          <ExerciseSide
+            ExercisesNum={exerciseCount}
+            incrementExercise={() => setExerciseCount(exerciseCount + 1)}
+          />
+        )}
       </main>
     </div>
   );
