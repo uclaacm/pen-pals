@@ -5,40 +5,11 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f6bc763a-784f-424c-b2d8-c36823e9ebcc/deploy-status)](https://app.netlify.com/sites/pen-pals/deploys)
 
-What's this? This is a template repository that sets up a few minor systems for a React micro-app, which is something that we've done frequently at Teach LA. Here's what it does:
-
-- has GitHub Actions automatically set up for testing and linting builds
-- has a default Dependabot config for `yarn` (with monthly audits)
-- has Netlify redirects set up for multi-route SPAs
-- has Webpack that helps bundle JS/TS files for browser usage
-- Husky for Git Hooks which enforces linting rules for files on commit
-- ESLint for our .TS and .TSX files
-- StyleLint with SASS guidelines for CSS, SASS, SCSS stylesheets.
-- includes the [Contributor Covenant](https://www.contributor-covenant.org/) in `CODE_OF_CONDUCT.md`
-- has a little bit of documentation for new people!
-- Some extra stuff like changing the app logo to TeachLA's logo and setting up the `src` directory for further development!
-
 ## Overview
 
-... explain what your project is here! What technology you used, who made it, and what it was for!
+Pen Pals is a React web application geared towards primary school students that teaches basic Python syntax through Python's Turtle library! Turtle is Python's digital canvas where a user can move the "Turtle" to draw on the screen. Pen Pal introduces turning and moving through a level-based game.
 
-## Things You Should Do (and then delete this section)
-
-Thanks for using our template! We hope this makes your life developing significantly easier.
-
-Things you should do **after using this as a template**:
-
-- [ ] find-and-replace `pen-pals` with your GitHub repo's project name in this README (it's in a few places, so use an editor!)
-- [x] set up [Netlify](https://www.netlify.com/) for this app - talk to jiin (`@doubleiis02`) if you need access to the Teach LA Netlify team.
-- [x] turn on "Automatically delete head branches" in GitHub `Settings > Options`
-- [x] in `Settings > Branches`, create a branch protection rule for `main` that requires PR reviews. Also require status checks, like passing `build`.
-- [x] _only_ enable squash merging in Github `Settings > Options > Merge Button` (and disable merge commits and rebase merging).
-- [ ] this is a reminder to periodically run accessibility checks & Search Engine Optimization on your project by running `inspect element / developer tools > Lighthouse`
-- [x] update the README badges for the GitHub Actions and Netlify with the correct links!
-- [ ] update and delete this documentation!
-- [ ] update `public/index.html` to have a description and title
-- [ ] update `public/favicon.svg` and `public/favaicon512.png` as needed
-- [ ] contact Regina Wang (`@reginawang99`), Matthew Nieva (`@matthewcn56`), or Jiin Kim (`@doubleiis02`) with any questions about our quickstarter template set-up.
+This project uses React, Typescript, SCSS, and Yarn package manager.
 
 ## Development Setup
 
@@ -96,8 +67,8 @@ Thanks for your interest in contributing to pen-pals! ❤️
 
 Here's a quick guide on how to get started.
 
-1. Either make a new branch or a fork of this repository. `main` is a protected branch, **so you cannot push to it**.
-2. Follow the instructions in "Development Setup" above. If you're on a fork, replace the URL with the fork's URL; if you're on a different branch, check it out using `git checkout`.
+1. Make a new branch of this repository with the name of the ticket assigned. `main` is a protected branch, **so you cannot push to it**.
+2. Follow the instructions in "Development Setup" above. If you're on a different branch, check it out using `git checkout`.
 3. Beep boop away!
 4. **Before you push**, make sure your app runs with `yarn start`. If there are any errors, our CI/CD service will **reject your build**.
 5. Once you're ready, stage and commit your changes!
@@ -113,7 +84,22 @@ By running `yarn lint-fix` we can use the linter that we set-up to format our co
 yarn lint-fix
 ```
 
-With Husky, we run `yarn lint-staged` automatically before you commit! If you want to lint before commiting, you can run `yarn lint-fix`.
+With Husky, we run `yarn lint-staged` automatically before you commit! If you want to lint before committing, you can run `yarn lint-fix`.
+
+## Template Repository Features
+
+What's this? This is a template repository that sets up a few minor systems for a React micro-app, which is something that we've done frequently at Teach LA. Here's what it does:
+
+- has GitHub Actions automatically set up for testing and linting builds
+- has a default Dependabot config for `yarn` (with monthly audits)
+- has Netlify redirects set up for multi-route SPAs
+- has Webpack that helps bundle JS/TS files for browser usage
+- Husky for Git Hooks which enforces linting rules for files on commit
+- ESLint for our .TS and .TSX files
+- StyleLint with SASS guidelines for CSS, SASS, SCSS stylesheets.
+- includes the [Contributor Covenant](https://www.contributor-covenant.org/) in `CODE_OF_CONDUCT.md`
+- has a little bit of documentation for new people!
+- Some extra stuff like changing the app logo to TeachLA's logo and setting up the `src` directory for further development!
 
 ## FAQs
 
@@ -200,6 +186,16 @@ declare module '*.<YOUR_ASSET_TYPE>' {
 ### How can I tell if my asset is actually being served?
 
 Take a look at `<YOUR_PROJECT_PATH>/asset-manifest.json`. [Like this!](https://teach-la-ts-react-starter.netlify.app/asset-manifest.json)
+
+## Things You Should Do (and then delete this section)
+
+Thanks for using our template! We hope this makes your life developing significantly easier.
+
+Things you should do **after using this as a template**:
+
+- [ ] this is a reminder to periodically run accessibility checks & Search Engine Optimization on your project by running `inspect element / developer tools > Lighthouse`
+- [ ] update and delete this documentation!
+- [ ] contact Regina Wang (`@reginawang99`), Matthew Nieva (`@matthewcn56`), or Jiin Kim (`@doubleiis02`) with any questions about our quickstarter template set-up.
 
 ## Some More Helpful Tools
 
