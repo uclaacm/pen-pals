@@ -1,6 +1,7 @@
 @use '_colors.scss' as colors;
 
 #footer {
+  align-self:flex-end;
   align-items: center;
   background-color: colors.$footer-green;
   bottom: 0;

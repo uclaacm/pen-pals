@@ -8,13 +8,19 @@
   font-weight: bold;
 }
 
+#lesson-text {
+  display:flex;
+  flex-direction:column;
+}
+
 #code-text {
   color: colors.$text-white;
   font-family: Cascadia Code, sans-serif;
   font-size: vars.$body-font-size;
   padding-left: vars.$lesson-side-left-padding;
   padding-right: vars.$lesson-side-left-padding;
-  padding-top: 2.5vh;
+  padding-top: 0.75vh;
+  padding-bottom:0.75vh;
   text-align: center;
 }
 
@@ -22,15 +28,15 @@
   background-color: colors.$primary-green;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  //justify-content: space-between;
+  justify-content:space-around;
+  height: 100%;
   overflow-y: auto;
-  width: 43vw;
+  width: 45%;
 }
 
 #turtle-logo {
   color: colors.$text-white;
-  padding-bottom: 2.5vh;
+  padding-bottom: 1.5vh;
   padding-left: 2vw;
   padding-top: 2vh;
 
@@ -56,7 +62,7 @@
   color: colors.$text-white;
   font-family: 'PT Sans', sans-serif;
   font-size: vars.$header-font-size;
-  padding-bottom: 2vh;
+  padding-bottom: 1vh;
   padding-left: vars.$lesson-side-left-padding;
   text-align: left;
 }
@@ -67,15 +73,16 @@
   font-size: vars.$body-font-size;
   padding-left: vars.$lesson-side-left-padding;
   padding-right: vars.$lesson-side-left-padding;
-  padding-top: 2vh;
+  padding-top: 1vh;
   text-align: left;
 }
 
 #turtle-and-levels-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 3vh;
+  padding: 1vh;
 }
 
 #encouraging-turtle {
@@ -83,8 +90,8 @@
   box-sizing: border-box;
   display: flex;
   height: auto;
-  padding: 1vh;
-  width: 60%;
+  padding-bottom:2vh;
+  width: 45%;
 }
 
 #footer-space {
@@ -96,9 +103,8 @@
 .selector-box {
   align-items: flex-end;
   display: flex;
-  height: auto;
+  height: fit-content;
   justify-content: center;
-  padding-bottom: 1vh;
   width: 100%;
 }
 

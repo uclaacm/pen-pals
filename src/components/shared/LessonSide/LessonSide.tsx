@@ -26,7 +26,7 @@ function LessonSide({
   // console.log("max:" + maxLevel);
   return (
     <section id="lesson-side-container">
-      <div>
+      <div id="lesson-text">
         <div id="turtle-logo">
           <img
             src={penPalsLogo}
