@@ -37,7 +37,7 @@ function LessonSide({
         </div>
         <LessonText text_array={lesson_info} />
       </div>
-      <div>
+      <div id="turtle-and-levels-container">
         <Turtle turtleID={randomTurtleMessage} />
 
         {/* passed from parent component */}

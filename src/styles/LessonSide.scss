@@ -23,9 +23,9 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: space-between;
+  //justify-content: space-between;
   overflow-y: auto;
-  width: 40vw;
+  width: 43vw;
 }
 
 #turtle-logo {
@@ -56,7 +56,7 @@
   color: colors.$text-white;
   font-family: 'PT Sans', sans-serif;
   font-size: vars.$header-font-size;
-  padding-bottom: 2.5vh;
+  padding-bottom: 2vh;
   padding-left: vars.$lesson-side-left-padding;
   text-align: left;
 }
@@ -67,17 +67,24 @@
   font-size: vars.$body-font-size;
   padding-left: vars.$lesson-side-left-padding;
   padding-right: vars.$lesson-side-left-padding;
-  padding-top: 2.5vh;
+  padding-top: 2vh;
   text-align: left;
 }
 
+#turtle-and-levels-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3vh;
+}
+
 #encouraging-turtle {
-  align-items: flex-end;
+  align-items: center;
   box-sizing: border-box;
   display: flex;
   height: auto;
-  padding: 5vh;
-  width: 100%;
+  padding: 1vh;
+  width: 60%;
 }
 
 #footer-space {
