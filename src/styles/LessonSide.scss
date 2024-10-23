@@ -9,18 +9,18 @@
 }
 
 #lesson-text {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 
 #code-text {
   color: colors.$text-white;
   font-family: Cascadia Code, sans-serif;
   font-size: vars.$body-font-size;
+  padding-bottom: 0.75vh;
   padding-left: vars.$lesson-side-left-padding;
   padding-right: vars.$lesson-side-left-padding;
   padding-top: 0.75vh;
-  padding-bottom:0.75vh;
   text-align: center;
 }
 
@@ -28,8 +28,8 @@
   background-color: colors.$primary-green;
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
   height: 100%;
+  justify-content: space-around;
   overflow-y: auto;
   width: 45%;
 }
@@ -81,7 +81,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 1vh;
 }
 
@@ -90,7 +89,7 @@
   box-sizing: border-box;
   display: flex;
   height: auto;
-  padding-bottom:2vh;
+  padding-bottom: 2vh;
   width: 45%;
 }
 
