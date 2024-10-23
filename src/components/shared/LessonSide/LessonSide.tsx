@@ -42,7 +42,7 @@ function LessonSide({
 
         {/* passed from parent component */}
         <LevelSelector
-          numLevels={6}
+          numLevels={5}
           currentLevel={levelNum}
           maxLevelReached={maxLevel}
           updateLevel={updateLevel}
