@@ -72,6 +72,15 @@
   padding: 1.25vw 2.5vw;
 }
 
+#unitcircleinput-check-button:hover {
+  box-shadow: 5px 5px 5px #989696;
+}
+
+#unitcircleinput-check-button:active {
+  box-shadow: none;
+  transform: scale(0.95);
+}
+
 #unitcircle-check-wrong {
   @include font-styles();
   color: red;
