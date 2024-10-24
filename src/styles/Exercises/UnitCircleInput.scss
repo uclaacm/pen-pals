@@ -72,6 +72,29 @@
   padding: 1.25vw 2.5vw;
 }
 
+#unitcircleinput-check-button:hover {
+  @include font-styles();
+  background-color: colors.$primary-green;
+  border: 0.1em solid;
+  border-left-color: #e5e5e5;
+  border-radius: 10px;
+  border-style: outset;
+  border-top-color: #e5e5e5;
+  color: colors.$text-white;
+  padding: 1.25vw 2.5vw;
+
+  //border-width: 150px;
+}
+
+#unitcircleinput-check-button:active {
+  @include font-styles();
+  background-color: colors.$primary-green;
+  border: hidden;
+  border-radius: 10px;
+  color: colors.$text-white;
+  padding: 1vw 2vw;
+}
+
 #unitcircle-check-wrong {
   @include font-styles();
   color: red;
