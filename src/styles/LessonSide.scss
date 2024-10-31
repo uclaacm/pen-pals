@@ -17,10 +17,10 @@
   color: colors.$text-white;
   font-family: Cascadia Code, sans-serif;
   font-size: vars.$body-font-size;
-  padding-bottom: 0.75vh;
+  padding-bottom: 1vh;
   padding-left: vars.$lesson-side-left-padding;
   padding-right: vars.$lesson-side-left-padding;
-  padding-top: 0.75vh;
+  padding-top: 1vh;
   text-align: center;
 }
 
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   overflow-y: auto;
   width: 45vw;
 }
@@ -39,7 +39,6 @@
   padding-bottom: 1.5vh;
   padding-left: 2vw;
   padding-top: 2vh;
-
   //align-items: flex-start;
   text-align: left;
 }
@@ -77,11 +76,11 @@
   text-align: left;
 }
 
-#turtle-and-levels-container {
+#turtle-and-level-selector {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 1vh;
+  padding: 0.5em;
 }
 
 #encouraging-turtle {
@@ -89,7 +88,7 @@
   box-sizing: border-box;
   display: flex;
   height: auto;
-  padding-bottom: 2vh;
+  padding-bottom: 1em;
   width: 45%;
 }
 
