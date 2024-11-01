@@ -2,6 +2,7 @@
 
 #footer {
   align-items: center;
+  align-self: flex-end;
   background-color: colors.$footer-green;
   bottom: 0;
   display: flex;
@@ -15,8 +16,6 @@
 #footer h3 {
   color: white;
   margin: 0;
-  padding-bottom: 1em;
-  padding-top: 1em;
 }
 
 #footer a {
