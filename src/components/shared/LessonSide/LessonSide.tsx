@@ -41,15 +41,13 @@ function LessonSide({
         <div id="turtle-and-level-selector">
           <Turtle turtleID={randomTurtleMessage} />
 
-          {/* passed from parent component */}
-          <LevelSelector
-            numLevels={6}
-            currentLevel={levelNum}
-            maxLevelReached={maxLevel}
-            updateLevel={updateLevel}
-          />
-        </div>
-        <Footer />
+        {/* passed from parent component */}
+        <LevelSelector
+          numLevels={5}
+          currentLevel={levelNum}
+          maxLevelReached={maxLevel}
+          updateLevel={updateLevel}
+        />
       </div>
     </section>
   );
