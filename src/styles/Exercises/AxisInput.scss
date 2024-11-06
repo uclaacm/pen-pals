@@ -58,6 +58,15 @@
   background-color: colors.$input-grey;
 }
 
+#axinput-check-button:hover {
+  box-shadow: 5px 5px 5px #989696;
+}
+
+#axinput-check-button:active {
+  box-shadow: none;
+  transform: scale(0.95);
+}
+
 #axinput-check-button {
   @include font-styles();
   background-color: colors.$primary-green;
