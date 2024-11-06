@@ -58,15 +58,6 @@
   background-color: colors.$input-grey;
 }
 
-#axinput-check-button:hover {
-  box-shadow: 5px 5px 5px #989696;
-}
-
-#axinput-check-button:active {
-  box-shadow: none;
-  transform: scale(0.95);
-}
-
 #axinput-check-button {
   @include font-styles();
   background-color: colors.$primary-green;
@@ -74,6 +65,15 @@
   border-radius: 10px;
   color: colors.$text-white;
   padding: 1.25vw 2.5vw;
+}
+
+#axinput-check-button:hover {
+  box-shadow: 5px 5px 5px #989696;
+}
+
+#axinput-check-button:active {
+  box-shadow: none;
+  transform: scale(0.95);
 }
 
 #axinput-check-wrong {
