@@ -77,7 +77,7 @@ ExerciseSideProps): JSX.Element {
                   { type: 'input', width: 4, id: 1, answer: 'goto' },
                   { type: 'text', text: '(1,' },
                   { type: 'input', width: 2, id: 2, answer: '-1' },
-                  { type: 'text', text: ')' }
+                  { type: 'text', text: ')' },
                 ],
               },
               {
@@ -88,7 +88,7 @@ ExerciseSideProps): JSX.Element {
                   { type: 'input', width: 2, id: 4, answer: '0' },
                   { type: 'text', text: ',' },
                   { type: 'input', width: 2, id: 5, answer: '-1' },
-                  { type: 'text', text: ')' }
+                  { type: 'text', text: ')' },
                 ],
               },
             ]}
