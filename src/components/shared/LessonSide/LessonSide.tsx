@@ -26,7 +26,7 @@ function LessonSide({
   // console.log("max:" + maxLevel);
   return (
     <section id="lesson-side-container">
-      <div>
+      <div id="lesson-text">
         <div id="turtle-logo">
           <img
             src={penPalsLogo}
@@ -37,18 +37,20 @@ function LessonSide({
         </div>
         <LessonText text_array={lesson_info} />
       </div>
-      <div>
-        <Turtle turtleID={randomTurtleMessage} />
+      <div id="lesson-interactive">
+        <div id="turtle-and-level-selector">
+          <Turtle turtleID={randomTurtleMessage} />
 
-        {/* passed from parent component */}
-        <LevelSelector
-          numLevels={6}
-          currentLevel={levelNum}
-          maxLevelReached={maxLevel}
-          updateLevel={updateLevel}
-        />
+          {/* passed from parent component */}
+          <LevelSelector
+            numLevels={5}
+            currentLevel={levelNum}
+            maxLevelReached={maxLevel}
+            updateLevel={updateLevel}
+          />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </section>
   );
 }

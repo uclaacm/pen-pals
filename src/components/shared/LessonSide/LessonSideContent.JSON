@@ -16,7 +16,6 @@
             "id": "lesson-side-body",
             "text": "Computers use the coordinate system to tell the cursor where to move. The coordinate system is a grid made of small chunks called units. The cursor starts out at the center of the grid and counts out some number of units to move. For example, the point (2, 1) would be two units RIGHT and one unit UP from the center."
         },
-        {"id": "code-text", "text": "turtle.goto(-1,2)"},
         {
             "id": "lesson-side-body",
             "text": "When looking at these numbers, remember that the number to move sideways comes first. A positive number means you move right, and a negative number means you move left. And when moving up and down with the second number, a positive number means you move up and a negative means down."
