@@ -48,12 +48,12 @@
 #unitcircle-check-question-faded {
   @include font-styles();
   @include font-styles();
+  color: #8d8d8d;
   font-size: calc(13px + 1vw);
   font-style: normal;
   margin-bottom: 4vh;
   margin-left: auto;
   margin-right: auto;
-  color: #8d8d8d;
 }
 
 .unitcircle-check-box {
