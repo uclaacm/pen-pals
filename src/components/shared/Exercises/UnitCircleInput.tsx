@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../../../styles/Exercises/UnitCircleInput.scss';
 
 interface UnitCircleInputProps {
@@ -15,6 +15,9 @@ interface CircleQuestion {
   id: number; //This sucks lol
 }
 
+// Put this inside the function, push on each initial render, only update on render?
+// let focusedList: boolean[] = [true, false, false];
+
 function UnitCircleInput({
   nextExercise,
   answers,
@@ -25,10 +28,65 @@ function UnitCircleInput({
     const handleChange = (event: { target: { value: string } }) => {
       setText(event.target.value, id);
     };
+    const [isInputFocused, setIsInputFocused] = useState(false);
+
+    useEffect(() => {
+      const input = document.getElementById(`unitcircle-check-box-${label}`);
+
+      // if (id === 0) {
+      //   focusedList.push(true);
+      // } else {
+      //   focusedList.push(false);
+      // }
+
+      const focusListener = () => {
+        setIsInputFocused(true);
+      };
+
+      const blurListener = () => {
+        setIsInputFocused(false);
+      };
+
+      if (input) {
+        input.addEventListener('focus', focusListener);
+        input.addEventListener('blur', blurListener);
+      }
+
+      // Clean up event listeners when component unmounts
+      return () => {
+        if (input) {
+          input.removeEventListener('focus', focusListener);
+          input.removeEventListener('blur', blurListener);
+        }
+      };
+    }, []);
+
+    // useEffect(() => {
+    //   for (let i = 0; i < focusedList.length; i++) {
+    //     if (inputText[id]) {
+    //       focusedList[i] = true;
+    //     }
+    //   }
+    //   for (let i = 1; i < focusedList.length; i++) {
+    //     if (focusedList[i] === false && !inputText[id - 1]) {
+    //       setIsInputFocused(true);
+    //       break;
+    //     }
+    //   }
+    // });
+
+    // console.log(focusedList[id]);
+
     /* lines 25-35, try to get component to look like this */
     return (
       <div id="unitcircle-question-container" key={id}>
-        <p id="unitcircle-check-question">
+        <p
+          id={
+            isInputFocused
+              ? 'unitcircle-check-question'
+              : 'unitcircle-check-question-faded'
+          }
+        >
           {label} = {direction}{' '}
         </p>
         <input
@@ -36,6 +94,7 @@ function UnitCircleInput({
           className="unitcircle-check-box"
           onChange={handleChange}
           value={inputText[id]}
+          id={`unitcircle-check-box-${label}`}
         />
       </div>
     );
