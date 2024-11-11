@@ -35,6 +35,7 @@
   padding-left: 0;
 }
 
+/* use #8D8D8D for faded text */
 #unitcircle-check-question {
   @include font-styles();
   font-size: calc(13px + 1vw);
@@ -42,6 +43,17 @@
   margin-bottom: 4vh;
   margin-left: auto;
   margin-right: auto;
+}
+
+#unitcircle-check-question-faded {
+  @include font-styles();
+  @include font-styles();
+  font-size: calc(13px + 1vw);
+  font-style: normal;
+  margin-bottom: 4vh;
+  margin-left: auto;
+  margin-right: auto;
+  color: #8d8d8d;
 }
 
 .unitcircle-check-box {
