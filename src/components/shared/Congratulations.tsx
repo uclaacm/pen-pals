@@ -1,6 +1,4 @@
 import '../../styles/Congratulations.scss';
-import cat from '../../assets/cat.svg';
-import dog from '../../assets/dog.svg';
 import encouragingTurtle from '../../assets/EncouragingTurtle-Solo.svg';
 import speechBubble from '../../assets/speechBubble.svg';
 import penPalsLogo from '../../assets/turtleLogo.svg';
