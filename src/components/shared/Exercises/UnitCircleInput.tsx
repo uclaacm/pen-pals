@@ -73,7 +73,7 @@ function UnitCircleInput({
     //       break;
     //     }
     //   }
-    // });
+    // }, []);
 
     // console.log(focusedList[id]);
 
