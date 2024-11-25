@@ -10,9 +10,9 @@
 
 #congrats-page-container {
   background-color: colors.$primary-green;
-  display: flex;
+  // display: flex;
   height: 100%;
-  position: relative;
+  // position: relative;
   width: 100%;
 }
 
@@ -40,16 +40,15 @@
 
 .speech-bubble {
   height: auto;
-  padding-left: 12.816vw;
-  padding-right: 18.463vw;
-  padding-top: 6vh;
-  position: absolute;
+  margin-left: 18vw;
+  margin-right: 18vw;
+  // position: absolute;
   width: auto;
 }
 
 #speech-bubble-image {
   height: auto;
-  width: 75%;
+  width: 100%;
 }
 
 #congratsTxt {
@@ -57,76 +56,21 @@
   font-family: 'PT Sans', sans-serif;
   font-size: 4vw;
   font-weight: bold;
-  left: 52%;
+  left: 50vw;
   position: absolute;
   top: 26%;
-  transform: translate(-64%, -26%);
-}
-
-#blurb {
-  color: colors.$primary-green;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 2.8vw;
-  font-weight: bold;
-  left: 50%;
-  position: absolute;
-  top: 55%;
-  transform: translate(-55%, -45%);
+  transform: translate(-50%, -60%);
 }
 
 #encouraging-turtle-congratulations {
-  bottom: 3vh;
+  // bottom: 3vh;
   height: 13.69vh;
-  left: 2vh;
-  position: absolute;
+  // left: 2vh;
+  // position: absolute;
   width: 24vw;
 }
 
 #turtle-picture {
   padding-left: 6vw;
   width: 14vw;
-}
-
-#cat-img {
-  width: 12vh;
-}
-
-#dog-img {
-  width: 12vh;
-}
-
-#tryNext {
-  bottom: 20.5vh;
-  color: colors.$text-white;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 4vh;
-  font-weight: bold;
-  height: auto;
-  position: absolute;
-  right: 10vw;
-  width: auto;
-}
-
-#rectangle1 {
-  background: #e5e5e5;
-  border-radius: 1.48vh;
-  bottom: 3vh;
-  box-shadow: 0.12px 0.12px 0.5px rgba(0, 0, 0, 0.25);
-  float: right;
-  height: 14.46vh;
-  position: absolute;
-  right: 2.8vh;
-  text-align: center;
-  width: 26.2vh;
-}
-
-#rectangle2 {
-  background: #e5e5e5;
-  border-radius: 1.48vh;
-  bottom: 3vh;
-  box-shadow: 0.12px 0.12px 0.5px rgba(0, 0, 0, 0.25);
-  height: 14.46vh;
-  position: absolute;
-  right: 31vh;
-  width: 26.2vh;
 }

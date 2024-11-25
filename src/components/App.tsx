@@ -27,7 +27,7 @@ function App(): JSX.Element {
   return (
     <div>
       <main>
-        {exerciseCount < 7 ? (
+        {exerciseCount < 4 ? (
           <>
             <LessonSide
               levelNum={exerciseCount + 1}
