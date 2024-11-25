@@ -37,6 +37,7 @@ ExerciseSideProps): JSX.Element {
     'unitcircle',
     'axis',
     'graph0',
+    'graph1',
     'congrats',
   ];
   let curExercise;
@@ -123,53 +124,42 @@ ExerciseSideProps): JSX.Element {
           <GraphExercise
             origin={{ x: 0, y: 0 }}
             points={[
-              { x: -1, y: 1, label: 'A' },
-              { x: 2, y: -1, label: 'B', line: 1 },
-              { x: 1, y: 0, label: 'C', line: 0 },
-              { x: 0, y: -2, label: 'D', line: 0 },
+              { x: -3, y: 0, label: '' },
+              { x: -2, y: 1, label: 'A', line: 1 },
+              { x: -1, y: 1, label: 'B', line: 1 },
+              { x: 0, y: 0, label: 'C', line: 1 },
+              { x: 0, y: -1, label: 'D', line: 1 },
+              { x: -3, y: -1, label: 'E', line: 1 },
             ]}
-            pointerPosition={{ x: 1, y: 1 }}
-            pointerOrientation={45}
+            pointerPosition={{ x: -3, y: 0 }}
+            pointerOrientation={0}
           />
         </div>
         <div style={{ paddingTop: '10vw' }}>
           <GraphInput
             questionArray={[
               {
-                textArray: [
-                  {
-                    type: 'text',
-                    text: '# Goto point A and draw on the dotted line',
-                  },
-                ],
+                textArray: [{ type: 'text', text: 'turtle.goto(-2,1)' }],
               },
               {
                 textArray: [
-                  { type: 'text', text: 'turtle.goto(' },
-                  { type: 'input', width: 2 },
-                  { type: 'text', text: ', -1)' },
-                ],
-              },
-              {
-                textArray: [
-                  { type: 'text', text: 'turtle.setheading(' },
-                  { type: 'input', width: 4 },
+                  { type: 'text', text: 'turtle.forward(' },
+                  { type: 'input', width: 2, answer: 1 },
                   { type: 'text', text: ')' },
                 ],
               },
               {
-                textArray: [
-                  { type: 'text', text: 'turtle.' },
-                  { type: 'input', width: 8 },
-                  { type: 'text', text: '()' },
-                ],
+                textArray: [{ type: 'text', text: 'turtle.goto(0,0)' }],
+              },
+              {
+                textArray: [{ type: 'text', text: 'turtle.goto(-1,0)' }],
               },
               {
                 textArray: [
-                  { type: 'text', text: 'turtle.goto(' },
-                  { type: 'input', width: 2 },
-                  { type: 'text', text: ', ' },
-                  { type: 'input', width: 2 },
+                  { type: 'text', text: 'turtle.' },
+                  { type: 'input', width: 8, answer: 'backward' },
+                  { type: 'text', text: '(' },
+                  { type: 'input', width: 2, answer: '3' },
                   { type: 'text', text: ')' },
                 ],
               },
