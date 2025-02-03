@@ -17,7 +17,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Run linters
-        run: yarn lint
+        run: npm run lint
