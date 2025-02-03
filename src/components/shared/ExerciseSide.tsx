@@ -188,14 +188,14 @@ ExerciseSideProps): JSX.Element {
               // { x: 0, y: 0, label: '', line: 0 },
               // { x: 0, y: -1, label: '', line: 0 },
               // { x: -3, y: -1, label: '', line: 0 },
-
-              { x: -3, y: -1, label: '', line: 1 },
-              { x: -4, y: 0, label: '', line: 1 },
-              { x: -4, y: 1, label: '', line: 1 },
-              { x: -3, y: 1, label: '', line: 1 },
-              { x: -3, y: -1, label: '', line: 1 },
+              { x: 0, y: 0, label: '', line: 0 },
+              { x: 0, y: -1, label: 'A', line: 1 },
+              { x: -2, y: 0, label: 'B', line: 1 },
+              { x: -1, y: 0, label: 'C', line: 1 },
+              { x: -1, y: 2, label: 'D', line: 1 },
+              { x: 2, y: 0, label: 'E', line: 1 },
             ]}
-            pointerPosition={{ x: -3, y: 0 }}
+            pointerPosition={{ x: 0, y: 0 }}
             pointerOrientation={0}
           />
         </div>
@@ -215,7 +215,7 @@ ExerciseSideProps): JSX.Element {
               {
                 textArray: [
                   { type: 'text', text: 'turtle.goto(' },
-                  { type: 'input', width: 2, answer: '-4' },
+                  { type: 'input', width: 2, answer: '-2' },
                   { type: 'text', text: ',' },
                   { type: 'input', width: 2, answer: '0' },
                   { type: 'text', text: ')' },
@@ -224,28 +224,28 @@ ExerciseSideProps): JSX.Element {
               {
                 textArray: [
                   { type: 'text', text: 'turtle.left(' },
-                  { type: 'input', width: 3, answer: '180' },
+                  { type: 'input', width: 3, answer: '90' },
                   { type: 'text', text: ')' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.' },
-                  { type: 'input', width: 7, answer: 'backward' },
-                  { type: 'text', text: '(-1)' },
+                  { type: 'input', width: 7, answer: 'forward' },
+                  { type: 'text', text: '(1)' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.left(' },
-                  { type: 'input', width: 3, answer: '-90' },
+                  { type: 'input', width: 3, answer: '90' },
                   { type: 'text', text: ')' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.forward(' },
-                  { type: 'input', width: 2, answer: '1' },
+                  { type: 'input', width: 2, answer: '2' },
                   { type: 'text', text: ')' },
                 ],
               },
@@ -254,7 +254,7 @@ ExerciseSideProps): JSX.Element {
                   { type: 'text', text: 'turtle.' },
                   { type: 'input', width: 4, answer: 'goto' },
                   { type: 'text', text: '(' },
-                  { type: 'input', width: 3, answer: '-3' },
+                  { type: 'input', width: 3, answer: '2' },
                   { type: 'text', text: ',' },
                   { type: 'input', width: 2, answer: '0' },
                   { type: 'text', text: ')' },
