@@ -96,14 +96,14 @@ function GraphInput({
   // }
 
   const setValueCorrect = (id: number, value: boolean): void => {
-    console.log(`Setting ${id} to ${value}`);
+    // console.log(`Setting ${id} to ${value}`);
     setValueMap(valueMap.set(id, value));
   };
 
   const checkCorrect = (): void => {
-    console.log('Checking correct');
+    // console.log('Checking correct');
     const valuesArray = Array.from(valueMap.values());
-    console.log(valuesArray);
+    // console.log(valuesArray);
     for (const i of valuesArray) {
       //console.log(i);
       if (!i) {
