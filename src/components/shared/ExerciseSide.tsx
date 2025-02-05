@@ -39,7 +39,7 @@ ExerciseSideProps): JSX.Element {
     'axis',
     'graph0',
     'graph1',
-    'graph2',
+    
     'congrats',
   ];
   let curExercise;
@@ -146,7 +146,7 @@ ExerciseSideProps): JSX.Element {
               {
                 textArray: [
                   { type: 'text', text: 'turtle.forward(' },
-                  { type: 'input', width: 2, answer: '1' },
+                  { type: 'input', width: 2, id: 0, answer: '1' },
                   { type: 'text', text: ')' },
                 ],
               },
@@ -159,9 +159,9 @@ ExerciseSideProps): JSX.Element {
               {
                 textArray: [
                   { type: 'text', text: 'turtle.' },
-                  { type: 'input', width: 8, answer: 'backward' },
+                  { type: 'input', width: 8, id: 1, answer: 'forward' },
                   { type: 'text', text: '(' },
-                  { type: 'input', width: 2, answer: '3' },
+                  { type: 'input', width: 2, id: 2, answer: '3' },
                   { type: 'text', text: ')' },
                 ],
               },
@@ -178,16 +178,6 @@ ExerciseSideProps): JSX.Element {
           <GraphExercise
             origin={{ x: 0, y: 0 }}
             points={[
-              // { x: 0, y: 0, label: '' },
-              // { x: 2, y: 1, label: '', line: 0 },
-              // { x: 1, y: -1, label: '', line: 0 },
-              // { x: 0, y: -1, label: '', line: 0 },
-              // { x: -3, y: 0, label: '' },
-              // { x: -2, y: 1, label: '', line: 0 },
-              // { x: -1, y: 1, label: '', line: 0 },
-              // { x: 0, y: 0, label: '', line: 0 },
-              // { x: 0, y: -1, label: '', line: 0 },
-              // { x: -3, y: -1, label: '', line: 0 },
               { x: 0, y: 0, label: '', line: 0 },
               { x: 0, y: -1, label: 'A', line: 1 },
               { x: -2, y: 0, label: 'B', line: 1 },
@@ -208,55 +198,55 @@ ExerciseSideProps): JSX.Element {
               {
                 textArray: [
                   { type: 'text', text: 'turtle.forward(' },
-                  { type: 'input', width: 2, answer: '1' },
+                  { type: 'input', width: 2, id: 0, answer: '1' },
                   { type: 'text', text: ')' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.goto(' },
-                  { type: 'input', width: 2, answer: '-2' },
+                  { type: 'input', width: 2, id: 1, answer: '-2' },
                   { type: 'text', text: ',' },
-                  { type: 'input', width: 2, answer: '0' },
+                  { type: 'input', width: 2, id: 2, answer: '0' },
                   { type: 'text', text: ')' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.left(' },
-                  { type: 'input', width: 3, answer: '90' },
+                  { type: 'input', width: 3, id: 3, answer: '90' },
                   { type: 'text', text: ')' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.' },
-                  { type: 'input', width: 7, answer: 'forward' },
+                  { type: 'input', width: 7, id: 4, answer: 'forward' },
                   { type: 'text', text: '(1)' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.left(' },
-                  { type: 'input', width: 3, answer: '90' },
+                  { type: 'input', width: 3, id: 5, answer: '90' },
                   { type: 'text', text: ')' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.forward(' },
-                  { type: 'input', width: 2, answer: '2' },
+                  { type: 'input', width: 2, id: 6, answer: '2' },
                   { type: 'text', text: ')' },
                 ],
               },
               {
                 textArray: [
                   { type: 'text', text: 'turtle.' },
-                  { type: 'input', width: 4, answer: 'goto' },
+                  { type: 'input', width: 4, id: 7, answer: 'goto' },
                   { type: 'text', text: '(' },
-                  { type: 'input', width: 3, answer: '2' },
+                  { type: 'input', width: 3, id: 8, answer: '2' },
                   { type: 'text', text: ',' },
-                  { type: 'input', width: 2, answer: '0' },
+                  { type: 'input', width: 2, id: 9, answer: '0' },
                   { type: 'text', text: ')' },
                 ],
               },
