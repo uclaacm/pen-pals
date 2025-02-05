@@ -85,22 +85,25 @@ function GraphInput({
   questionArray,
   nextExercise,
 }: GraphInputProps): JSX.Element {
-  const valueMap = new Map<number, boolean>();
-  for (const question of questionArray) {
-    for (const item of question.textArray) {
-      if (item.type == 'input') {
-        valueMap.set(item.id ?? -1, false);
-      }
-    }
-  }
+  const [valueMap, setValueMap] = useState(new Map<number, boolean>());
+  // const valueMap = new Map<number, boolean>();
+  // for (const question of questionArray) {
+  //   for (const item of question.textArray) {
+  //     if (item.type == 'input') {
+  //       setValueMap(valueMap.set(item.id ?? -1, false));
+  //     }
+  //   }
+  // }
+
   const setValueCorrect = (id: number, value: boolean): void => {
-    //console.log(`Setting ${id} to ${value}`);
-    valueMap.set(id, value);
+    // console.log(`Setting ${id} to ${value}`);
+    setValueMap(valueMap.set(id, value));
   };
 
   const checkCorrect = (): void => {
-    //console.log('Checking correct');
+    // console.log('Checking correct');
     const valuesArray = Array.from(valueMap.values());
+    // console.log(valuesArray);
     for (const i of valuesArray) {
       //console.log(i);
       if (!i) {
@@ -110,6 +113,7 @@ function GraphInput({
       }
     }
     //console.log('all right!');
+    setWrong(false);
     nextExercise();
   };
 
