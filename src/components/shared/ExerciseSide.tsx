@@ -39,7 +39,7 @@ ExerciseSideProps): JSX.Element {
     'axis',
     'graph0',
     'graph1',
-
+    'graph2',
     'congrats',
   ];
   let curExercise;
