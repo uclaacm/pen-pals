@@ -10,7 +10,7 @@ import GraphExercise from './Exercises/GraphExercise';
 import GraphInput from './Exercises/GraphInput';
 //import AxisParent from './Exercises/AxisParent';
 import UnitCircleParent from './Exercises/UnitCircleParent';
-
+//add changes to netlify
 ('./Exercises/AxisExercise');
 
 interface ExerciseSideProps {
