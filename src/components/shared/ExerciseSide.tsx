@@ -40,9 +40,10 @@ ExerciseSideProps): JSX.Element {
     | 'graph2';
 
   const exercises: availableExercises[] = [
+    'graph0',
     'unitcircle',
     'axis',
-    'graph0',
+
     'graph1',
     'graph2',
     'congrats',
