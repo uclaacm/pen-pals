@@ -52,7 +52,7 @@
             "id": "lesson-side-body",
             "text": "Sometimes, you may want to move the cursor in a different direction than the one it's currently pointing in. You could use goto(), but that can be messy and hard to understand. Another solution is to use the left() and right() commands to turn the cursor to the direction you want it to go, like this:"
         },
-        {"id": "code-text", "text": "turtle.left(90"},
+        {"id": "code-text", "text": "turtle.left(90)"},
         {"id": "code-text", "text": "turtle.right(180)"},
         {
             "id": "lesson-side-body",
