@@ -1,5 +1,5 @@
 //import { useState } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../../../styles/Exercises/GraphInput.scss';
 
 interface GraphQuestionData {
@@ -33,6 +33,13 @@ function GraphStringElement({
   questionData,
   setCorrect,
 }: GraphQuestionGrouping) {
+  const [inputText, setInputText] = useState("");
+
+  // reset input when questionData changes (new level/question set)
+  useEffect(() => {
+    setInputText(""); 
+  }, [questionData]);
+
   if (questionData.type == 'text') {
     return <p id="graphinput-check-question">{questionData?.text ?? ''}</p>;
   } else {
@@ -45,13 +52,14 @@ function GraphStringElement({
       } else {
         setCorrect(questionData?.id ?? -1, false);
       }
-      //setInputText(event.target.value);
+      setInputText(event.target.value);
     };
     return (
       <div>
         <input
           type="text"
           className="graphinput-check-box"
+          value={inputText}
           style={{ width: `${(questionData?.width ?? 3) * 16}px` }}
           onChange={handleChange}
         />
