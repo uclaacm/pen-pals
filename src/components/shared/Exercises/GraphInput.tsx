@@ -33,11 +33,11 @@ function GraphStringElement({
   questionData,
   setCorrect,
 }: GraphQuestionGrouping) {
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
 
   // reset input when questionData changes (new level/question set)
   useEffect(() => {
-    setInputText(""); 
+    setInputText('');
   }, [questionData]);
 
   if (questionData.type == 'text') {
