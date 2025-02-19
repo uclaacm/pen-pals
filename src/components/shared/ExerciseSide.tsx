@@ -10,9 +10,16 @@ import GraphExercise from './Exercises/GraphExercise';
 import GraphInput from './Exercises/GraphInput';
 //import AxisParent from './Exercises/AxisParent';
 import UnitCircleParent from './Exercises/UnitCircleParent';
+
 //netlify deploy relink
+//add changes to netlify
 
 ('./Exercises/AxisExercise');
+
+export enum LineStyles {
+  Solid,
+  Dashed,
+}
 
 interface ExerciseSideProps {
   ExercisesNum: number;
@@ -129,10 +136,10 @@ ExerciseSideProps): JSX.Element {
             points={[
               { x: -3, y: 0, label: '' },
               { x: -2, y: 1, label: 'A', line: 1 },
-              { x: -1, y: 1, label: 'B', line: 1 },
+              { x: -1, y: 1, label: 'B', line: 0 },
               { x: 0, y: 0, label: 'C', line: 1 },
               { x: 0, y: -1, label: 'D', line: 1 },
-              { x: -3, y: -1, label: 'E', line: 1 },
+              { x: -3, y: -1, label: 'E', line: 0 },
             ]}
             pointerPosition={{ x: -3, y: 0 }}
             pointerOrientation={0}
@@ -180,10 +187,10 @@ ExerciseSideProps): JSX.Element {
             origin={{ x: 0, y: 0 }}
             points={[
               { x: 0, y: 0, label: '', line: 0 },
-              { x: 0, y: -1, label: 'A', line: 1 },
+              { x: 0, y: -1, label: 'A', line: 0 },
               { x: -2, y: 0, label: 'B', line: 1 },
-              { x: -1, y: 0, label: 'C', line: 1 },
-              { x: -1, y: 2, label: 'D', line: 1 },
+              { x: -1, y: 0, label: 'C', line: 0 },
+              { x: -1, y: 2, label: 'D', line: 0 },
               { x: 2, y: 0, label: 'E', line: 1 },
             ]}
             pointerPosition={{ x: 0, y: 0 }}
