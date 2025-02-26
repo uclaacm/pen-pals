@@ -5,7 +5,7 @@ import UnitCircleInput from './UnitCircleInput';
 ('./Exercises/AxisExercise');
 
 interface UnitCircleParentProps {
-  unitCircleMarkers: string[][]; //2-D array for different sets of problems
+  unitCircleMarkers: string[][]; // 2-D array for different sets of problems
   unitCircleLabels: string[][];
   directions: string[][];
   toNextExercise: () => void;
@@ -17,7 +17,7 @@ function UnitCircleParent({
   directions,
   toNextExercise,
 }: UnitCircleParentProps): JSX.Element {
-  //make 2d array for answers using the non-empty elements of unitCircleLabels
+  // make 2d array for answers using the non-empty elements of unitCircleLabels
   const answers: number[][] = [];
   const questionLabels: string[][] = [];
   const questionDirections: string[][] = [];
@@ -58,7 +58,6 @@ function UnitCircleParent({
   return (
     <div>
       <UnitCircleExercise
-        //orientation="horizontal"
         turtleAngle={1}
         markers={
           unitCircleMarkers[Math.min(exerciseNum, unitCircleMarkers.length - 1)]

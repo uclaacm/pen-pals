@@ -22,7 +22,6 @@ function AxisExercise({
     <div
       className="axis-container"
       style={{
-        //transform: `rotate(${orientation === 'horizontal' ? '0deg' : '90deg'})`, // axis orientation
         transform: `rotate(${isHorizontal ? '0deg' : '90deg'})`, // axis orientation
         width: size,
         marginLeft: !isHorizontal ? '25%' : '2%',
