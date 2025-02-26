@@ -21,11 +21,11 @@
 }
 
 #turtle-logo {
-  position:fixed;
   color: colors.$text-white;
   float: left;
   padding-left: 2vw;
   padding-top: 2vh;
+  position: fixed;
   text-align: left;
   width: 37vw;
 }
@@ -55,8 +55,8 @@
 
 #speech-bubble-image {
   height: auto;
-  width: 60vw;
   max-height: 100vh;
+  width: 60vw;
 }
 
 .congrats-text {
