@@ -10,7 +10,10 @@ import GraphExercise from './Exercises/GraphExercise';
 import GraphInput from './Exercises/GraphInput';
 //import AxisParent from './Exercises/AxisParent';
 import UnitCircleParent from './Exercises/UnitCircleParent';
+
+//netlify deploy relink
 //add changes to netlify
+
 ('./Exercises/AxisExercise');
 
 export enum LineStyles {
