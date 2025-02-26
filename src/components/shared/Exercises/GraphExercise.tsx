@@ -15,12 +15,11 @@ interface GraphProps {
 }
 
 function GraphExercise({
-  /* eslint-disable @typescript-eslint/no-unused-vars */
   origin,
   points,
   pointerPosition,
   pointerOrientation,
-}: /* eslint-enable @typescript-eslint/no-unused-vars */
+}:
 GraphProps): JSX.Element {
   const verticalLineCount = 7;
   const horizontalLineCount = 5;
