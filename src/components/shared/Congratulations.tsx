@@ -6,7 +6,7 @@ import penPalsLogo from '../../assets/turtleLogo.svg';
 function CongratsPage(): JSX.Element {
   return (
     <section id="congrats-page-container">
-      <div id="turtle-logo">
+      <div id="congrats-turtle-logo">
         <img
           src={penPalsLogo}
           alt="Small turtle, part of the TeachLA logo"
