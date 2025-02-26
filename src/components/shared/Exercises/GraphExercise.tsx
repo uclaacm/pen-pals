@@ -19,8 +19,7 @@ function GraphExercise({
   points,
   pointerPosition,
   pointerOrientation,
-}:
-GraphProps): JSX.Element {
+}: GraphProps): JSX.Element {
   const verticalLineCount = 7;
   const horizontalLineCount = 5;
   const verticalLineSpacing = 100 / (verticalLineCount + 1);
