@@ -6,7 +6,6 @@ import penPalsLogo from '../../assets/turtleLogo.svg';
 function CongratsPage(): JSX.Element {
   return (
     <section id="congrats-page-container">
-      <div>
         <div id="turtle-logo">
           <img
             src={penPalsLogo}
@@ -57,7 +56,6 @@ function CongratsPage(): JSX.Element {
             />
           </div>
         </div>
-      </div>
     </section>
   );
 }

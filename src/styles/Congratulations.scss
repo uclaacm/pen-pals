@@ -21,6 +21,7 @@
 }
 
 #turtle-logo {
+  position:fixed;
   color: colors.$text-white;
   float: left;
   padding-left: 2vw;
@@ -55,6 +56,7 @@
 #speech-bubble-image {
   height: auto;
   width: 60vw;
+  max-height: 100vh;
 }
 
 .congrats-text {
@@ -66,11 +68,11 @@
   max-width: 60vw;
   padding: 0 8vw;
   position: absolute;
-  top: 5rem;
+  top: 1rem;
 }
 
 .congrats-text p {
-  font-size: 1vw;
+  font-size: 1.75vw;
 }
 
 #congratsHeader {
@@ -82,7 +84,7 @@
 
 .congrats-links a {
   color: #000;
-  font-size: 1vw;
+  font-size: 1.75vw;
 }
 
 #congrats-links-header {
