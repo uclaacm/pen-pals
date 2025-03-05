@@ -108,25 +108,6 @@ ExerciseSideProps): JSX.Element {
         </div>
       </div>
     );
-
-    /*<div className="exercise-box">
-          <AxisParent
-            axisMarkers={[
-              [-2, -1, 0, 1, 2],
-              [-1, 0, 1, 2],
-            ]}
-            axisLabels={[
-              ['A', '', '', 'B', 'C'],
-              ['A', '', '', 'B'],
-            ]}
-            toNextExercise={() => {
-              setCompleteExercises(completeExercises + 1);
-              incrementExercise();
-              return;
-            }}
-          />
-        </div>
-    );*/
   } else if (exercises[displayExercise] == 'graph1') {
     curExercise = (
       <div>
@@ -315,7 +296,7 @@ ExerciseSideProps): JSX.Element {
               ],
             ]}
             unitCircleLabels={[
-              ['A', 'C', '', 'B', ''],
+              ['A', 'B', '', 'C', ''],
               ['', 'A', 'B', '', 'C'],
               ['', '', 'A', 'B', '', 'C', ''],
               ['', 'A', '', '', 'B', '', 'C'],
