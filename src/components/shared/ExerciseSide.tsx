@@ -167,7 +167,7 @@ ExerciseSideProps): JSX.Element {
               {
                 textArray: [
                   { type: 'text', text: 'turtle.' },
-                  { type: 'input', width: 8, id: 1, answer: 'forward' },
+                  { type: 'input', width: 8, id: 1, answer: 'backward' },
                   { type: 'text', text: '(' },
                   { type: 'input', width: 2, id: 2, answer: '3' },
                   { type: 'text', text: ')' },
