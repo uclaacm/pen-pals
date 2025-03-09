@@ -34,6 +34,7 @@
   flex-direction: column;
   font-family: 'PT Sans', sans-serif;
   text-align: left;
+  width: 100%;
 }
 
 #graphinput-question-box {
@@ -90,6 +91,15 @@
   border-radius: 10px;
   color: colors.$text-white;
   padding: 1.25vw 2.5vw;
+}
+
+#graphinput-check-button:hover {
+  box-shadow: 5px 5px 5px #989696;
+}
+
+#graphinput-check-button:active {
+  box-shadow: none;
+  transform: scale(0.95);
 }
 
 #graphinput-check-wrong {

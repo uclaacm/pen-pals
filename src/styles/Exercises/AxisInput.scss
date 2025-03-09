@@ -67,6 +67,15 @@
   padding: 1.25vw 2.5vw;
 }
 
+#axinput-check-button:hover {
+  box-shadow: 5px 5px 5px #989696;
+}
+
+#axinput-check-button:active {
+  box-shadow: none;
+  transform: scale(0.95);
+}
+
 #axinput-check-wrong {
   @include font-styles();
   color: red;

@@ -5,7 +5,7 @@ import AxisInput from './AxisInputs';
 ('./Exercises/AxisExercise');
 
 interface AxisParentProps {
-  axisMarkers: number[][]; //2-D array for different sets of problems
+  axisMarkers: number[][]; // 2-D array for different sets of problems
   axisLabels: string[][];
   orientations: string[];
   toNextExercise: () => void;
@@ -17,7 +17,7 @@ function AxisParent({
   orientations,
   toNextExercise,
 }: AxisParentProps): JSX.Element {
-  //make 2d array for answers using the non-empty elements of axisLabels
+  // make 2d array for answers using the non-empty elements of axisLabels
   const axisAnswers: number[][] = [];
   const questionLabels: string[][] = [];
   for (let i = 0; i < axisMarkers.length; i++) {
@@ -48,7 +48,6 @@ function AxisParent({
   return (
     <div>
       <AxisExercise
-        //orientation="horizontal"
         orientation={
           orientations[Math.min(exerciseNum, axisMarkers.length - 1)]
         }

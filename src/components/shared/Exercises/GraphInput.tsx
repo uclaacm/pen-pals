@@ -1,5 +1,4 @@
-//import { useState } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../../../styles/Exercises/GraphInput.scss';
 
 interface GraphQuestionData {
@@ -33,25 +32,30 @@ function GraphStringElement({
   questionData,
   setCorrect,
 }: GraphQuestionGrouping) {
+  const [inputText, setInputText] = useState('');
+
+  // reset input when questionData changes (new level/question set)
+  useEffect(() => {
+    setInputText('');
+  }, [questionData]);
+
   if (questionData.type == 'text') {
     return <p id="graphinput-check-question">{questionData?.text ?? ''}</p>;
   } else {
-    //const [inputText, setInputText] = useState("");
     const handleChange = (event: { target: { value: string } }) => {
-      //console.log(`input text: ${event.target.value}`);
-      //console.log(questionData?.answer ?? '');
       if (event.target.value == (questionData?.answer ?? '')) {
         setCorrect(questionData?.id ?? -1, true);
       } else {
         setCorrect(questionData?.id ?? -1, false);
       }
-      //setInputText(event.target.value);
+      setInputText(event.target.value);
     };
     return (
       <div>
         <input
           type="text"
           className="graphinput-check-box"
+          value={inputText}
           style={{ width: `${(questionData?.width ?? 3) * 16}px` }}
           onChange={handleChange}
         />
@@ -61,7 +65,7 @@ function GraphStringElement({
 }
 
 function GraphLine({ data, setCorrect }: GraphLineGrouping) {
-  //Map all elements of TextArray
+  // Map all elements of TextArray
   const makeElement = (elementData: GraphQuestionData): JSX.Element => {
     return (
       <GraphStringElement questionData={elementData} setCorrect={setCorrect} />
@@ -72,44 +76,27 @@ function GraphLine({ data, setCorrect }: GraphLineGrouping) {
       {data.textArray.map(makeElement)}
     </div>
   );
-  /*return (
-    <div id="graphinput-question-container">
-      <GraphStringElement type={"text"} text={"Hi?"}/>
-      <GraphStringElement type={"beans"} width={4} text={""}/>
-      <p id={'graphinput-check-question'}> Bye</p>
-    </div>
-  );*/
 }
 
 function GraphInput({
   questionArray,
   nextExercise,
 }: GraphInputProps): JSX.Element {
-  const valueMap = new Map<number, boolean>();
-  for (const question of questionArray) {
-    for (const item of question.textArray) {
-      if (item.type == 'input') {
-        valueMap.set(item.id ?? -1, false);
-      }
-    }
-  }
+  const [valueMap, setValueMap] = useState(new Map<number, boolean>());
+
   const setValueCorrect = (id: number, value: boolean): void => {
-    //console.log(`Setting ${id} to ${value}`);
-    valueMap.set(id, value);
+    setValueMap(valueMap.set(id, value));
   };
 
   const checkCorrect = (): void => {
-    //console.log('Checking correct');
     const valuesArray = Array.from(valueMap.values());
     for (const i of valuesArray) {
-      //console.log(i);
       if (!i) {
-        //console.log(`${i} is incorrect`);
         setWrong(true);
         return;
       }
     }
-    //console.log('all right!');
+    setWrong(false);
     nextExercise();
   };
 
