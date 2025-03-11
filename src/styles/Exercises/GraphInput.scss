@@ -57,6 +57,14 @@
   font-family: 'PT Sans', sans-serif;
   padding-top: 5vw;
   text-align: left;
+  position: absolute;
+  top: clamp(
+    160px,
+    20%,
+    1000px
+  ); // prevent input container from overlapping with graph
+  left: 50vw;
+  width: 45%;
 }
 
 .graphinput-check-box {

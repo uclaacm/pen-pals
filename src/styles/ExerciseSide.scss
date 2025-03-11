@@ -10,6 +10,8 @@
 
 .exercise-box {
   //align-items: center;
+  // background-color: 'red';
+  // top: clamp(200px, 50%, 100%);
   display: flex;
   flex-direction: column;
   height: 75%;
@@ -21,4 +23,9 @@
 
 .check-question {
   font-family: 'PT Sans', sans-serif;
+}
+
+.graph-exercise-input-container {
+  display: flex;
+  flex-direction: column;
 }
