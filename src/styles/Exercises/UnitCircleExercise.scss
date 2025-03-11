@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  left: 11%; //change: added
   //margin: 25% 10% 15%;
   //width: calc(550px + 1vw);
-  margin-bottom: 2%;
-  margin-left: 15%;
-  margin-top: 5%;
-  max-width: 400px;
+  margin-bottom: 1%; //changed from 2%
+  margin-left: 10%; //changed from 15%
+  margin-top: 3%; //changed from 5%
+  max-width: 400px; //400px
   position: relative;
   width: 70%;
 }
@@ -19,7 +20,7 @@
 
 .turtle {
   bottom: calc(0.15 * 100%);
-  left: calc(0.46 * 100%);
+  left: calc(0.45 * 100%); //changed from calc(0.46 * 100%);
   position: absolute;
   // width: 10%;
 }

@@ -108,25 +108,6 @@ ExerciseSideProps): JSX.Element {
         </div>
       </div>
     );
-
-    /*<div className="exercise-box">
-          <AxisParent
-            axisMarkers={[
-              [-2, -1, 0, 1, 2],
-              [-1, 0, 1, 2],
-            ]}
-            axisLabels={[
-              ['A', '', '', 'B', 'C'],
-              ['A', '', '', 'B'],
-            ]}
-            toNextExercise={() => {
-              setCompleteExercises(completeExercises + 1);
-              incrementExercise();
-              return;
-            }}
-          />
-        </div>
-    );*/
   } else if (exercises[displayExercise] == 'graph1') {
     curExercise = (
       <div className="graph-exercise-input-container">
@@ -165,7 +146,7 @@ ExerciseSideProps): JSX.Element {
               {
                 textArray: [
                   { type: 'text', text: 'turtle.' },
-                  { type: 'input', width: 8, id: 1, answer: 'forward' },
+                  { type: 'input', width: 8, id: 1, answer: 'backward' },
                   { type: 'text', text: '(' },
                   { type: 'input', width: 2, id: 2, answer: '3' },
                   { type: 'text', text: ')' },
@@ -313,7 +294,7 @@ ExerciseSideProps): JSX.Element {
               ],
             ]}
             unitCircleLabels={[
-              ['A', 'C', '', 'B', ''],
+              ['A', 'B', '', 'C', ''],
               ['', 'A', 'B', '', 'C'],
               ['', '', 'A', 'B', '', 'C', ''],
               ['', 'A', '', '', 'B', '', 'C'],

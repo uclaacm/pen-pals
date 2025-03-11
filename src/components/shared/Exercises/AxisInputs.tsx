@@ -10,7 +10,7 @@ interface AxisInputProps {
 interface AxisQuestion {
   label: string;
   answer: number; // Should change to being strings
-  id: number; //This sucks lol
+  id: number; // This sucks lol!
 }
 
 function AxisInput({
@@ -46,7 +46,6 @@ function AxisInput({
     }
     if (counter == questionLabels.length - 1) {
       setIsDone(true);
-      //setIsComplete(true);
       nextExercise();
       return;
     }
@@ -91,7 +90,6 @@ function AxisInput({
     return <h2>Done!</h2>;
   }
 
-  //console.log(questionLabels[counter]);
   const questionOutput = questions.map(MakeQuestion);
   return (
     <div className="axinput-container">

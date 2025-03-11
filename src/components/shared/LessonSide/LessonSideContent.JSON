@@ -19,6 +19,10 @@
         {
             "id": "lesson-side-body",
             "text": "When looking at these numbers, remember that the number to move sideways comes first. A positive number means you move right, and a negative number means you move left. And when moving up and down with the second number, a positive number means you move up and a negative means down."
+        },
+        {
+            "id": "lesson-side-body",
+            "text": "Hint: The turtle icon on the exercises is always at the position 0."
         }
     ],
     "3": [

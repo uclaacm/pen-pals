@@ -12,7 +12,7 @@ interface CircleQuestion {
   label: string;
   answer: number; // Should change to being strings
   direction: string;
-  id: number; //This sucks lol
+  id: number; // This sucks lol!
 }
 
 function UnitCircleInput({
