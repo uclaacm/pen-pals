@@ -110,23 +110,21 @@ ExerciseSideProps): JSX.Element {
     );
   } else if (exercises[displayExercise] == 'graph1') {
     curExercise = (
-      <div>
-        <div>
-          <GraphExercise
-            origin={{ x: 0, y: 0 }}
-            points={[
-              { x: -3, y: 0, label: '' },
-              { x: -2, y: 1, label: 'A', line: 1 },
-              { x: -1, y: 1, label: 'B', line: 0 },
-              { x: 0, y: 0, label: 'C', line: 1 },
-              { x: 0, y: -1, label: 'D', line: 1 },
-              { x: -3, y: -1, label: 'E', line: 0 },
-            ]}
-            pointerPosition={{ x: -3, y: 0 }}
-            pointerOrientation={0}
-          />
-        </div>
-        <div style={{ paddingTop: '10vw' }}>
+      <div className="graph-exercise-input-container">
+        <GraphExercise
+          origin={{ x: 0, y: 0 }}
+          points={[
+            { x: -3, y: 0, label: '' },
+            { x: -2, y: 1, label: 'A', line: 1 },
+            { x: -1, y: 1, label: 'B', line: 0 },
+            { x: 0, y: 0, label: 'C', line: 1 },
+            { x: 0, y: -1, label: 'D', line: 1 },
+            { x: -3, y: -1, label: 'E', line: 0 },
+          ]}
+          pointerPosition={{ x: -3, y: 0 }}
+          pointerOrientation={0}
+        />
+        <div style={{ paddingTop: '30vh' }}>
           <GraphInput
             questionArray={[
               {
@@ -178,7 +176,7 @@ ExerciseSideProps): JSX.Element {
             pointerOrientation={0}
           />
         </div>
-        <div style={{ paddingTop: '10vw' }}>
+        <div style={{ paddingTop: '30vh' }}>
           <GraphInput
             questionArray={[
               {
